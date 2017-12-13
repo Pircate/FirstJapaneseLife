@@ -19,6 +19,10 @@
 		B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B4B1FE141F4002E2F67 /* FacilityViewController.swift */; };
 		B5126B521FE14728002E2F67 /* Service.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5126B511FE14728002E2F67 /* Service.plist */; };
 		B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B531FE14978002E2F67 /* ServiceListCell.swift */; };
+		B5F82D5C1FE17DC8004B925E /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D5B1FE17DC7004B925E /* ServiceDetailViewController.swift */; };
+		B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */; };
+		B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D601FE180DD004B925E /* UIColorExtension.swift */; };
+		B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D621FE18443004B925E /* ServiceChildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		B5126B511FE14728002E2F67 /* Service.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Service.plist; sourceTree = "<group>"; };
 		B5126B531FE14978002E2F67 /* ServiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
 		B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstJapaneseLife-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5F82D5B1FE17DC7004B925E /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
+		B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilityChildViewController.swift; sourceTree = "<group>"; };
+		B5F82D601FE180DD004B925E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B5F82D621FE18443004B925E /* ServiceChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +131,14 @@
 			isa = PBXGroup;
 			children = (
 				B5126B3C1FE13EE7002E2F67 /* App */,
-				B5126B351FE13EE7002E2F67 /* Classes */,
-				B5126B3B1FE13EE7002E2F67 /* Resource */,
-				B5126B341FE13EE7002E2F67 /* Vendor */,
 				B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */,
 				B5126B051FE13B4E002E2F67 /* Assets.xcassets */,
-				B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */,
+				B5126B351FE13EE7002E2F67 /* Classes */,
+				B5F82D5F1FE180C5004B925E /* Extension */,
 				B5126B0A1FE13B4E002E2F67 /* Info.plist */,
+				B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */,
+				B5126B3B1FE13EE7002E2F67 /* Resource */,
+				B5126B341FE13EE7002E2F67 /* Vendor */,
 			);
 			path = FirstJapaneseLife;
 			sourceTree = "<group>";
@@ -239,6 +248,7 @@
 		B5126B421FE141C6002E2F67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */,
 				B5126B4B1FE141F4002E2F67 /* FacilityViewController.swift */,
 			);
 			path = Controller;
@@ -272,6 +282,8 @@
 		B5126B461FE141C6002E2F67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B5F82D5B1FE17DC7004B925E /* ServiceDetailViewController.swift */,
+				B5F82D621FE18443004B925E /* ServiceChildViewController.swift */,
 				B5126B491FE141EA002E2F67 /* ServiceViewController.swift */,
 			);
 			path = Controller;
@@ -305,6 +317,14 @@
 			children = (
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B5F82D5F1FE180C5004B925E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5F82D601FE180DD004B925E /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FA24339AFDFB541B748F633C /* Frameworks */ = {
@@ -518,8 +538,12 @@
 				B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */,
 				B5126B4A1FE141EA002E2F67 /* ServiceViewController.swift in Sources */,
 				B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */,
+				B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */,
+				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
+				B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */,
+				B5F82D5C1FE17DC8004B925E /* ServiceDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

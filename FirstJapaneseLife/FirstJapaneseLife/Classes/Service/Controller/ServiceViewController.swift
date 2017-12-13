@@ -21,18 +21,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     }()
     
     lazy var dataSource: [String] = {
-        let dataSource = ["租房",
-                          "住民登录",
-                          "开设银行户头",
-                          "购买手机",
-                          "自行车相关",
-                          "购物",
-                          "吃饭",
-                          "娱乐",
-                          "支付各项费用",
-                          "生病时",
-                          "作为学生",
-                          "想要打工"]
+        let dataSource = ["租房", "住民登录", "开设银行户头", "购买手机", "自行车相关", "购物", "吃饭", "娱乐", "支付各项费用", "生病时", "作为学生", "想要打工"]
         return dataSource
     }()
 
@@ -56,8 +45,6 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     }
     
     // MARK: - UITableViewDataSource
-    
-    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -71,7 +58,11 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(dataSource[indexPath.row])
+
+        let serviceChildVC = ServiceChildViewController()
+        serviceChildVC.navigationItem.title = dataSource[indexPath.row]
+        serviceChildVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(serviceChildVC, animated: true)
     }
 
 }

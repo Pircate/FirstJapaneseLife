@@ -13,6 +13,9 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
+        navigationController?.navigationBar.barTintColor = .global
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         setupNavigationItem()
     }
 
@@ -27,12 +30,12 @@ class BaseViewController: UIViewController {
         
         let backBtn = UIButton(type: .system)
         backBtn.setTitle("上一页", for: .normal)
-        backBtn.setTitleColor(.black, for: .normal)
+        backBtn.setTitleColor(.white, for: .normal)
         backBtn.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
         
         let homeBtn = UIButton(type: .system)
         homeBtn.setTitle("起始页", for: .normal)
-        homeBtn.setTitleColor(.black, for: .normal)
+        homeBtn.setTitleColor(.white, for: .normal)
         homeBtn.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
         
         navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: backBtn), UIBarButtonItem(customView: homeBtn)]

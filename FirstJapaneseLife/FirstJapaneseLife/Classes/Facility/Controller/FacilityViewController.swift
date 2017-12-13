@@ -20,17 +20,7 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
     }()
     
     lazy var dataSource: [String] = {
-        let dataSource = ["学校",
-                          "银行",
-                          "房屋中介",
-                          "办事处",
-                          "手机营业厅",
-                          "超市",
-                          "便利店",
-                          "饮食",
-                          "医院",
-                          "娱乐",
-                          "ATM"]
+        let dataSource = ["学校", "银行", "房屋中介", "办事处", "手机营业厅", "超市", "便利店", "饮食", "医院", "娱乐", "ATM"]
         return dataSource
     }()
 
@@ -66,7 +56,11 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(dataSource[indexPath.row])
+        
+        let facilityChildVC = FacilityChildViewController()
+        facilityChildVC.navigationItem.title = dataSource[indexPath.row]
+        facilityChildVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(facilityChildVC, animated: true)
     }
 
 }

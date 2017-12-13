@@ -5,6 +5,5 @@ target 'FirstJapaneseLife' do
     pod 'SnapKit'
     pod 'Kingfisher'
     pod 'MJRefresh'
-    pod 'GoogleMaps'
     #pod 'AYNavigationBar'
 end
