@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
 		B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.debug.xcconfig"; sourceTree = "<group>"; };
+		22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.release.xcconfig"; sourceTree = "<group>"; };
+		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5126B051FE13B4E002E2F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		B5126B4B1FE141F4002E2F67 /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityViewController.swift; sourceTree = "<group>"; };
 		B5126B511FE14728002E2F67 /* Service.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Service.plist; sourceTree = "<group>"; };
 		B5126B531FE14978002E2F67 /* ServiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
+		B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstJapaneseLife-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA13BA7D0288A200644D264 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */,
+				22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B5126AF21FE13B4E002E2F67 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +104,8 @@
 				B5126B121FE13B4F002E2F67 /* FirstJapaneseLifeTests */,
 				B5126B1D1FE13B4F002E2F67 /* FirstJapaneseLifeUITests */,
 				B5126AFC1FE13B4E002E2F67 /* Products */,
+				3FA13BA7D0288A200644D264 /* Pods */,
+				FA24339AFDFB541B748F633C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +155,7 @@
 		B5126B341FE13EE7002E2F67 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -289,6 +307,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		FA24339AFDFB541B748F633C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5126B231FE13B4F002E2F67 /* Build configuration list for PBXNativeTarget "FirstJapaneseLife" */;
 			buildPhases = (
+				58011C1CC62E88AD170AC913 /* [CP] Check Pods Manifest.lock */,
 				B5126AF71FE13B4E002E2F67 /* Sources */,
 				B5126AF81FE13B4E002E2F67 /* Frameworks */,
 				B5126AF91FE13B4E002E2F67 /* Resources */,
+				C7B3B90C39411303BA3DB31F /* [CP] Embed Pods Frameworks */,
+				5E880A3CD249134CD9B214DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +386,7 @@
 				TargetAttributes = {
 					B5126AFA1FE13B4E002E2F67 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					B5126B0E1FE13B4F002E2F67 = {
@@ -417,6 +447,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58011C1CC62E88AD170AC913 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstJapaneseLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E880A3CD249134CD9B214DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7B3B90C39411303BA3DB31F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5126AF71FE13B4E002E2F67 /* Sources */ = {
@@ -584,14 +675,18 @@
 		};
 		B5126B241FE13B4F002E2F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirstJapaneseLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoX.FirstJapaneseLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstJapaneseLife/Vendor/FirstJapaneseLife-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -599,14 +694,17 @@
 		};
 		B5126B251FE13B4F002E2F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirstJapaneseLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoX.FirstJapaneseLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstJapaneseLife/Vendor/FirstJapaneseLife-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

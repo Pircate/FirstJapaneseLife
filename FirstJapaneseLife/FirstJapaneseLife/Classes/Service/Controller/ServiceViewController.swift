@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SnapKit
 
 class ServiceViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
@@ -37,10 +38,6 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tabBarItem.title = "サービス"
-        tabBarItem.image = UIImage(named: "tab_bar_service_normal")
-        tabBarItem.selectedImage = UIImage(named: "tab_bar_service_selected")
         
         addSubviews()
     }
@@ -53,6 +50,9 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     // MARK: - private
     private func addSubviews() {
         view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
     
     // MARK: - UITableViewDataSource

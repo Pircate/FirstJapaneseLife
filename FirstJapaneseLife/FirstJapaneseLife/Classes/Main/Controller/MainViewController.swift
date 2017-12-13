@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UITabBarController {
     
     lazy var facilityButton: UIButton = {
         let btn = UIButton(type: .system)
@@ -30,8 +30,17 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addSubviews()
+        let leftVC = FacilityViewController()
+        leftVC.tabBarItem.title = "施設"
+        leftVC.tabBarItem.image = UIImage(named: "tab_bar_facility_normal")
+        leftVC.tabBarItem.selectedImage = UIImage(named: "tab_bar_facility_selected")
+        
+        let rightVC = ServiceViewController()
+        rightVC.tabBarItem.title = "サービス"
+        rightVC.tabBarItem.image = UIImage(named: "tab_bar_service_normal")
+        rightVC.tabBarItem.selectedImage = UIImage(named: "tab_bar_service_selected")
+        
+        viewControllers = [leftVC, rightVC]
     }
 
     override func didReceiveMemoryWarning() {
