@@ -29,11 +29,6 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         let dataSource = [String]()
         return dataSource
     }()
-
-    lazy var synthesizer: AVSpeechSynthesizer = {
-        let synthesizer = AVSpeechSynthesizer()
-        return synthesizer
-    }()
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -70,10 +65,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     
     // MARK: - action
     @objc private func playButtonAction() {
-        let utterance = AVSpeechUtterance(string: "初めての日本生活")
-        let voice = AVSpeechSynthesisVoice(language: "ja-JP")
-        utterance.voice = voice
-        synthesizer.speak(utterance)
+        VoiceSpeaker.speak("初めての日本生活")
     }
     
     // MARK: - UITableViewDataSource

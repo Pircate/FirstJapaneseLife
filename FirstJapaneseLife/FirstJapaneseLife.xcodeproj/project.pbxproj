@@ -23,6 +23,7 @@
 		B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */; };
 		B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D601FE180DD004B925E /* UIColorExtension.swift */; };
 		B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D621FE18443004B925E /* ServiceChildViewController.swift */; };
+		B5F82D661FE18FE9004B925E /* VoiceSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilityChildViewController.swift; sourceTree = "<group>"; };
 		B5F82D601FE180DD004B925E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B5F82D621FE18443004B925E /* ServiceChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildViewController.swift; sourceTree = "<group>"; };
+		B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceSpeaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				B5126B0A1FE13B4E002E2F67 /* Info.plist */,
 				B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */,
 				B5126B3B1FE13EE7002E2F67 /* Resource */,
+				B5F82D641FE18F98004B925E /* Tools */,
 				B5126B341FE13EE7002E2F67 /* Vendor */,
 			);
 			path = FirstJapaneseLife;
@@ -325,6 +328,14 @@
 				B5F82D601FE180DD004B925E /* UIColorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B5F82D641FE18F98004B925E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		FA24339AFDFB541B748F633C /* Frameworks */ = {
@@ -544,6 +555,7 @@
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
 				B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */,
 				B5F82D5C1FE17DC8004B925E /* ServiceDetailViewController.swift in Sources */,
+				B5F82D661FE18FE9004B925E /* VoiceSpeaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
