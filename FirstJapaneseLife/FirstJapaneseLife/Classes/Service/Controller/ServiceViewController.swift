@@ -38,7 +38,9 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "服务"
+        tabBarItem.title = "サービス"
+        tabBarItem.image = UIImage(named: "tab_bar_service_normal")
+        tabBarItem.selectedImage = UIImage(named: "tab_bar_service_selected")
         
         addSubviews()
     }

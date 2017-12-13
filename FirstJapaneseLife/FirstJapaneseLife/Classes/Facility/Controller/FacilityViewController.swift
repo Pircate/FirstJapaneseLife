@@ -8,12 +8,38 @@
 
 import UIKit
 
-class FacilityViewController: BaseViewController {
+class FacilityViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+        tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
+        return tableView
+    }()
+    
+    lazy var dataSource: [String] = {
+        let dataSource = ["学校",
+                          "银行",
+                          "房屋中介",
+                          "办事处",
+                          "手机营业厅",
+                          "超市",
+                          "便利店",
+                          "饮食",
+                          "医院",
+                          "娱乐",
+                          "ATM"]
+        return dataSource
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "设施"
+        tabBarItem.title = "施設"
+        
+        addSubviews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +47,26 @@ class FacilityViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - private
+    private func addSubviews() {
+        view.addSubview(tableView)
     }
-    */
+
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
+        cell.titleLabel.text = dataSource[indexPath.row]
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(dataSource[indexPath.row])
+    }
 
 }
