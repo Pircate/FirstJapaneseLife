@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ServiceChildViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -29,6 +30,11 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         return dataSource
     }()
 
+    lazy var synthesizer: AVSpeechSynthesizer = {
+        let synthesizer = AVSpeechSynthesizer()
+        return synthesizer
+    }()
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +59,21 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         playBtn.backgroundColor = .global
         playBtn.layer.cornerRadius = 5
         playBtn.layer.masksToBounds = true
+        playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         footerView.addSubview(playBtn)
         playBtn.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(CGSize(width: kScreenWidth - 30, height: 36))
         }
         tableView.tableFooterView = footerView
+    }
+    
+    // MARK: - action
+    @objc private func playButtonAction() {
+        let utterance = AVSpeechUtterance(string: "初めての日本生活")
+        let voice = AVSpeechSynthesisVoice(language: "ja-JP")
+        utterance.voice = voice
+        synthesizer.speak(utterance)
     }
     
     // MARK: - UITableViewDataSource
