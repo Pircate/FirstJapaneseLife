@@ -11,7 +11,7 @@ import UIKit
 class FacilityViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
 
     lazy var tabMenuView: TabMenuView = {
-        let menu = TabMenuView(titles: FacilityData.facilityList)
+        let menu = TabMenuView(titles: facilityList)
         menu.didSelectItemHandler = { [weak self] (index) in
             let indexPath = IndexPath(item: 0, section: index)
             self?.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
@@ -34,9 +34,13 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     }()
     
     lazy var dataSource: [String] = {
-        let dataSource = FacilityData.facilityList
+        let dataSource = facilityList
         return dataSource
     }()
+    
+    var facilityList: [String] {
+        return LanguageManager.shared.isJapanese ? FacilityData.jFacilityList : FacilityData.facilityList
+    }
 
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -51,6 +55,10 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func languageWillChange(sender: Notification) {
+        collectionView.reloadData()
     }
     
     // MARK: - private
@@ -81,7 +89,7 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
 
     // MARK: - UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dataSource.count
+        return FacilityData.facilityList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,7 +116,12 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header: FacilityHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView", for: indexPath) as! FacilityHeaderView
-        header.titleLabel.text = dataSource[indexPath.section]
+        if LanguageManager.shared.isJapanese {
+            header.titleLabel.text = FacilityData.jFacilityList[indexPath.section]
+        }
+        else {
+            header.titleLabel.text = dataSource[indexPath.section]
+        }
         return header
     }
 

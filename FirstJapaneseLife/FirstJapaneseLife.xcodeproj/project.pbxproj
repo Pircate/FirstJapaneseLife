@@ -25,6 +25,7 @@
 		468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */; };
 		468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18821FE281BD00929D27 /* LanguageManager.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
+		B50EC6071FE294CB00EEBE91 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EC6061FE294CB00EEBE91 /* LocalizableString.swift */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
 		B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */; };
@@ -78,6 +79,7 @@
 		468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildListCell.swift; sourceTree = "<group>"; };
 		468A18821FE281BD00929D27 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50EC6061FE294CB00EEBE91 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5126B051FE13B4E002E2F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		B5126B3B1FE13EE7002E2F67 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B50EC6061FE294CB00EEBE91 /* LocalizableString.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */,
 				B5126B4A1FE141EA002E2F67 /* ServiceViewController.swift in Sources */,
 				B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */,
+				B50EC6071FE294CB00EEBE91 /* LocalizableString.swift in Sources */,
 				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
 				462919AC1FE204800031D642 /* WebViewController.swift in Sources */,
