@@ -11,7 +11,7 @@ import UIKit
 class FacilityViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
@@ -27,7 +27,7 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tabBarItem.title = "施設"
+        ay_navigationItem.title = "施設"
         
         addSubviews()
     }
@@ -40,6 +40,10 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
     // MARK: - private
     private func addSubviews() {
         view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.left.bottom.right.equalToSuperview()
+        }
     }
 
     // MARK: - UITableViewDataSource
@@ -58,7 +62,7 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
         tableView.deselectRow(at: indexPath, animated: true)
         
         let facilityChildVC = FacilityChildViewController()
-        facilityChildVC.navigationItem.title = dataSource[indexPath.row]
+        facilityChildVC.ay_navigationItem.title = dataSource[indexPath.row]
         facilityChildVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(facilityChildVC, animated: true)
     }

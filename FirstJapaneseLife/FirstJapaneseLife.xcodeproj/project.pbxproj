@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		462919AC1FE204800031D642 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AB1FE204800031D642 /* WebViewController.swift */; };
+		462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AD1FE204920031D642 /* UIViewControllerExtension.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
@@ -17,7 +19,6 @@
 		B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B3F1FE13F01002E2F67 /* MainViewController.swift */; };
 		B5126B4A1FE141EA002E2F67 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B491FE141EA002E2F67 /* ServiceViewController.swift */; };
 		B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B4B1FE141F4002E2F67 /* FacilityViewController.swift */; };
-		B5126B521FE14728002E2F67 /* Service.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5126B511FE14728002E2F67 /* Service.plist */; };
 		B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B531FE14978002E2F67 /* ServiceListCell.swift */; };
 		B5F82D5C1FE17DC8004B925E /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D5B1FE17DC7004B925E /* ServiceDetailViewController.swift */; };
 		B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D5D1FE17DE4004B925E /* FacilityChildViewController.swift */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.debug.xcconfig"; sourceTree = "<group>"; };
 		22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.release.xcconfig"; sourceTree = "<group>"; };
+		462919AB1FE204800031D642 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		462919AD1FE204920031D642 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		B5126B3F1FE13F01002E2F67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5126B491FE141EA002E2F67 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		B5126B4B1FE141F4002E2F67 /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityViewController.swift; sourceTree = "<group>"; };
-		B5126B511FE14728002E2F67 /* Service.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Service.plist; sourceTree = "<group>"; };
 		B5126B531FE14978002E2F67 /* ServiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
 		B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstJapaneseLife-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5F82D5B1FE17DC7004B925E /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,13 @@
 				22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		462919AF1FE209870031D642 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5126AF21FE13B4E002E2F67 = {
@@ -167,6 +176,7 @@
 		B5126B341FE13EE7002E2F67 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				462919AB1FE204800031D642 /* WebViewController.swift */,
 				B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */,
 			);
 			path = Vendor;
@@ -240,6 +250,7 @@
 		B5126B411FE141C6002E2F67 /* Facility */ = {
 			isa = PBXGroup;
 			children = (
+				462919AF1FE209870031D642 /* View */,
 				B5126B501FE146F1002E2F67 /* Resource */,
 				B5126B421FE141C6002E2F67 /* Controller */,
 				B5126B431FE141C6002E2F67 /* Model */,
@@ -303,7 +314,6 @@
 		B5126B4E1FE146CD002E2F67 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				B5126B511FE14728002E2F67 /* Service.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -325,6 +335,7 @@
 		B5F82D5F1FE180C5004B925E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				462919AD1FE204920031D642 /* UIViewControllerExtension.swift */,
 				B5F82D601FE180DD004B925E /* UIColorExtension.swift */,
 			);
 			path = Extension;
@@ -459,7 +470,6 @@
 			files = (
 				B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */,
 				B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */,
-				B5126B521FE14728002E2F67 /* Service.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,12 +533,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AYNavigationBar/AYNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AYNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -552,7 +566,9 @@
 				B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */,
 				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
+				462919AC1FE204800031D642 /* WebViewController.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
+				462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */,
 				B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */,
 				B5F82D5C1FE17DC8004B925E /* ServiceDetailViewController.swift in Sources */,
 				B5F82D661FE18FE9004B925E /* VoiceSpeaker.swift in Sources */,

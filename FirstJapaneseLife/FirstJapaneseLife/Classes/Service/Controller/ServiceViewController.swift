@@ -27,7 +27,8 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        ay_navigationItem.title = "サービス"
         addSubviews()
     }
 
@@ -40,7 +41,8 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     private func addSubviews() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.left.bottom.right.equalToSuperview()
         }
     }
     
@@ -60,7 +62,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
 
         let serviceChildVC = ServiceChildViewController()
-        serviceChildVC.navigationItem.title = dataSource[indexPath.row]
+        serviceChildVC.ay_navigationItem.title = dataSource[indexPath.row]
         serviceChildVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(serviceChildVC, animated: true)
     }

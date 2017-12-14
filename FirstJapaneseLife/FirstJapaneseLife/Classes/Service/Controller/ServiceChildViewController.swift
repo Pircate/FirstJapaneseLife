@@ -36,7 +36,8 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
 
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.left.bottom.right.equalToSuperview()
         }
         setupTableFooterView()
     }

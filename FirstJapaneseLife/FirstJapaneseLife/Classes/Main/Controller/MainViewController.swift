@@ -15,16 +15,22 @@ class MainViewController: UIViewController {
     
     lazy var facilityButton: UIButton = {
         let btn = UIButton(type: .system)
+        btn.layer.cornerRadius = 5
+        btn.layer.masksToBounds = true
+        btn.backgroundColor = .global
         btn.setTitle("施設", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
+        btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self, action: #selector(facilityButtonAction), for: .touchUpInside)
         return btn
     }()
     
     lazy var serviceButton: UIButton = {
         let btn = UIButton(type: .system)
+        btn.layer.cornerRadius = 5
+        btn.layer.masksToBounds = true
+        btn.backgroundColor = .global
         btn.setTitle("サービス", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
+        btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self, action: #selector(serviceButtonAction), for: .touchUpInside)
         return btn
     }()
@@ -33,9 +39,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        navigationController?.navigationBar.barTintColor = .global
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationItem.title = "初めての日本生活"
+        ay_navigationBar.alpha = 0
+        ay_navigationItem.title = "初めての日本生活"
+        ay_navigationItem.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
         
         addSubviews()
     }
@@ -48,6 +54,13 @@ class MainViewController: UIViewController {
 
     // MARK: - private
     func addSubviews() {
+
+        let backgroundImgView = UIImageView(image: UIImage(named: "home_background"))
+        view.addSubview(backgroundImgView)
+        backgroundImgView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+
         view.addSubview(facilityButton)
         view.addSubview(serviceButton)
         
