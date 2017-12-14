@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         ay_navigationBar.alpha = 0
         ay_navigationItem.title = "初めての日本生活"
-        ay_navigationItem.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
+        ay_navigationItem.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 24)]
         
         addSubviews()
     }

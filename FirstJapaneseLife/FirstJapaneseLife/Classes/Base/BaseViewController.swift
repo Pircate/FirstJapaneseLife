@@ -68,7 +68,7 @@ class BaseViewController: UIViewController {
     private func setupBaseAttribute() {
         view.backgroundColor = .white
         ay_navigationBar.backgroundColor = .global
-        ay_navigationItem.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        ay_navigationItem.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     private func setupNavigationItem() {
