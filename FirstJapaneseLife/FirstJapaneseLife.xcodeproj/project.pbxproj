@@ -22,6 +22,7 @@
 		468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18741FE24D9200929D27 /* DetailMapCell.swift */; };
 		468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18761FE24FDB00929D27 /* DetailAddressCell.swift */; };
 		468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18781FE256A300929D27 /* TitleHeaderView.swift */; };
+		468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		468A18741FE24D9200929D27 /* DetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapCell.swift; sourceTree = "<group>"; };
 		468A18761FE24FDB00929D27 /* DetailAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddressCell.swift; sourceTree = "<group>"; };
 		468A18781FE256A300929D27 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildListCell.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */,
 				462919C21FE230560031D642 /* ReadyPictureCell.swift */,
 				462919C41FE23B460031D642 /* ServiceChildTextCell.swift */,
+				468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */,
 				B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */,
 				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
 				468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */,
@@ -812,11 +816,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 472U22BHS4;
 				INFOPLIST_FILE = FirstJapaneseLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaoX.FirstJapaneseLife;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gaoX.FirstJapaneseLife-gx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FirstJapaneseLife/Vendor/FirstJapaneseLife-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -832,11 +836,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 472U22BHS4;
 				INFOPLIST_FILE = FirstJapaneseLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaoX.FirstJapaneseLife;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gaoX.FirstJapaneseLife-gx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FirstJapaneseLife/Vendor/FirstJapaneseLife-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
