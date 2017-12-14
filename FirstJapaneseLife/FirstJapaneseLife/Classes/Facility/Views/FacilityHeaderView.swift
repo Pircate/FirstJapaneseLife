@@ -27,7 +27,7 @@ class FacilityHeaderView: UICollectionReusableView {
         }
 
         let line = CALayer()
-        line.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 0.4)
+        line.frame = CGRect(x: 15, y: 0, width: kScreenWidth - 30, height: 0.4)
         line.backgroundColor = UIColor(hex: "#E5E5E5").cgColor
         self.layer.addSublayer(line)
     }

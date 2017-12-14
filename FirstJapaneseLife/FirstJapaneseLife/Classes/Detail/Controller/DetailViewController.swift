@@ -43,8 +43,6 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
     private func addSubviews() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-//            make.top.equalTo(ay_navigationBar.snp.bottom)
-//            make.left.bottom.right.equalToSuperview()
             make.edges.equalToSuperview()
         }
 

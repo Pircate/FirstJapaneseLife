@@ -60,7 +60,7 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
         tabMenuView.snp.makeConstraints { (make) in
             make.top.equalTo(ay_navigationBar.snp.bottom)
             make.left.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth, height: 36))
+            make.size.equalTo(CGSize(width: kScreenWidth, height: 44))
         }
 
         let lineView = UIView()
