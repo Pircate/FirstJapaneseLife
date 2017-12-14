@@ -64,7 +64,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
 
     private func configItemWidth() {
         for title in titles {
-            let width = CGFloat(title.count * 15 + 20)
+            let width = CGFloat(title.count * 15 + 30)
             itemWidths.append(width)
         }
     }

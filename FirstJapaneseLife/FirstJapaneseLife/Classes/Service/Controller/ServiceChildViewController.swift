@@ -17,6 +17,8 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
+        tableView.register(ServiceChildReadyCell.self, forCellReuseIdentifier: "ServiceChildReadyCell")
+        tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()
     
@@ -78,19 +80,31 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         switch section {
         case 0:
             return siteDataSource.count
-        case 2:
-            return imageDataSource.count
         default:
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell")
-        if indexPath.section == 0 {
-            cell?.textLabel?.text = siteDataSource[indexPath.row]
+
+        switch indexPath.section {
+        case 0:
+            let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
+            cell.titleLabel.text = siteDataSource[indexPath.row]
+            return cell
+        case 2:
+            let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
+            return cell
+
+        default:
+            let cell: ServiceChildTextCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildTextCell") as! ServiceChildTextCell
+            cell.textView.text = """
+            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
+            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
+            初めての日本生活初めての日本生活初めての日本生活初めての日本生活
+            """
+            return cell
         }
-        return cell!
     }
     
     // MARK: - UITableViewDelegate
@@ -107,21 +121,37 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         case 0:
             return 44
         case 1:
-            return 100
+            return 200
+        case 2:
+            return 120
         default:
-            return 44
+            return 200
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView()
-        header.backgroundColor = .orange
+        header.backgroundColor = UIColor(hex: "#F2F7FA")
+
+        let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
+        let iconView = UIImageView(image: UIImage(named: iconImgs[section]))
+        header.addSubview(iconView)
+
         let titleLabel = UILabel()
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
         titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
         titleLabel.textAlignment = .center
+        titleLabel.textColor = .global
         header.addSubview(titleLabel)
+
         titleLabel.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.center.equalToSuperview()
+        }
+
+        iconView.snp.makeConstraints { (make) in
+            make.right.equalTo(titleLabel.snp.left).offset(-5)
+            make.centerY.equalToSuperview()
+            make.size.equalTo(CGSize(width: 16, height: 16))
         }
         return header
     }

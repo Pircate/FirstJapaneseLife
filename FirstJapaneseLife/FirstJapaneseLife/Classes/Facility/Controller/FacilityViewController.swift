@@ -85,7 +85,9 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     
     // MARK: - UITableViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        let childVC = FacilityChildViewController()
+        childVC.ay_navigationItem.title = FacilityData.allList[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(childVC, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

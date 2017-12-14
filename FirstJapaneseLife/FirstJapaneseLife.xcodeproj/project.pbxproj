@@ -14,6 +14,9 @@
 		462919BB1FE21A160031D642 /* FacilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BA1FE21A160031D642 /* FacilityData.swift */; };
 		462919BD1FE21D840031D642 /* FacilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BC1FE21D840031D642 /* FacilityListCell.swift */; };
 		462919BF1FE2235B0031D642 /* FacilityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BE1FE2235B0031D642 /* FacilityHeaderView.swift */; };
+		462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */; };
+		462919C31FE230560031D642 /* ReadyPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C21FE230560031D642 /* ReadyPictureCell.swift */; };
+		462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C41FE23B460031D642 /* ServiceChildTextCell.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		462919BA1FE21A160031D642 /* FacilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityData.swift; sourceTree = "<group>"; };
 		462919BC1FE21D840031D642 /* FacilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityListCell.swift; sourceTree = "<group>"; };
 		462919BE1FE2235B0031D642 /* FacilityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityHeaderView.swift; sourceTree = "<group>"; };
+		462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildReadyCell.swift; sourceTree = "<group>"; };
+		462919C21FE230560031D642 /* ReadyPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyPictureCell.swift; sourceTree = "<group>"; };
+		462919C41FE23B460031D642 /* ServiceChildTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildTextCell.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +328,9 @@
 			isa = PBXGroup;
 			children = (
 				B5126B531FE14978002E2F67 /* ServiceListCell.swift */,
+				462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */,
+				462919C21FE230560031D642 /* ReadyPictureCell.swift */,
+				462919C41FE23B460031D642 /* ServiceChildTextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,14 +584,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */,
+				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
 				462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */,
 				B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */,
+				462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */,
 				B5126B4A1FE141EA002E2F67 /* ServiceViewController.swift in Sources */,
 				B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */,
 				B5F82D5E1FE17DE4004B925E /* FacilityChildViewController.swift in Sources */,
 				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
 				462919AC1FE204800031D642 /* WebViewController.swift in Sources */,
+				462919C31FE230560031D642 /* ReadyPictureCell.swift in Sources */,
 				462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
 				462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */,

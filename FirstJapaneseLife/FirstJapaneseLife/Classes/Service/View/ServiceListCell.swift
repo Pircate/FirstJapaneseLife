@@ -11,8 +11,9 @@ import UIKit
 class ServiceListCell: UITableViewCell {
     
     lazy var titleLabel: UILabel = {
-        let titleLabel = UILabel(frame: self.contentView.bounds)
-        titleLabel.textAlignment = .center
+        let titleLabel = UILabel()
+        titleLabel.textColor = UIColor(hex: "#666666")
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
         return titleLabel
     }()
 
@@ -29,7 +30,8 @@ class ServiceListCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
+        accessoryType = .disclosureIndicator
         addSubviews()
     }
     
@@ -39,6 +41,10 @@ class ServiceListCell: UITableViewCell {
     
     func addSubviews() {
         contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.centerY.equalToSuperview()
+        }
     }
     
 }
