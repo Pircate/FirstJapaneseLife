@@ -90,7 +90,12 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FacilityListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilityListCell", for: indexPath) as! FacilityListCell
-        cell.titleLabel.text = FacilityData.allList[indexPath.section][indexPath.item]
+        if LanguageManager.shared.isJapanese {
+            cell.titleLabel.text = FacilityData.jAllList[indexPath.section][indexPath.item]
+        }
+        else {
+            cell.titleLabel.text = FacilityData.allList[indexPath.section][indexPath.item]
+        }
         return cell
     }
     

@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     }
 
     deinit {
-        print("deinit")
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +57,7 @@ class BaseViewController: UIViewController {
         switchBtn.setTitle("中文", for: .selected)
         switchBtn.setTitle("中文", for: [.selected, .highlighted])
         switchBtn.setTitleColor(.white, for: .normal)
+        switchBtn.isSelected = !LanguageManager.shared.isJapanese
         switchBtn.addTarget(self, action: #selector(switchButtonAction(sender:)), for: .touchUpInside)
 
         ay_navigationItem.rightBarButton = switchBtn
@@ -78,6 +79,7 @@ class BaseViewController: UIViewController {
         alert(title: title, message: nil, cancelTitle: cancelTitle, otherTitles: [confirmTitle]) { (index) in
             if index == 1 {
                 sender.isSelected = !sender.isSelected
+                LanguageManager.shared.isJapanese = !sender.isSelected
             }
         }
     }

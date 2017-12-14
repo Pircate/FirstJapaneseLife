@@ -23,6 +23,7 @@
 		468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18761FE24FDB00929D27 /* DetailAddressCell.swift */; };
 		468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18781FE256A300929D27 /* TitleHeaderView.swift */; };
 		468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */; };
+		468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18821FE281BD00929D27 /* LanguageManager.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		468A18761FE24FDB00929D27 /* DetailAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddressCell.swift; sourceTree = "<group>"; };
 		468A18781FE256A300929D27 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		468A187A1FE26DE400929D27 /* ServiceChildListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildListCell.swift; sourceTree = "<group>"; };
+		468A18821FE281BD00929D27 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */,
+				468A18821FE281BD00929D27 /* LanguageManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */,
+				468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */,
 				B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */,
 				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
 				468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */,

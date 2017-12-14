@@ -14,6 +14,8 @@ struct FacilityData {
 
     static let schoolList = ["日本工业大学"]
 
+    static let jSchoolList = ["日本工業大学"]
+
     static let bankList = ["邮储银行", "埼玉Resona银行"]
 
     static let agencyList = ["东洋不动产", "铃建房屋有限公司", "MAST三幸房产有限公司"]
@@ -36,5 +38,9 @@ struct FacilityData {
 
     static var allList: [[String]] {
         return [schoolList, bankList, agencyList, officeList, phoneHallList, supermarketList, storeList, restaurantList, hospitalList, entertainmentList, ATMList]
+    }
+
+    static var jAllList: [[String]] {
+        return [jSchoolList, bankList, agencyList, officeList, phoneHallList, supermarketList, storeList, restaurantList, hospitalList, entertainmentList, ATMList]
     }
 }
