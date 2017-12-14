@@ -12,9 +12,9 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
 
     lazy var tabMenuView: TabMenuView = {
         let menu = TabMenuView(titles: FacilityData.facilityList)
-        menu.didSelectItemHandler = { (index) in
+        menu.didSelectItemHandler = { [weak self] (index) in
             let indexPath = IndexPath(item: 0, section: index)
-            self.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
+            self?.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
         }
         return menu
     }()
@@ -45,6 +45,7 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
         ay_navigationItem.title = "施設"
         
         addSubviews()
+        disableAdjustsScrollViewInsets(collectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,9 +63,18 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
             make.size.equalTo(CGSize(width: kScreenWidth, height: 36))
         }
 
+        let lineView = UIView()
+        lineView.backgroundColor = UIColor(hex: "#E5E5E5")
+        view.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.top.equalTo(tabMenuView.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(0.5)
+        }
+
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(tabMenuView.snp.bottom)
+            make.top.equalTo(lineView.snp.bottom)
             make.left.bottom.right.equalToSuperview()
         }
     }
@@ -86,9 +96,9 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     
     // MARK: - UITableViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let childVC = FacilityChildViewController()
-        childVC.ay_navigationItem.title = FacilityData.allList[indexPath.section][indexPath.item]
-        navigationController?.pushViewController(childVC, animated: true)
+        let detailVC = DetailViewController()
+        detailVC.ay_navigationItem.title = FacilityData.allList[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

@@ -70,13 +70,13 @@ class MainViewController: UIViewController {
         facilityButton.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(self.view.snp.centerY).offset(-30)
-            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 30))
+            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 36))
         }
         
         serviceButton.snp.makeConstraints { (make) in
             make.top.equalTo(facilityButton.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 30))
+            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 36))
         }
     }
 

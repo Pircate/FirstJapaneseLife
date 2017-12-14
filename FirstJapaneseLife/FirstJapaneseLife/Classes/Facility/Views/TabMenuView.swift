@@ -39,7 +39,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     var didSelectItemHandler: ((Int) -> Void)?
 
     init(titles: [String]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 36))
+        super.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 44))
 
         self.titles = titles
 
@@ -72,11 +72,6 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
 
     private func addSubviews() {
         self.addSubview(collectionView)
-
-        let underline = CALayer()
-        underline.frame = CGRect(x: 0, y: self.bounds.height - 0.5, width: kScreenWidth, height: 0.5)
-        underline.backgroundColor = UIColor(hex: "#E5E5E5").cgColor
-        self.layer.addSublayer(underline)
     }
 
     // MARK: - public
@@ -100,7 +95,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
 
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: itemWidths[indexPath.item], height: 36)
+        return CGSize(width: itemWidths[indexPath.item], height: 44)
     }
 
     // MARK: - UICollectionViewDelegate

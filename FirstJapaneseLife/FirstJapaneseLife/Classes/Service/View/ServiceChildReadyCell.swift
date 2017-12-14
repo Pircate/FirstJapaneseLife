@@ -12,7 +12,7 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: CGFloat((kScreenWidth - 70) / 3), height: 100)
+        flowLayout.itemSize = CGSize(width: CGFloat((kScreenWidth - 70) / 3), height: kScreenWidth / 2 - 40)
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15)
         flowLayout.scrollDirection = .horizontal;

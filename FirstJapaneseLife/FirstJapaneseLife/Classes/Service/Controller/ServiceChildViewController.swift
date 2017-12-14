@@ -24,15 +24,11 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
 
     var siteDataSource = [String]()
     
-    lazy var imageDataSource: [String] = {
-        let dataSource = [String]()
-        return dataSource
-    }()
-    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        disableAdjustsScrollViewInsets(tableView)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(ay_navigationBar.snp.bottom)
@@ -114,7 +110,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         }
         let detailVC = DetailViewController()
         detailVC.hidesBottomBarWhenPushed = true
-        detailVC.ay_navigationItem.title = ServiceData.allList[indexPath.section][indexPath.row]
+        detailVC.ay_navigationItem.title = siteDataSource[indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
@@ -125,36 +121,17 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         case 1:
             return 200
         case 2:
-            return 120
+            return kScreenWidth / 2 - 20
         default:
             return 200
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView()
-        header.backgroundColor = UIColor(hex: "#F2F7FA")
-
+        let header = TitleHeaderView()
         let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
-        let iconView = UIImageView(image: UIImage(named: iconImgs[section]))
-        header.addSubview(iconView)
-
-        let titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
-        titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .global
-        header.addSubview(titleLabel)
-
-        titleLabel.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-        }
-
-        iconView.snp.makeConstraints { (make) in
-            make.right.equalTo(titleLabel.snp.left).offset(-5)
-            make.centerY.equalToSuperview()
-            make.size.equalTo(CGSize(width: 16, height: 16))
-        }
+        header.iconView.image = UIImage(named: iconImgs[section])
+        header.titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
         return header
     }
     

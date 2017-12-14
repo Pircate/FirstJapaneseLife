@@ -30,6 +30,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
 
         ay_navigationItem.title = "サービス"
         addSubviews()
+        disableAdjustsScrollViewInsets(tableView)
     }
 
     override func didReceiveMemoryWarning() {
