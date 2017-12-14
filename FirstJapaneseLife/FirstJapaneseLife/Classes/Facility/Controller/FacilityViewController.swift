@@ -38,6 +38,7 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
         return dataSource
     }()
 
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

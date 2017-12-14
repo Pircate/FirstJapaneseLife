@@ -24,6 +24,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.bounces = false
         for (index, item) in titles.enumerated() {
             collectionView.register(TabMenuCell.self, forCellWithReuseIdentifier: "TabMenuCell_\(index)")
         }

@@ -15,6 +15,7 @@ class ServiceChildTextCell: UITableViewCell {
         textView.font = UIFont.systemFont(ofSize: 14)
         textView.textColor = UIColor(hex: "#666666")
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        textView.isEditable = false
         return textView
     }()
 

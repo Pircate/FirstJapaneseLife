@@ -21,11 +21,8 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()
-    
-    lazy var siteDataSource: [String] = {
-        let dataSource = ["琦玉银行", "大阪银行"]
-        return dataSource
-    }()
+
+    var siteDataSource = [String]()
     
     lazy var imageDataSource: [String] = {
         let dataSource = [String]()
@@ -51,7 +48,8 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     
     // MARK: - private
     private func setupTableFooterView() {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 44))
+
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 60))
         let playBtn = UIButton(type: .custom)
         playBtn.setTitle("播放", for: .normal)
         playBtn.backgroundColor = .global
@@ -60,7 +58,8 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         footerView.addSubview(playBtn)
         playBtn.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
             make.size.equalTo(CGSize(width: kScreenWidth - 30, height: 36))
         }
         tableView.tableFooterView = footerView
@@ -110,10 +109,13 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let serviceDetailVC = ServiceDetailViewController()
-        serviceDetailVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(serviceDetailVC, animated: true)
+        guard indexPath.section == 0 else {
+            return
+        }
+        let detailVC = DetailViewController()
+        detailVC.hidesBottomBarWhenPushed = true
+        detailVC.ay_navigationItem.title = ServiceData.allList[indexPath.section][indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

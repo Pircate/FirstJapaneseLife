@@ -21,7 +21,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     }()
     
     lazy var dataSource: [String] = {
-        let dataSource = ["租房", "住民登录及国民健康保险加入", "开设银行户头", "购买手机", "自行车相关", "购物", "吃饭", "娱乐", "支付各项费用", "生病时", "作为学生", "想要打工"]
+        let dataSource = ServiceData.serviceList
         return dataSource
     }()
 
@@ -64,6 +64,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         let serviceChildVC = ServiceChildViewController()
         serviceChildVC.ay_navigationItem.title = dataSource[indexPath.row]
         serviceChildVC.hidesBottomBarWhenPushed = true
+        serviceChildVC.siteDataSource = ServiceData.allList[indexPath.row]
         navigationController?.pushViewController(serviceChildVC, animated: true)
     }
 
