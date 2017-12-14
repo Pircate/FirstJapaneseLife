@@ -9,6 +9,11 @@
 import UIKit
 
 class ServiceListCell: UITableViewCell {
+
+    lazy var iconView: UIImageView = {
+        let iconView = UIImageView()
+        return iconView
+    }()
     
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -40,9 +45,16 @@ class ServiceListCell: UITableViewCell {
     }
     
     func addSubviews() {
+        contentView.addSubview(iconView)
+        iconView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(15)
+            make.centerY.equalToSuperview()
+            make.size.equalTo(CGSize(width: 16, height: 16))
+        }
+
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(15)
+            make.left.equalTo(iconView.snp.right).offset(15)
             make.centerY.equalToSuperview()
         }
     }

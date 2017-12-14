@@ -15,6 +15,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = UIColor(hex: "#E5E5E5")
         tableView.tableFooterView = UIView()
         tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
         return tableView
@@ -54,6 +55,7 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
+        cell.iconView.image = UIImage(named: "service_icon_\(indexPath.row)")
         cell.titleLabel.text = dataSource[indexPath.row]
         return cell
     }
