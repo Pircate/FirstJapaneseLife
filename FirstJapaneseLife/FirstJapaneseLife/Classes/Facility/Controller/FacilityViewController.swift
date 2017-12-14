@@ -8,19 +8,33 @@
 
 import UIKit
 
-class FacilityViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.tableFooterView = UIView()
-        tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
-        return tableView
+class FacilityViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+
+    lazy var tabMenuView: TabMenuView = {
+        let menu = TabMenuView(titles: FacilityData.facilityList)
+        menu.didSelectItemHandler = { (index) in
+            let indexPath = IndexPath(item: 0, section: index)
+            self.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
+        }
+        return menu
+    }()
+
+    lazy var collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: CGFloat(kScreenWidth / 2), height: 44)
+        flowLayout.minimumLineSpacing = 0;
+        flowLayout.minimumInteritemSpacing = 0;
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(FacilityListCell.self, forCellWithReuseIdentifier: "FacilityListCell")
+        collectionView.register(FacilityHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView")
+        return collectionView
     }()
     
     lazy var dataSource: [String] = {
-        let dataSource = ["学校", "银行", "房屋中介", "办事处", "手机营业厅", "超市", "便利店", "饮食", "医院", "娱乐", "ATM"]
+        let dataSource = FacilityData.facilityList
         return dataSource
     }()
 
@@ -39,32 +53,50 @@ class FacilityViewController: BaseViewController, UITableViewDataSource, UITable
     
     // MARK: - private
     private func addSubviews() {
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
+
+        view.addSubview(tabMenuView)
+        tabMenuView.snp.makeConstraints { (make) in
             make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.left.equalToSuperview()
+            make.size.equalTo(CGSize(width: kScreenWidth, height: 36))
+        }
+
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(tabMenuView.snp.bottom)
             make.left.bottom.right.equalToSuperview()
         }
     }
 
-    // MARK: - UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: - UICollectionViewDataSource
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataSource.count
     }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return FacilityData.allList[section].count
+    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
-        cell.titleLabel.text = dataSource[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: FacilityListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilityListCell", for: indexPath) as! FacilityListCell
+        cell.titleLabel.text = FacilityData.allList[indexPath.section][indexPath.item]
         return cell
     }
     
     // MARK: - UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let facilityChildVC = FacilityChildViewController()
-        facilityChildVC.ay_navigationItem.title = dataSource[indexPath.row]
-        facilityChildVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(facilityChildVC, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header: FacilityHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView", for: indexPath) as! FacilityHeaderView
+        header.titleLabel.text = dataSource[indexPath.section]
+        return header
+    }
+
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: kScreenWidth, height: 50)
     }
 
 }
