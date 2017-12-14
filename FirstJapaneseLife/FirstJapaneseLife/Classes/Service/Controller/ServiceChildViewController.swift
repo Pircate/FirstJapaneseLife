@@ -17,7 +17,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.separatorColor = UIColor(hex: "#E5E5E5")
-        tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
+        tableView.register(ServiceChildListCell.self, forCellReuseIdentifier: "ServiceChildListCell")
         tableView.register(ServiceChildReadyCell.self, forCellReuseIdentifier: "ServiceChildReadyCell")
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
@@ -85,7 +85,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
 
         switch indexPath.section {
         case 0:
-            let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
+            let cell: ServiceChildListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildListCell") as! ServiceChildListCell
             cell.titleLabel.text = siteDataSource[indexPath.row]
             return cell
         case 2:
@@ -132,6 +132,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         let header = TitleHeaderView()
         let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
         header.iconView.image = UIImage(named: iconImgs[section])
+        header.titleLabel.textColor = UIColor(hex: "#8a8a8a")
         header.titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
         return header
     }

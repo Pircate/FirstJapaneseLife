@@ -13,9 +13,13 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = UIColor(hex: "#F2F7FA")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorColor = UIColor(hex: "#E5E5E5")
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 15))
+        headerView.backgroundColor = UIColor(hex: "#F2F7FA")
+        tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
         tableView.register(ServiceListCell.self, forCellReuseIdentifier: "ServiceListCell")
         return tableView

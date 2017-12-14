@@ -68,8 +68,7 @@ class MainViewController: UIViewController {
         view.addSubview(serviceButton)
         
         facilityButton.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(self.view.snp.centerY).offset(-30)
+            make.center.equalToSuperview()
             make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 36))
         }
         

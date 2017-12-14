@@ -50,8 +50,8 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
     }
 
     private func setupTableHeaderView() {
-        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 200))
-        headerView.image = UIImage(named: "home_background")
+        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 240))
+        headerView.image = UIImage(named: "detail_header")
         tableView.tableHeaderView = headerView
     }
 
@@ -91,7 +91,6 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
                 if let marks = placemarks {
                     if marks.count > 0 {
                         let placemark = marks.first
-                        print(placemark?.location?.coordinate)
                         if let coordinate = placemark?.location?.coordinate {
                             let annotation = MKPointAnnotation()
                             annotation.coordinate = coordinate
@@ -121,7 +120,7 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 240
+            return 180
         case 1:
             if indexPath.row > 0 {
                 return 44
@@ -135,7 +134,7 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
     // MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 {
-            let alpha = scrollView.contentOffset.y / CGFloat(136)
+            let alpha = scrollView.contentOffset.y / CGFloat(176)
             ay_navigationBar.alpha = alpha
         }
         else {
