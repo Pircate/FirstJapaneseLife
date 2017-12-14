@@ -19,6 +19,10 @@ class BaseViewController: UIViewController {
         setupNavigationItem()
     }
 
+    deinit {
+        print("deinit")
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +48,18 @@ class BaseViewController: UIViewController {
         homeBtn.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
         
         ay_navigationItem.leftBarItems = [backBtn, homeBtn]
-        
+
+        let switchBtn = UIButton(type: .custom)
+        switchBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        switchBtn.frame = CGRect(x: 0, y: 0, width: 60, height: 44)
+        switchBtn.setTitle("日本语", for: .normal)
+        switchBtn.setTitle("日本语", for: .highlighted)
+        switchBtn.setTitle("中文", for: .selected)
+        switchBtn.setTitle("中文", for: [.selected, .highlighted])
+        switchBtn.setTitleColor(.white, for: .normal)
+        switchBtn.addTarget(self, action: #selector(switchButtonAction(sender:)), for: .touchUpInside)
+
+        ay_navigationItem.rightBarButton = switchBtn
     }
     
     // MARK: - action
@@ -56,4 +71,14 @@ class BaseViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
+    @objc private func switchButtonAction(sender: UIButton) {
+        let title = sender.isSelected ? "是否切换为日语" : "中国語に切り替えるか"
+        let cancelTitle = sender.isSelected ? "取消" : "キャンセル"
+        let confirmTitle = sender.isSelected ? "确定" : "確定"
+        alert(title: title, message: nil, cancelTitle: cancelTitle, otherTitles: [confirmTitle]) { (index) in
+            if index == 1 {
+                sender.isSelected = !sender.isSelected
+            }
+        }
+    }
 }

@@ -26,10 +26,10 @@ class TitleHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor(hex: "#F2F7FA")
+        backgroundColor = UIColor(hex: "#F2F7FA")
 
-        self.addSubview(iconView)
-        self.addSubview(titleLabel)
+        addSubview(iconView)
+        addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
