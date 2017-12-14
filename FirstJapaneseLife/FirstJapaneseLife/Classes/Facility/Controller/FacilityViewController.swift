@@ -33,13 +33,12 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
         return collectionView
     }()
     
-    lazy var dataSource: [String] = {
-        let dataSource = facilityList
-        return dataSource
-    }()
-    
     var facilityList: [String] {
         return LanguageManager.shared.isJapanese ? FacilityData.jFacilityList : FacilityData.facilityList
+    }
+    
+    var allFacilityList: [[String]] {
+        return LanguageManager.shared.isJapanese ? FacilityData.jAllList : FacilityData.allList
     }
 
     // MARK: - life cycle
@@ -89,39 +88,29 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
 
     // MARK: - UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return FacilityData.facilityList.count
+        return facilityList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FacilityData.allList[section].count
+        return allFacilityList[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FacilityListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilityListCell", for: indexPath) as! FacilityListCell
-        if LanguageManager.shared.isJapanese {
-            cell.titleLabel.text = FacilityData.jAllList[indexPath.section][indexPath.item]
-        }
-        else {
-            cell.titleLabel.text = FacilityData.allList[indexPath.section][indexPath.item]
-        }
+        cell.titleLabel.text = allFacilityList[indexPath.section][indexPath.item]
         return cell
     }
     
     // MARK: - UITableViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
-        detailVC.ay_navigationItem.title = FacilityData.allList[indexPath.section][indexPath.item]
-        navigationController?.pushViewController(detailVC, animated: true)
+        detailVC.ay_navigationItem.title = allFacilityList[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(detailVC, animated: true) 
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header: FacilityHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView", for: indexPath) as! FacilityHeaderView
-        if LanguageManager.shared.isJapanese {
-            header.titleLabel.text = FacilityData.jFacilityList[indexPath.section]
-        }
-        else {
-            header.titleLabel.text = dataSource[indexPath.section]
-        }
+        header.titleLabel.text = facilityList[indexPath.section]
         return header
     }
 

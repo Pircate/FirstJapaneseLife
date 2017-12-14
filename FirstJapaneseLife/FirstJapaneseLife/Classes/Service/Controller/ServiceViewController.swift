@@ -25,10 +25,9 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         return tableView
     }()
     
-    lazy var dataSource: [String] = {
-        let dataSource = ServiceData.serviceList
-        return dataSource
-    }()
+    var serviceList: [String] {
+        return LanguageManager.shared.isJapanese ? ServiceData.jServiceList : ServiceData.serviceList
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +42,10 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         // Dispose of any resources that can be recreated.
     }
     
+    override func languageWillChange(sender: Notification) {
+        tableView.reloadData()
+    }
+    
     // MARK: - private
     private func addSubviews() {
         view.addSubview(tableView)
@@ -54,13 +57,13 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return serviceList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
         cell.iconView.image = UIImage(named: "service_icon_\(indexPath.row)")
-        cell.titleLabel.text = dataSource[indexPath.row]
+        cell.titleLabel.text = serviceList[indexPath.row]
         return cell
     }
 
@@ -69,9 +72,8 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
 
         let serviceChildVC = ServiceChildViewController()
-        serviceChildVC.ay_navigationItem.title = dataSource[indexPath.row]
-        serviceChildVC.hidesBottomBarWhenPushed = true
-        serviceChildVC.siteDataSource = ServiceData.allList[indexPath.row]
+        serviceChildVC.serviceIndex = indexPath.row
+        serviceChildVC.ay_navigationItem.title = serviceList[indexPath.row]
         navigationController?.pushViewController(serviceChildVC, animated: true)
     }
 

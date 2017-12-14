@@ -23,8 +23,12 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()
+    
+    var allServiceList: [[String]] {
+        return LanguageManager.shared.isJapanese ? ServiceData.jAllList : ServiceData.allList
+    }
 
-    var siteDataSource = [String]()
+    var serviceIndex = 0
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -42,6 +46,10 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func languageWillChange(sender: Notification) {
+        tableView.reloadData()
     }
     
     // MARK: - private
@@ -76,7 +84,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return siteDataSource.count
+            return allServiceList[serviceIndex].count
         default:
             return 1
         }
@@ -87,7 +95,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         switch indexPath.section {
         case 0:
             let cell: ServiceChildListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildListCell") as! ServiceChildListCell
-            cell.titleLabel.text = siteDataSource[indexPath.row]
+            cell.titleLabel.text = allServiceList[serviceIndex][indexPath.row]
             return cell
         case 2:
             let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
@@ -117,8 +125,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
             return
         }
         let detailVC = DetailViewController()
-        detailVC.hidesBottomBarWhenPushed = true
-        detailVC.ay_navigationItem.title = siteDataSource[indexPath.row]
+        detailVC.ay_navigationItem.title = allServiceList[serviceIndex][indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
