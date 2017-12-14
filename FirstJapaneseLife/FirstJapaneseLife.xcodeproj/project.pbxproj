@@ -26,7 +26,7 @@
 		468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18821FE281BD00929D27 /* LanguageManager.swift */; };
 		A47C374FE0F96896EEFFDE64 /* Pods_FirstJapaneseLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */; };
 		B50EC6071FE294CB00EEBE91 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EC6061FE294CB00EEBE91 /* LocalizableString.swift */; };
-		B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */; };
+		B50EC6091FE2AA1B00EEBE91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EC6081FE2AA1B00EEBE91 /* AppDelegate.swift */; };
 		B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5126B051FE13B4E002E2F67 /* Assets.xcassets */; };
 		B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5126B071FE13B4E002E2F67 /* LaunchScreen.storyboard */; };
 		B5126B141FE13B4F002E2F67 /* FirstJapaneseLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B131FE13B4F002E2F67 /* FirstJapaneseLifeTests.swift */; };
@@ -80,8 +80,8 @@
 		468A18821FE281BD00929D27 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		B0B779A588084655A1D975B8 /* Pods_FirstJapaneseLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstJapaneseLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50EC6061FE294CB00EEBE91 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		B50EC6081FE2AA1B00EEBE91 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5126AFB1FE13B4E002E2F67 /* FirstJapaneseLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJapaneseLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5126B051FE13B4E002E2F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5126B081FE13B4E002E2F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5126B0A1FE13B4E002E2F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				B5126B3C1FE13EE7002E2F67 /* App */,
-				B5126AFE1FE13B4E002E2F67 /* AppDelegate.swift */,
 				B5126B051FE13B4E002E2F67 /* Assets.xcassets */,
 				B5126B351FE13EE7002E2F67 /* Classes */,
 				B5F82D5F1FE180C5004B925E /* Extension */,
@@ -320,6 +319,7 @@
 		B5126B3C1FE13EE7002E2F67 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B50EC6081FE2AA1B00EEBE91 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -608,6 +608,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AYNavigationBar/AYNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -616,6 +617,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AYNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Agrume.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -637,12 +639,12 @@
 				468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */,
 				B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */,
 				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
+				B50EC6091FE2AA1B00EEBE91 /* AppDelegate.swift in Sources */,
 				468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */,
 				468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */,
 				462919CF1FE24C1F0031D642 /* DetailViewController.swift in Sources */,
 				468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */,
 				462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */,
-				B5126AFF1FE13B4E002E2F67 /* AppDelegate.swift in Sources */,
 				462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */,
 				B5126B4A1FE141EA002E2F67 /* ServiceViewController.swift in Sources */,
 				B5126B4C1FE141F4002E2F67 /* FacilityViewController.swift in Sources */,

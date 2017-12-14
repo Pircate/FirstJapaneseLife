@@ -24,6 +24,9 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
         collectionView.register(ReadyPictureCell.self, forCellWithReuseIdentifier: "ReadyPictureCell")
         return collectionView
     }()
+    
+    var didSelectItemHandler: ((Int) -> Void)?
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,5 +60,11 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ReadyPictureCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReadyPictureCell", for: indexPath) as! ReadyPictureCell
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if didSelectItemHandler != nil {
+            didSelectItemHandler!(indexPath.item)
+        }
     }
 }

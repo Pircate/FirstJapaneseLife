@@ -6,4 +6,5 @@ target 'FirstJapaneseLife' do
     pod 'Kingfisher'
     pod 'MJRefresh'
     pod 'AYNavigationBar'
+    pod 'Agrume'
 end
