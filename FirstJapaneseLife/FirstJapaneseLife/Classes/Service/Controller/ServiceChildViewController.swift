@@ -91,8 +91,10 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
             return cell
         case 2:
             let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
+            let images = [UIImage(named: "banner0")!, UIImage(named: "banner1")!, UIImage(named: "banner2")!]
+            cell.images = images
             cell.didSelectItemHandler = { (index) in
-                let agrume = Agrume(images: [UIImage(named: "home_background")!, UIImage(named: "home_background")!, UIImage(named: "home_background")!], startIndex: index, backgroundBlurStyle: .dark)
+                let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
                 agrume.showFrom(self)
             }
             return cell

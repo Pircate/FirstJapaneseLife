@@ -12,7 +12,6 @@ class ReadyPictureCell: UICollectionViewCell {
 
     lazy var imageView: UIImageView = {
         let imgView = UIImageView()
-        imgView.image = UIImage(named: "home_background")
         return imgView
     }()
 

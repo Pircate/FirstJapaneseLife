@@ -25,6 +25,11 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
         return collectionView
     }()
     
+    var images: [UIImage] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     var didSelectItemHandler: ((Int) -> Void)?
     
 
@@ -40,6 +45,7 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
     }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        self.images = [UIImage]()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         contentView.addSubview(collectionView)
@@ -54,11 +60,12 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
 
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ReadyPictureCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReadyPictureCell", for: indexPath) as! ReadyPictureCell
+        cell.imageView.image = images[indexPath.item]
         return cell
     }
     
