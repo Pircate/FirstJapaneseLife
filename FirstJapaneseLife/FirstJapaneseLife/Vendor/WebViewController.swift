@@ -10,11 +10,11 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
-    
+
     // MARK: - properties
     private var url = ""
     private var htmlString = ""
-    
+
     let configuration: WKWebViewConfiguration = {
         var source = """
             var meta = document.createElement('meta');
@@ -36,29 +36,29 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.scrollView.showsVerticalScrollIndicator = false
         return webView
     }()
-    
+
     lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.main.bounds.size.width, height: 2))
         progressView.progressTintColor = .green
         progressView.trackTintColor = .clear
         return progressView
     }()
-    
+
     // MARK: - life cycle
     init(url: String) {
         super.init(nibName: nil, bundle: nil)
         self.url = url
     }
-    
+
     init(htmlString: String) {
         super.init(nibName: nil, bundle: nil)
         self.htmlString = htmlString
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,18 +66,16 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         addObserver()
         addSubviews()
         updateLeftNavigationBarItem()
-        
+
         if !url.isEmpty {
             loadURLRequest()
-        }
-        else if !htmlString.isEmpty {
+        } else if !htmlString.isEmpty {
             loadHTMLString()
-        }
-        else {
+        } else {
             loadFail()
         }
     }
-    
+
     deinit {
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
         webView.removeObserver(self, forKeyPath: "title")
@@ -89,7 +87,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     // MARK: - private
     private func addObserver() {
@@ -97,44 +94,43 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
         webView.addObserver(self, forKeyPath: "canGoBack", options: .new, context: nil)
     }
-    
+
     private func addSubviews() {
         view.addSubview(webView)
         view.addSubview(progressView)
-        
+
         registerNavigationBar()
         ay_navigationBar.backgroundColor = .orange
         ay_navigationItem.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
-    
+
     private func updateLeftNavigationBarItem() {
         let backImg = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
         let backBtn = UIButton(type: .system)
         backBtn.frame = CGRect(x: 0, y: 0, width: 38, height: 44)
         backBtn.setImage(backImg, for: .normal)
         backBtn.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
-        
+
         if webView.canGoBack {
             backBtn.frame = CGRect(x: 0, y: 0, width: 54, height: 44)
             backBtn.setTitle("返回", for: .normal)
             backBtn.setTitleColor(.white, for: .normal)
             backBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-            backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0)
-            
+            backBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
+
             let closeBtn = UIButton(type: .system)
             closeBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 20)
             closeBtn.setTitle("关闭", for: .normal)
             closeBtn.setTitleColor(.white, for: .normal)
             closeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
             closeBtn.addTarget(self, action: #selector(closeBtnAction), for: .touchUpInside)
-            
+
             ay_navigationItem.leftBarItems = [backBtn, closeBtn]
-        }
-        else {
+        } else {
             ay_navigationItem.leftBarButton = backBtn
         }
     }
-    
+
     private func loadURLRequest() {
         if url.isEmpty {
             loadFail()
@@ -146,8 +142,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             if let URL = result?.url {
                 let request = URLRequest(url: URL)
                 webView.load(request)
-            }
-            else {
+            } else {
                 loadFail()
                 webView.loadHTMLString(url, baseURL: nil)
             }
@@ -155,17 +150,17 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             loadFail()
         }
     }
-    
+
     private func loadHTMLString() {
         webView.loadHTMLString(htmlString, baseURL: nil)
     }
-    
+
     private func loadFail() {
         ay_navigationItem.title = "很抱歉，加载失败"
     }
-    
+
     // MARK: - observe
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             progressView.progress = Float(webView.estimatedProgress)
             if progressView.progress == 1 {
@@ -183,7 +178,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             updateLeftNavigationBarItem()
         }
     }
-    
+
     // MARK: - action
     @objc private func backBtnAction() {
         if webView.canGoBack {
@@ -192,26 +187,26 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         }
         navigationController?.popViewController(animated: true)
     }
-    
+
     @objc private func closeBtnAction() {
         navigationController?.popViewController(animated: true)
     }
-    
+
     // MARK: - WKNavigationDelegate
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.isHidden = false
         progressView.transform = CGAffineTransform(scaleX: 1.0, y: 1.5)
         view.bringSubview(toFront: progressView)
     }
-    
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         progressView.isHidden = true
     }
-    
+
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         progressView.isHidden = true
     }
-    
+
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         webView.reload()
     }

@@ -14,8 +14,8 @@ class ServiceChildReadyCell: UITableViewCell {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: CGFloat((UIScreen.width - 70) / 3), height: UIScreen.width / 2 - 42)
         flowLayout.minimumLineSpacing = 20
-        flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15)
-        flowLayout.scrollDirection = .horizontal;
+        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
@@ -24,14 +24,13 @@ class ServiceChildReadyCell: UITableViewCell {
         collectionView.register(ReadyPictureCell.self, forCellWithReuseIdentifier: "ReadyPictureCell")
         return collectionView
     }()
-    
+
     var images: [UIImage] {
         didSet {
             self.collectionView.reloadData()
         }
     }
     var didSelectItemHandler: ((Int) -> Void)?
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()

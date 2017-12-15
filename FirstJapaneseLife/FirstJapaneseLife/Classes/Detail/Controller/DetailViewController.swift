@@ -146,8 +146,7 @@ extension DetailViewController: UIScrollViewDelegate {
         if scrollView.contentOffset.y > 0 {
             let alpha = scrollView.contentOffset.y / CGFloat(176)
             ay_navigationBar.alpha = alpha
-        }
-        else {
+        } else {
             let alpha = -scrollView.contentOffset.y / ay_navigationBar.frame.maxY
             ay_navigationBar.alpha = alpha
         }

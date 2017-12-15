@@ -22,8 +22,8 @@ class FacilityViewController: BaseViewController {
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: CGFloat(UIScreen.width / 2), height: 44)
-        flowLayout.minimumLineSpacing = 0;
-        flowLayout.minimumInteritemSpacing = 0;
+        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self

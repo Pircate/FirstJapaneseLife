@@ -17,9 +17,9 @@ class TabMenuView: UIView {
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: UIScreen.width / CGFloat(titles.count), height: 44)
-        flowLayout.minimumLineSpacing = 0;
-        flowLayout.minimumInteritemSpacing = 0;
-        flowLayout.scrollDirection = .horizontal;
+        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
