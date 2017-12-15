@@ -12,7 +12,7 @@ class ServiceChildReadyCell: UITableViewCell {
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: CGFloat((UIScreen.width - 70) / 3), height: UIScreen.width / 2 - 42)
+        flowLayout.itemSize = CGSize(width: CGFloat((UIScreen.width - 70) / 3), height: UIScreen.width / 2 - 22)
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         flowLayout.scrollDirection = .horizontal
@@ -68,6 +68,7 @@ extension ServiceChildReadyCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ReadyPictureCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReadyPictureCell", for: indexPath) as! ReadyPictureCell
         cell.imageView.image = images[indexPath.item]
+        cell.nameLabel.text = "图片\(indexPath.item + 1)"
         return cell
     }
 }

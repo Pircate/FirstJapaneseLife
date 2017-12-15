@@ -102,7 +102,7 @@ extension ServiceChildViewController: UITableViewDataSource {
             return cell
         case 2:
             let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
-            let images = [UIImage(named: "banner0")!, UIImage(named: "banner1")!, UIImage(named: "banner2")!]
+            let images = [UIImage(named: "banner0")!, UIImage(named: "banner1")!, UIImage(named: "banner2")!, UIImage(named: "home_background")!, UIImage(named: "launch_screen")!]
             cell.images = images
             cell.didSelectItemHandler = { (index) in
                 let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
@@ -142,7 +142,7 @@ extension ServiceChildViewController: UITableViewDelegate {
         case 1:
             return 200
         case 2:
-            return UIScreen.width / 2 - 20
+            return UIScreen.width / 2
         default:
             return 200
         }

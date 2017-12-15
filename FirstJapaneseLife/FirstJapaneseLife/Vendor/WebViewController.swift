@@ -100,12 +100,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         view.addSubview(progressView)
 
         registerNavigationBar()
-        ay_navigationBar.backgroundColor = .orange
-        ay_navigationItem.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
     }
 
     private func updateLeftNavigationBarItem() {
-        let backImg = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+        let backImg = UIImage(named: "default_back_white")?.withRenderingMode(.alwaysOriginal)
         let backBtn = UIButton(type: .system)
         backBtn.frame = CGRect(x: 0, y: 0, width: 38, height: 44)
         backBtn.setImage(backImg, for: .normal)
