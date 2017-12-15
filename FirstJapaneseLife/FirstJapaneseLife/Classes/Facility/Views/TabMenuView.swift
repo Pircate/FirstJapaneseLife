@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class TabMenuView: UIView {
 
     static let menuHeight: CGFloat = 44.0
 
@@ -83,8 +83,11 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
+}
 
-    // MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
+extension TabMenuView: UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return titles.count
     }
@@ -94,13 +97,11 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         cell.model = dataSource[indexPath.item]
         return cell
     }
+}
 
-    // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: itemWidths[indexPath.item], height: TabMenuView.menuHeight)
-    }
+// MARK: - UICollectionViewDelegate
+extension TabMenuView: UICollectionViewDelegate {
 
-    // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         var model = dataSource[indexPath.item]
         model.deselectDisabled = true
@@ -117,5 +118,13 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
         if didSelectItemHandler != nil {
             didSelectItemHandler!(indexPath.item)
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension TabMenuView: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: itemWidths[indexPath.item], height: TabMenuView.menuHeight)
     }
 }
