@@ -69,6 +69,9 @@ class ServiceChildViewController: BaseViewController {
     
     // MARK: - action
     @objc private func playButtonAction() {
+        #if arch(i386) || arch(x86_64)
+            return
+        #endif
         VoiceSpeaker.speak("初めての日本生活")
     }
 }
