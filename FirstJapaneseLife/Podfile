@@ -4,7 +4,6 @@ use_frameworks!
 target 'FirstJapaneseLife' do
     pod 'SnapKit'
     pod 'Kingfisher'
-    pod 'MJRefresh'
     pod 'AYNavigationBar'
     pod 'Agrume'
 end

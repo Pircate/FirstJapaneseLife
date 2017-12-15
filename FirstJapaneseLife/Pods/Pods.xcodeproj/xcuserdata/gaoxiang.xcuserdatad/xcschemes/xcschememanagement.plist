@@ -9,6 +9,13 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Agrume.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>FDFullscreenPopGesture.xcscheme</key>
@@ -16,16 +23,9 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Kingfisher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>MJRefresh.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

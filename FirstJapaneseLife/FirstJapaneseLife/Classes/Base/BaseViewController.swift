@@ -101,7 +101,5 @@ class BaseViewController: UIViewController {
     }
     
     //  MARK: - notification
-    @objc func languageWillChange(sender: Notification) {
-        
-    }
+    @objc func languageWillChange(sender: Notification) {}
 }
