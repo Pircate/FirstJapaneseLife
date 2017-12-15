@@ -8,9 +8,9 @@
 
 import UIKit
 
-let tabMenuHeight: CGFloat = 44.0
-
 class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+    static let menuHeight: CGFloat = 44.0
 
     var titles = [String]()
 
@@ -41,7 +41,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     var didSelectItemHandler: ((Int) -> Void)?
 
     init(titles: [String]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: tabMenuHeight))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: TabMenuView.menuHeight))
 
         self.titles = titles
 
@@ -97,7 +97,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
 
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: itemWidths[indexPath.item], height: tabMenuHeight)
+        return CGSize(width: itemWidths[indexPath.item], height: TabMenuView.menuHeight)
     }
 
     // MARK: - UICollectionViewDelegate

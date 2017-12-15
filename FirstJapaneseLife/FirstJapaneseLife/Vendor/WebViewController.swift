@@ -13,7 +13,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     // MARK: - properties
     private var url = ""
-    private var HTMLString = ""
+    private var htmlString = ""
     
     let configuration: WKWebViewConfiguration = {
         var source = """
@@ -50,9 +50,9 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         self.url = url
     }
     
-    init(HTMLString: String) {
+    init(htmlString: String) {
         super.init(nibName: nil, bundle: nil)
-        self.HTMLString = HTMLString
+        self.htmlString = htmlString
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -70,7 +70,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         if !url.isEmpty {
             loadURLRequest()
         }
-        else if !HTMLString.isEmpty {
+        else if !htmlString.isEmpty {
             loadHTMLString()
         }
         else {
@@ -157,7 +157,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     private func loadHTMLString() {
-        webView.loadHTMLString(HTMLString, baseURL: nil)
+        webView.loadHTMLString(htmlString, baseURL: nil)
     }
     
     private func loadFail() {
