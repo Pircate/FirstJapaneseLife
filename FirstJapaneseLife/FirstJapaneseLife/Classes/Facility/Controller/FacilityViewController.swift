@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FacilityViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class FacilityViewController: BaseViewController {
 
     lazy var tabMenuView: TabMenuView = {
         let menu = TabMenuView(titles: facilityList)
@@ -85,8 +85,11 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
             make.left.bottom.right.equalToSuperview()
         }
     }
+}
 
-    // MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
+extension FacilityViewController: UICollectionViewDataSource {
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return facilityList.count
     }
@@ -94,18 +97,11 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allFacilityList[section].count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FacilityListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilityListCell", for: indexPath) as! FacilityListCell
         cell.titleLabel.text = allFacilityList[indexPath.section][indexPath.item]
         return cell
-    }
-    
-    // MARK: - UITableViewDelegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = DetailViewController()
-        detailVC.ay_navigationItem.title = allFacilityList[indexPath.section][indexPath.item]
-        navigationController?.pushViewController(detailVC, animated: true) 
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -113,10 +109,22 @@ class FacilityViewController: BaseViewController, UICollectionViewDataSource, UI
         header.titleLabel.text = facilityList[indexPath.section]
         return header
     }
+}
 
-    // MARK: - UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDelegate
+extension FacilityViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.ay_navigationItem.title = allFacilityList[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension FacilityViewController: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: kScreenWidth, height: 50)
     }
-
 }

@@ -29,8 +29,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         configuration.userContentController = userContentCtrl
         return configuration
     }()
-    
-    
+
     lazy var webView: WKWebView = {
         let webView = WKWebView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - self.ay_navigationBar.frame.maxY), configuration: self.configuration)
         webView.navigationDelegate = self

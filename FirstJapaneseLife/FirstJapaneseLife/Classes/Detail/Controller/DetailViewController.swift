@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class DetailViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
+class DetailViewController: BaseViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -25,6 +25,7 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
         return tableView
     }()
 
+    // MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,8 +55,11 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
         headerView.image = UIImage(named: "detail_header")
         tableView.tableHeaderView = headerView
     }
+}
 
-    // MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
+extension DetailViewController: UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -103,8 +107,11 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
             return cell
         }
     }
+}
 
-    // MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate
+extension DetailViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = TitleHeaderView()
         let iconImgs = ["detail_header_intro", "detail_header_address", "detail_header_map"]
@@ -130,8 +137,11 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
             return 240
         }
     }
+}
 
-    // MARK: - UIScrollViewDelegate
+// MARK: - UIScrollViewDelegate
+extension DetailViewController: UIScrollViewDelegate {
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 {
             let alpha = scrollView.contentOffset.y / CGFloat(176)
@@ -142,5 +152,4 @@ class DetailViewController: BaseViewController, UITableViewDataSource, UITableVi
             ay_navigationBar.alpha = alpha
         }
     }
-
 }

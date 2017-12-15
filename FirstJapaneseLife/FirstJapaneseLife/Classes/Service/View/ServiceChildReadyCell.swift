@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class ServiceChildReadyCell: UITableViewCell {
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: CGFloat((kScreenWidth - 70) / 3), height: kScreenWidth / 2 - 40)
+        flowLayout.itemSize = CGSize(width: CGFloat((kScreenWidth - 70) / 3), height: kScreenWidth / 2 - 42)
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15)
         flowLayout.scrollDirection = .horizontal;
@@ -57,8 +57,11 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    // MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
+extension ServiceChildReadyCell: UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -68,7 +71,11 @@ class ServiceChildReadyCell: UITableViewCell, UICollectionViewDataSource, UIColl
         cell.imageView.image = images[indexPath.item]
         return cell
     }
-    
+}
+
+// MARK: - UICollectionViewDelegate
+extension ServiceChildReadyCell: UICollectionViewDelegate {
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if didSelectItemHandler != nil {
             didSelectItemHandler!(indexPath.item)

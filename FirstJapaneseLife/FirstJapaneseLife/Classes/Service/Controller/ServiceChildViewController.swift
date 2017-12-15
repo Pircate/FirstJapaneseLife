@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Agrume
 
-class ServiceChildViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class ServiceChildViewController: BaseViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -75,12 +75,15 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
     @objc private func playButtonAction() {
         VoiceSpeaker.speak("初めての日本生活")
     }
-    
-    // MARK: - UITableViewDataSource
+}
+
+// MARK: - UITableViewDataSource
+extension ServiceChildViewController: UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -89,7 +92,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
             return 1
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         switch indexPath.section {
@@ -117,8 +120,11 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
             return cell
         }
     }
-    
-    // MARK: - UITableViewDelegate
+}
+
+// MARK: - UITableViewDelegate
+extension ServiceChildViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard indexPath.section == 0 else {
@@ -128,7 +134,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         detailVC.ay_navigationItem.title = allServiceList[serviceIndex][indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
@@ -141,7 +147,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
             return 200
         }
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = TitleHeaderView()
         let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
@@ -150,7 +156,7 @@ class ServiceChildViewController: BaseViewController, UITableViewDataSource, UIT
         header.titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
         return header
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
     }

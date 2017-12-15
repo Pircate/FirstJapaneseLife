@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ServiceViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class ServiceViewController: BaseViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -54,20 +54,26 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
             make.left.bottom.right.equalToSuperview()
         }
     }
-    
-    // MARK: - UITableViewDataSource
+}
+
+// MARK: - UITableViewDataSource
+extension ServiceViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return serviceList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
         cell.iconView.image = UIImage(named: "service_icon_\(indexPath.row)")
         cell.titleLabel.text = serviceList[indexPath.row]
         return cell
     }
+}
 
-    // MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate
+extension ServiceViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -76,5 +82,4 @@ class ServiceViewController: BaseViewController, UITableViewDataSource, UITableV
         serviceChildVC.ay_navigationItem.title = serviceList[indexPath.row]
         navigationController?.pushViewController(serviceChildVC, animated: true)
     }
-
 }

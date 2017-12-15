@@ -280,8 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				B5126B381FE13EE7002E2F67 /* Controller */,
-				B5126B391FE13EE7002E2F67 /* Model */,
-				B5126B3A1FE13EE7002E2F67 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -292,20 +290,6 @@
 				B5126B3F1FE13F01002E2F67 /* MainViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		B5126B391FE13EE7002E2F67 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B5126B3A1FE13EE7002E2F67 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B5126B3B1FE13EE7002E2F67 /* Resource */ = {
@@ -329,8 +313,6 @@
 			children = (
 				B5126B421FE141C6002E2F67 /* Controller */,
 				462919B41FE219880031D642 /* Data */,
-				B5126B431FE141C6002E2F67 /* Model */,
-				B5126B501FE146F1002E2F67 /* Resource */,
 				462919B51FE219AA0031D642 /* Views */,
 			);
 			path = Facility;
@@ -344,19 +326,11 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B5126B431FE141C6002E2F67 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		B5126B451FE141C6002E2F67 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				B5126B461FE141C6002E2F67 /* Controller */,
 				462919C61FE23E8C0031D642 /* Data */,
-				B5126B4F1FE146E4002E2F67 /* Model */,
 				B5126B4E1FE146CD002E2F67 /* Resource */,
 				B5126B481FE141C6002E2F67 /* View */,
 			);
@@ -385,20 +359,6 @@
 			sourceTree = "<group>";
 		};
 		B5126B4E1FE146CD002E2F67 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		B5126B4F1FE146E4002E2F67 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B5126B501FE146F1002E2F67 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 			);
