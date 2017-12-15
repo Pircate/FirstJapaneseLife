@@ -45,8 +45,8 @@ class TabMenuView: UIView {
 
         self.titles = titles
 
-        configDataSource()
-        configItemWidth()
+        configureDataSource()
+        figureItemWidth()
         addSubviews()
     }
 
@@ -55,17 +55,17 @@ class TabMenuView: UIView {
     }
 
     // MARK: - private
-    private func configDataSource() {
+    private func configureDataSource() {
 
         let colors = [UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0")]
 
         for (index, title) in titles.enumerated() {
-            let model = TabMenuModel(backgroundLayerColor: colors[index], titleNormalColor: .global, titleSelectedColor: .white, deselectDisabled: false, title: title)
+            let model = TabMenuModel(title: title, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: colors[index])
             dataSource.append(model)
         }
     }
 
-    private func configItemWidth() {
+    private func figureItemWidth() {
         for title in titles {
             let width = CGFloat(title.count * 15 + 30)
             itemWidths.append(width)
@@ -101,16 +101,6 @@ extension TabMenuView: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension TabMenuView: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        var model = dataSource[indexPath.item]
-        model.deselectDisabled = true
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        var model = dataSource[indexPath.item]
-        model.deselectDisabled = false
-    }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)

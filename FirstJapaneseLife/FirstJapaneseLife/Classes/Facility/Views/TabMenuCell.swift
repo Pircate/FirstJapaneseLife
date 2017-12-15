@@ -9,12 +9,10 @@
 import UIKit
 
 struct TabMenuModel {
-    var backgroundLayerColor: UIColor?
+    var title: String?
     var titleNormalColor: UIColor?
     var titleSelectedColor: UIColor?
-    var deselectDisabled = false
-
-    var title = ""
+    var backgroundLayerColor: UIColor?
 }
 
 class TabMenuCell: UICollectionViewCell {
@@ -33,17 +31,18 @@ class TabMenuCell: UICollectionViewCell {
         return btn
     }()
 
-    var model: TabMenuModel {
-        willSet {
-            backgroundLayer.backgroundColor = newValue.backgroundLayerColor?.cgColor
-            titleButton.setTitleColor(newValue.titleNormalColor, for: .normal)
-            titleButton.setTitleColor(newValue.titleSelectedColor, for: .selected)
-            titleButton.setTitle(newValue.title, for: .normal)
+    var model: TabMenuModel? {
+        didSet {
+            backgroundLayer.backgroundColor = model?.backgroundLayerColor?.cgColor
+            titleButton.setTitleColor(model?.titleNormalColor, for: .normal)
+            titleButton.setTitleColor(model?.titleSelectedColor, for: .selected)
+            titleButton.setTitle(model?.title, for: .normal)
         }
     }
 
+    private static var deselectDisabled = false
+
     override init(frame: CGRect) {
-        self.model = TabMenuModel()
         super.init(frame: frame)
 
         addSubviews()
@@ -53,13 +52,17 @@ class TabMenuCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override var isHighlighted: Bool {
+        didSet {
+            TabMenuCell.deselectDisabled = isHighlighted
+        }
+    }
+
     override var isSelected: Bool {
-        willSet {
-            if model.deselectDisabled {
-                return
-            }
-            titleButton.isSelected = newValue
-            backgroundLayer.frame = newValue ? self.contentView.bounds : CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 3)
+        didSet {
+            let flag = TabMenuCell.deselectDisabled ? oldValue : isSelected
+            titleButton.isSelected = flag
+            backgroundLayer.frame = flag ? self.contentView.bounds : CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 3)
         }
     }
 
