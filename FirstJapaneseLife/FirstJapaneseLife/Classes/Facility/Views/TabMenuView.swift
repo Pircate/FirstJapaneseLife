@@ -16,7 +16,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: kScreenWidth / CGFloat(titles.count), height: 44)
+        flowLayout.itemSize = CGSize(width: UIScreen.width / CGFloat(titles.count), height: 44)
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = .horizontal;
@@ -41,7 +41,7 @@ class TabMenuView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
     var didSelectItemHandler: ((Int) -> Void)?
 
     init(titles: [String]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: tabMenuHeight))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: tabMenuHeight))
 
         self.titles = titles
 

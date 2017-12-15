@@ -17,7 +17,7 @@ class ServiceViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorColor = UIColor(hex: "#E5E5E5")
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 15))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 15))
         headerView.backgroundColor = UIColor(hex: "#F2F7FA")
         tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()

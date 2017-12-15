@@ -51,7 +51,7 @@ class DetailViewController: BaseViewController {
     }
 
     private func setupTableHeaderView() {
-        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 240))
+        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 240))
         headerView.image = UIImage(named: "detail_header")
         tableView.tableHeaderView = headerView
     }

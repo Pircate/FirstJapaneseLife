@@ -19,6 +19,7 @@
 		462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C41FE23B460031D642 /* ServiceChildTextCell.swift */; };
 		462919C81FE23E960031D642 /* ServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C71FE23E960031D642 /* ServiceData.swift */; };
 		462919CF1FE24C1F0031D642 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919CD1FE24C1F0031D642 /* DetailViewController.swift */; };
+		462CFC8C1FE36B80003048AB /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462CFC8B1FE36B80003048AB /* UIScreenExtension.swift */; };
 		468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18741FE24D9200929D27 /* DetailMapCell.swift */; };
 		468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18761FE24FDB00929D27 /* DetailAddressCell.swift */; };
 		468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A18781FE256A300929D27 /* TitleHeaderView.swift */; };
@@ -73,6 +74,7 @@
 		462919C41FE23B460031D642 /* ServiceChildTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildTextCell.swift; sourceTree = "<group>"; };
 		462919C71FE23E960031D642 /* ServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceData.swift; sourceTree = "<group>"; };
 		462919CD1FE24C1F0031D642 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		462CFC8B1FE36B80003048AB /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		468A18741FE24D9200929D27 /* DetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapCell.swift; sourceTree = "<group>"; };
 		468A18761FE24FDB00929D27 /* DetailAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddressCell.swift; sourceTree = "<group>"; };
 		468A18781FE256A300929D27 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				462919AD1FE204920031D642 /* UIViewControllerExtension.swift */,
 				B5F82D601FE180DD004B925E /* UIColorExtension.swift */,
+				462CFC8B1FE36B80003048AB /* UIScreenExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
 				462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */,
+				462CFC8C1FE36B80003048AB /* UIScreenExtension.swift in Sources */,
 				462919BB1FE21A160031D642 /* FacilityData.swift in Sources */,
 				B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */,
 				462919C81FE23E960031D642 /* ServiceData.swift in Sources */,

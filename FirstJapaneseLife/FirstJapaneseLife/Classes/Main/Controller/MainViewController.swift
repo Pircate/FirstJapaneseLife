@@ -8,9 +8,6 @@
 
 import UIKit
 
-var kScreenWidth = UIScreen.main.bounds.width
-var kScreenHeight = UIScreen.main.bounds.height
-
 class MainViewController: UIViewController {
     
     lazy var facilityButton: UIButton = {
@@ -69,13 +66,13 @@ class MainViewController: UIViewController {
         
         facilityButton.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 36))
+            make.size.equalTo(CGSize(width: UIScreen.width - 60, height: 36))
         }
         
         serviceButton.snp.makeConstraints { (make) in
             make.top.equalTo(facilityButton.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth - 60, height: 36))
+            make.size.equalTo(CGSize(width: UIScreen.width - 60, height: 36))
         }
     }
 

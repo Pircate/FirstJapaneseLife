@@ -21,7 +21,7 @@ class FacilityViewController: BaseViewController {
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: CGFloat(kScreenWidth / 2), height: 44)
+        flowLayout.itemSize = CGSize(width: CGFloat(UIScreen.width / 2), height: 44)
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
@@ -67,7 +67,7 @@ class FacilityViewController: BaseViewController {
         tabMenuView.snp.makeConstraints { (make) in
             make.top.equalTo(ay_navigationBar.snp.bottom)
             make.left.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth, height: 44))
+            make.size.equalTo(CGSize(width: UIScreen.width, height: 44))
         }
 
         let lineView = UIView()
@@ -125,6 +125,6 @@ extension FacilityViewController: UICollectionViewDelegate {
 extension FacilityViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: kScreenWidth, height: 50)
+        return CGSize(width: UIScreen.width, height: 50)
     }
 }

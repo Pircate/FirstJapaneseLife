@@ -55,7 +55,7 @@ class ServiceChildViewController: BaseViewController {
     // MARK: - private
     private func setupTableFooterView() {
 
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 60))
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 60))
         let playBtn = UIButton(type: .custom)
         playBtn.setTitle("播放", for: .normal)
         playBtn.backgroundColor = .global
@@ -66,7 +66,7 @@ class ServiceChildViewController: BaseViewController {
         playBtn.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.size.equalTo(CGSize(width: kScreenWidth - 30, height: 36))
+            make.size.equalTo(CGSize(width: UIScreen.width - 30, height: 36))
         }
         tableView.tableFooterView = footerView
     }
@@ -142,7 +142,7 @@ extension ServiceChildViewController: UITableViewDelegate {
         case 1:
             return 200
         case 2:
-            return kScreenWidth / 2 - 20
+            return UIScreen.width / 2 - 20
         default:
             return 200
         }
