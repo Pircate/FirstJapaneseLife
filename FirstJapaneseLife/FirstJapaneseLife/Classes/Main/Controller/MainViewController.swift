@@ -11,23 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
     
     lazy var facilityButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.layer.cornerRadius = 5
-        btn.layer.masksToBounds = true
-        btn.backgroundColor = .global
-        btn.setTitle("施設", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
+        let btn = GlobalButton(title: "施設")
         btn.addTarget(self, action: #selector(facilityButtonAction), for: .touchUpInside)
         return btn
     }()
     
     lazy var serviceButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.layer.cornerRadius = 5
-        btn.layer.masksToBounds = true
-        btn.backgroundColor = .global
-        btn.setTitle("サービス", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
+        let btn = GlobalButton(title: "サービス")
         btn.addTarget(self, action: #selector(serviceButtonAction), for: .touchUpInside)
         return btn
     }()

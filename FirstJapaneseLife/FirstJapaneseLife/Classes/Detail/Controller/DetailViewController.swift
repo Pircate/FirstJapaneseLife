@@ -103,7 +103,7 @@ extension DetailViewController: UITableViewDataSource {
             return cell
         default:
             let cell: DetailMapCell = tableView.dequeueReusableCell(withIdentifier: "DetailMapCell") as! DetailMapCell
-            cell.address = "上海市松江区九亭镇盛富公寓"
+            cell.address = "日本埼玉县南埼玉郡宫代町学园台"
             return cell
         }
     }
@@ -129,10 +129,10 @@ extension DetailViewController: UITableViewDelegate {
         case 0:
             return 180
         case 1:
-            if indexPath.row > 0 {
-                return 44
+            guard indexPath.row > 0 else {
+                return 54
             }
-            return 54
+            return 44
         default:
             return 240
         }

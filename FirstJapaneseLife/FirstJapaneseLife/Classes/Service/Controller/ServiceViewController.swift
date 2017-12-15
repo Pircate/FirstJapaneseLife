@@ -77,9 +77,20 @@ extension ServiceViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let serviceChildVC = ServiceChildViewController()
-        serviceChildVC.serviceIndex = indexPath.row
-        serviceChildVC.ay_navigationItem.title = serviceList[indexPath.row]
-        navigationController?.pushViewController(serviceChildVC, animated: true)
+        switch indexPath.row {
+        case 10:
+            let serviceStudentVC = ServiceStudentViewController()
+            serviceStudentVC.ay_navigationItem.title = serviceList[indexPath.row]
+            navigationController?.pushViewController(serviceStudentVC, animated: true)
+        case 11:
+            let serviceWorkVC = ServiceWorkViewController()
+            serviceWorkVC.ay_navigationItem.title = serviceList[indexPath.row]
+            navigationController?.pushViewController(serviceWorkVC, animated: true)
+        default:
+            let serviceChildVC = ServiceChildViewController()
+            serviceChildVC.serviceIndex = indexPath.row
+            serviceChildVC.ay_navigationItem.title = serviceList[indexPath.row]
+            navigationController?.pushViewController(serviceChildVC, animated: true)
+        }
     }
 }

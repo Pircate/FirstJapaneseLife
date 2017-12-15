@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461589411FE3C71000FB1895 /* ServiceStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */; };
+		461589431FE3C72F00FB1895 /* ServiceWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */; };
+		461589451FE3CAAD00FB1895 /* GlobalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589441FE3CAAD00FB1895 /* GlobalButton.swift */; };
 		462919AC1FE204800031D642 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AB1FE204800031D642 /* WebViewController.swift */; };
 		462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AD1FE204920031D642 /* UIViewControllerExtension.swift */; };
 		462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B61FE219AA0031D642 /* TabMenuCell.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.debug.xcconfig"; sourceTree = "<group>"; };
 		22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.release.xcconfig"; sourceTree = "<group>"; };
+		461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStudentViewController.swift; sourceTree = "<group>"; };
+		461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWorkViewController.swift; sourceTree = "<group>"; };
+		461589441FE3CAAD00FB1895 /* GlobalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalButton.swift; sourceTree = "<group>"; };
 		462919AB1FE204800031D642 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		462919AD1FE204920031D642 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		462919B61FE219AA0031D642 /* TabMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuCell.swift; sourceTree = "<group>"; };
@@ -274,6 +280,7 @@
 			children = (
 				B5126B3D1FE13EF8002E2F67 /* BaseViewController.swift */,
 				468A18781FE256A300929D27 /* TitleHeaderView.swift */,
+				461589441FE3CAAD00FB1895 /* GlobalButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 			children = (
 				B5F82D621FE18443004B925E /* ServiceChildViewController.swift */,
 				B5126B491FE141EA002E2F67 /* ServiceViewController.swift */,
+				461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */,
+				461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -599,11 +608,14 @@
 				468A187B1FE26DE400929D27 /* ServiceChildListCell.swift in Sources */,
 				468A18831FE281BD00929D27 /* LanguageManager.swift in Sources */,
 				B5126B401FE13F01002E2F67 /* MainViewController.swift in Sources */,
+				461589431FE3C72F00FB1895 /* ServiceWorkViewController.swift in Sources */,
 				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
 				B50EC6091FE2AA1B00EEBE91 /* AppDelegate.swift in Sources */,
+				461589411FE3C71000FB1895 /* ServiceStudentViewController.swift in Sources */,
 				468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */,
 				468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */,
 				462919CF1FE24C1F0031D642 /* DetailViewController.swift in Sources */,
+				461589451FE3CAAD00FB1895 /* GlobalButton.swift in Sources */,
 				468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */,
 				462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */,
 				462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */,

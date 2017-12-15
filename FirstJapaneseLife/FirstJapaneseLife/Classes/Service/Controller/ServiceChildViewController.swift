@@ -56,11 +56,7 @@ class ServiceChildViewController: BaseViewController {
     private func setupTableFooterView() {
 
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 60))
-        let playBtn = UIButton(type: .custom)
-        playBtn.setTitle("播放", for: .normal)
-        playBtn.backgroundColor = .global
-        playBtn.layer.cornerRadius = 5
-        playBtn.layer.masksToBounds = true
+        let playBtn = GlobalButton(title: "播放")
         playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         footerView.addSubview(playBtn)
         playBtn.snp.makeConstraints { (make) in
