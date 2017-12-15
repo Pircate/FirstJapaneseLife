@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
-import MapKit
+import Agrume
 
 class DetailViewController: BaseViewController {
 
@@ -16,6 +15,7 @@ class DetailViewController: BaseViewController {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -53,7 +53,19 @@ class DetailViewController: BaseViewController {
     private func setupTableHeaderView() {
         let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 240))
         headerView.image = UIImage(named: "detail_header")
+        headerView.isUserInteractionEnabled = true
         tableView.tableHeaderView = headerView
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureAction(sender:)))
+        headerView.addGestureRecognizer(tapGesture)
+    }
+
+    // MARK: - action
+    @objc private func tapGestureAction(sender: UITapGestureRecognizer) {
+        let imgView = sender.view as? UIImageView
+        if let image = imgView?.image {
+            let agrume = Agrume(image: image, backgroundBlurStyle: .dark)
+            agrume.showFrom(self)
+        }
     }
 }
 
@@ -91,19 +103,7 @@ extension DetailViewController: UITableViewDataSource {
             return cell
         default:
             let cell: DetailMapCell = tableView.dequeueReusableCell(withIdentifier: "DetailMapCell") as! DetailMapCell
-            CLGeocoder().geocodeAddressString("埼玉県南埼玉郡宫代町学园台", completionHandler: { (placemarks, error) in
-                if let marks = placemarks {
-                    if marks.count > 0 {
-                        let placemark = marks.first
-                        if let coordinate = placemark?.location?.coordinate {
-                            let annotation = MKPointAnnotation()
-                            annotation.coordinate = coordinate
-                            cell.mapView.showAnnotations([annotation], animated: true)
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            })
+            cell.address = "上海市松江区九亭镇盛富公寓"
             return cell
         }
     }
