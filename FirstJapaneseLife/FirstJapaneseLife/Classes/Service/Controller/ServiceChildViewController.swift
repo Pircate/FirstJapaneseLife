@@ -108,6 +108,7 @@ extension ServiceChildViewController: UITableViewDataSource {
             cell.images = images
             cell.didSelectItemHandler = { (index) in
                 let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
+                agrume.statusBarStyle = .lightContent
                 agrume.showFrom(self)
             }
             return cell

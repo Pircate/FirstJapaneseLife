@@ -74,6 +74,7 @@ class DetailViewController: BaseViewController {
         let imgView = sender.view as? UIImageView
         if let image = imgView?.image {
             let agrume = Agrume(image: image, backgroundBlurStyle: .dark)
+            agrume.statusBarStyle = .lightContent
             agrume.showFrom(self)
         }
     }
