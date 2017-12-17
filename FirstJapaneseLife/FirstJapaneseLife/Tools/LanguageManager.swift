@@ -21,11 +21,12 @@ class LanguageManager {
             return UserDefaults.standard.bool(forKey: kIsJapaneseKey)
         }
         set {
-            if isJapanese != newValue {
-                NotificationCenter.default.post(name: NSNotification.Name(kLanguageWillChangeNotification), object: nil)
-            }
+            let oldValue = isJapanese
             UserDefaults.standard.set(newValue, forKey: kIsJapaneseKey)
             UserDefaults.standard.synchronize()
+            if oldValue != newValue {
+                NotificationCenter.default.post(name: NSNotification.Name(kLanguageWillChangeNotification), object: nil)
+            }
         }
     }
 }

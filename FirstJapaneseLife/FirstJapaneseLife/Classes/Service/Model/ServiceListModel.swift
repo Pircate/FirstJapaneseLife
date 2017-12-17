@@ -9,15 +9,6 @@
 import Foundation
 import HandyJSON
 
-struct ServiceChildModel: HandyJSON {
-    var lid: String?
-    var name: String? {
-        return LanguageManager.shared.isJapanese ? jname : cname
-    }
-    var cname: String?
-    var jname: String?
-}
-
 struct ServiceListModel: HandyJSON {
     var sid: String?
     var name: String? {
@@ -36,6 +27,6 @@ struct ServiceListModel: HandyJSON {
     }
     var cchat: String?
     var jchat: String?
-    var list = [ServiceChildModel]()
+    var list = [DetailModel]()
     
 }

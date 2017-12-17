@@ -24,11 +24,14 @@ class DetailViewController: BaseViewController {
         tableView.register(DetailAddressCell.self, forCellReuseIdentifier: "DetailAddressCell")
         return tableView
     }()
+    
+    var detailModel = DetailModel()
 
     // MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ay_navigationItem.title = detailModel.name
         disableAdjustsScrollViewInsets(tableView)
         ay_navigationBar.alpha = 0
 
@@ -38,6 +41,10 @@ class DetailViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func languageWillChange(sender: Notification) {
+        ay_navigationItem.title = detailModel.name
     }
 
     // MARK: - private

@@ -134,7 +134,7 @@ extension ServiceChildViewController: UITableViewDelegate {
         }
         let detailVC = DetailViewController()
         let model = serviceModel.list[indexPath.row]
-        detailVC.ay_navigationItem.title = model.name
+        detailVC.detailModel = model
         navigationController?.pushViewController(detailVC, animated: true)
     }
 

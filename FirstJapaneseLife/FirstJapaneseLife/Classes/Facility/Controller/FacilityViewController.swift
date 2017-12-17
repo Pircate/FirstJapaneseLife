@@ -135,7 +135,7 @@ extension FacilityViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         let model = dataSource[indexPath.section].list[indexPath.item]
-        detailVC.ay_navigationItem.title = model.name
+        detailVC.detailModel = model
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
