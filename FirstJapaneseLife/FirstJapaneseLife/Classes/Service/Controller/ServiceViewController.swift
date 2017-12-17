@@ -67,7 +67,6 @@ class ServiceViewController: BaseViewController {
                 dataSource = [ServiceListModel].deserialize(from: result) as! [ServiceListModel]
                 tableView.reloadData()
             }
-            
         } catch {}
     }
 }

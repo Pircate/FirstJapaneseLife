@@ -45,6 +45,7 @@ class DetailViewController: BaseViewController {
     
     override func languageWillChange(sender: Notification) {
         ay_navigationItem.title = detailModel.name
+        tableView.reloadData()
     }
 
     // MARK: - private
@@ -59,7 +60,9 @@ class DetailViewController: BaseViewController {
 
     private func setupTableHeaderView() {
         let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 240))
-        headerView.image = UIImage(named: "detail_header")
+        if let name = detailModel.image {
+            headerView.image = UIImage(named: name)
+        }
         headerView.isUserInteractionEnabled = true
         tableView.tableHeaderView = headerView
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureAction(sender:)))
@@ -97,20 +100,23 @@ extension DetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell: ServiceChildTextCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildTextCell") as! ServiceChildTextCell
-            cell.textView.text = """
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            """
+            cell.textView.text = detailModel.desc
             return cell
         case 1:
             let cell: DetailAddressCell = tableView.dequeueReusableCell(withIdentifier: "DetailAddressCell") as! DetailAddressCell
             cell.leftLabel.text = ["地址", "电话", "营业时间"][indexPath.row]
-            cell.rightLabel.text = ["日本埼玉县南埼玉郡宫代町学园台4-1\n256465", "45646622", "9:00-18:00"][indexPath.row]
+            switch indexPath.row {
+            case 0:
+                cell.rightLabel.text = detailModel.address
+            case 1:
+                cell.rightLabel.text = detailModel.telphone
+            default:
+                cell.rightLabel.text = detailModel.open_time
+            }
             return cell
         default:
             let cell: DetailMapCell = tableView.dequeueReusableCell(withIdentifier: "DetailMapCell") as! DetailMapCell
-            cell.address = "日本埼玉县南埼玉郡宫代町学园台"
+            cell.address = detailModel.jaddress
             return cell
         }
     }

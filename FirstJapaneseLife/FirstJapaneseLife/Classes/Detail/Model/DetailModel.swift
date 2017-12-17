@@ -16,4 +16,17 @@ struct DetailModel: HandyJSON {
     }
     var cname: String?
     var jname: String?
+    var image: String?
+    var desc: String? {
+        return LanguageManager.shared.isJapanese ? jdesc : cdesc
+    }
+    var cdesc: String?
+    var jdesc: String?
+    var address: String? {
+        return LanguageManager.shared.isJapanese ? jaddress : caddress
+    }
+    var caddress: String?
+    var jaddress: String?
+    var telphone: String?
+    var open_time: String?
 }
