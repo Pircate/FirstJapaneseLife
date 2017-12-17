@@ -14,7 +14,6 @@
 		462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AD1FE204920031D642 /* UIViewControllerExtension.swift */; };
 		462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B61FE219AA0031D642 /* TabMenuCell.swift */; };
 		462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B71FE219AA0031D642 /* TabMenuView.swift */; };
-		462919BB1FE21A160031D642 /* FacilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BA1FE21A160031D642 /* FacilityData.swift */; };
 		462919BD1FE21D840031D642 /* FacilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BC1FE21D840031D642 /* FacilityListCell.swift */; };
 		462919BF1FE2235B0031D642 /* FacilityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919BE1FE2235B0031D642 /* FacilityHeaderView.swift */; };
 		462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */; };
@@ -41,6 +40,8 @@
 		B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5126B531FE14978002E2F67 /* ServiceListCell.swift */; };
 		B57147151FE68D3100E193A3 /* ServiceData.json in Resources */ = {isa = PBXBuildFile; fileRef = B57147141FE68D3100E193A3 /* ServiceData.json */; };
 		B57147171FE68D6100E193A3 /* ServiceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57147161FE68D6100E193A3 /* ServiceListModel.swift */; };
+		B571471B1FE69ADE00E193A3 /* FacilityData.json in Resources */ = {isa = PBXBuildFile; fileRef = B571471A1FE69ADE00E193A3 /* FacilityData.json */; };
+		B571471D1FE69EC600E193A3 /* FacilityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571471C1FE69EC600E193A3 /* FacilityListModel.swift */; };
 		B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D601FE180DD004B925E /* UIColorExtension.swift */; };
 		B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D621FE18443004B925E /* ServiceChildViewController.swift */; };
 		B5F82D661FE18FE9004B925E /* VoiceSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */; };
@@ -73,7 +74,6 @@
 		462919AD1FE204920031D642 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		462919B61FE219AA0031D642 /* TabMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuCell.swift; sourceTree = "<group>"; };
 		462919B71FE219AA0031D642 /* TabMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
-		462919BA1FE21A160031D642 /* FacilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityData.swift; sourceTree = "<group>"; };
 		462919BC1FE21D840031D642 /* FacilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityListCell.swift; sourceTree = "<group>"; };
 		462919BE1FE2235B0031D642 /* FacilityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityHeaderView.swift; sourceTree = "<group>"; };
 		462919C01FE22EB70031D642 /* ServiceChildReadyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildReadyCell.swift; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 		B5126B531FE14978002E2F67 /* ServiceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
 		B57147141FE68D3100E193A3 /* ServiceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServiceData.json; sourceTree = "<group>"; };
 		B57147161FE68D6100E193A3 /* ServiceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListModel.swift; sourceTree = "<group>"; };
+		B571471A1FE69ADE00E193A3 /* FacilityData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FacilityData.json; sourceTree = "<group>"; };
+		B571471C1FE69EC600E193A3 /* FacilityListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityListModel.swift; sourceTree = "<group>"; };
 		B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstJapaneseLife-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5F82D601FE180DD004B925E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B5F82D621FE18443004B925E /* ServiceChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildViewController.swift; sourceTree = "<group>"; };
@@ -145,14 +147,6 @@
 				22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		462919B41FE219880031D642 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				462919BA1FE21A160031D642 /* FacilityData.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		462919B51FE219AA0031D642 /* Views */ = {
@@ -315,7 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				B5126B421FE141C6002E2F67 /* Controller */,
-				462919B41FE219880031D642 /* Data */,
+				B57147191FE69AB400E193A3 /* Model */,
+				B57147181FE69AB400E193A3 /* Resource */,
 				462919B51FE219AA0031D642 /* Views */,
 			);
 			path = Facility;
@@ -377,6 +372,22 @@
 				B57147141FE68D3100E193A3 /* ServiceData.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B57147181FE69AB400E193A3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B571471A1FE69ADE00E193A3 /* FacilityData.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B57147191FE69AB400E193A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B571471C1FE69EC600E193A3 /* FacilityListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B5F82D5F1FE180C5004B925E /* Extension */ = {
@@ -517,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B571471B1FE69ADE00E193A3 /* FacilityData.json in Resources */,
 				B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */,
 				B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */,
 				B57147151FE68D3100E193A3 /* ServiceData.json in Resources */,
@@ -631,13 +643,13 @@
 				B50EC6071FE294CB00EEBE91 /* LocalizableString.swift in Sources */,
 				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
+				B571471D1FE69EC600E193A3 /* FacilityListModel.swift in Sources */,
 				462919AC1FE204800031D642 /* WebViewController.swift in Sources */,
 				462919C31FE230560031D642 /* ReadyPictureCell.swift in Sources */,
 				462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,
 				462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */,
 				462CFC8C1FE36B80003048AB /* UIScreenExtension.swift in Sources */,
-				462919BB1FE21A160031D642 /* FacilityData.swift in Sources */,
 				B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */,
 				462919BF1FE2235B0031D642 /* FacilityHeaderView.swift in Sources */,
 				462919BD1FE21D840031D642 /* FacilityListCell.swift in Sources */,

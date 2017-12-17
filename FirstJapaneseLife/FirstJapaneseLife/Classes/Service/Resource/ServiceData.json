@@ -299,13 +299,13 @@
  "list": [
           {
           "lid": 1,
-          "cname": "卡拉OK BOX舞台MAX",
-          "jname": "カラオケボックス"
+          "cname": "今井病院",
+          "jname": "今井病院"
           },
           {
           "lid": 2,
-          "cname": "Big ball",
-          "jname": "Big ball"
+          "cname": "东埼玉综合病院",
+          "jname": "東埼玉総合病院"
           }
           ]
  },

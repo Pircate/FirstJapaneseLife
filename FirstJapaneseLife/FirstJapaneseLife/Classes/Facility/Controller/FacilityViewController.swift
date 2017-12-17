@@ -11,7 +11,7 @@ import UIKit
 class FacilityViewController: BaseViewController {
 
     lazy var tabMenuView: TabMenuView = {
-        let menu = TabMenuView(titles: facilityList)
+        let menu = TabMenuView(titles: titles)
         menu.didSelectItemHandler = { [weak self] (index) in
             let indexPath = IndexPath(item: 0, section: index)
             self?.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
@@ -33,13 +33,15 @@ class FacilityViewController: BaseViewController {
         return collectionView
     }()
     
-    var facilityList: [String] {
-        return LanguageManager.shared.isJapanese ? FacilityData.jFacilityList : FacilityData.facilityList
-    }
+    lazy var dataSource: [FacilityListModel] = {
+        let dataSource = [FacilityListModel]()
+        return dataSource
+    }()
     
-    var allFacilityList: [[String]] {
-        return LanguageManager.shared.isJapanese ? FacilityData.jAllList : FacilityData.allList
-    }
+    lazy var titles: [String] = {
+        let titles = ["学校", "银行", "房屋中介", "办事处", "手机营业厅", "超市", "便利店", "饮食", "医院", "娱乐", "ATM"]
+        return titles
+    }()
 
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -49,6 +51,7 @@ class FacilityViewController: BaseViewController {
         
         addSubviews()
         disableAdjustsScrollViewInsets(collectionView)
+        loadFacilityData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,28 +88,43 @@ class FacilityViewController: BaseViewController {
             make.left.bottom.right.equalToSuperview()
         }
     }
+    
+    private func loadFacilityData() {
+        let path = Bundle.main.path(forResource: "FacilityData", ofType: "json")
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            let result = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            if let result = result as? [Any] {
+                dataSource = [FacilityListModel].deserialize(from: result) as! [FacilityListModel]
+                collectionView.reloadData()
+            }
+            
+        } catch {}
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 extension FacilityViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return facilityList.count
+        return dataSource.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allFacilityList[section].count
+        return dataSource[section].list.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FacilityListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacilityListCell", for: indexPath) as! FacilityListCell
-        cell.titleLabel.text = allFacilityList[indexPath.section][indexPath.item]
+        let model = dataSource[indexPath.section].list[indexPath.item]
+        cell.titleLabel.text = model.name
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header: FacilityHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView", for: indexPath) as! FacilityHeaderView
-        header.titleLabel.text = facilityList[indexPath.section]
+        let model = dataSource[indexPath.section]
+        header.titleLabel.text = model.name
         return header
     }
 }
@@ -116,7 +134,8 @@ extension FacilityViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
-        detailVC.ay_navigationItem.title = allFacilityList[indexPath.section][indexPath.item]
+        let model = dataSource[indexPath.section].list[indexPath.item]
+        detailVC.ay_navigationItem.title = model.name
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

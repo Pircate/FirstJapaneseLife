@@ -1,0 +1,285 @@
+[
+ {
+ "sid": 1,
+ "cname": "学校",
+ "jname": "学校",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "日本工业大学",
+          "jname": "日本工業大学"
+          }
+          ]
+ },
+ {
+ "sid": 2,
+ "cname": "银行",
+ "jname": "銀行",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "邮储银行",
+          "jname": "郵便銀行"
+          },
+          {
+          "lid": 2,
+          "cname": "埼玉Resona银行",
+          "jname": "埼玉系銀行"
+          }
+          ]
+ },
+ {
+ "sid": 3,
+ "cname": "房屋中介",
+ "jname": "家屋ブローカー",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "东洋不动产",
+          "jname": "東洋不動産"
+          },
+          {
+          "lid": 2,
+          "cname": "铃建房屋有限公司",
+          "jname": "ベル建設有限会社"
+          },
+          {
+          "lid": 3,
+          "cname": "MAST三幸房产有限公司",
+          "jname": "MAST三幸不動産有限公司"
+          }
+          ]
+ },
+ {
+ "sid": 4,
+ "cname": "办事处",
+ "jname": "事務所",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "宫代町办事处",
+          "jname": "宮代町事務所"
+          }
+          ]
+ },
+ {
+ "sid": 5,
+ "cname": "手机营业厅",
+ "jname": "携帯電話営業店",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "Softbank",
+          "jname": "Softbank"
+          },
+          {
+          "lid": 2,
+          "cname": "au",
+          "jname": "au"
+          }
+          ]
+ },
+ {
+ "sid": 6,
+ "cname": "超市",
+ "jname": "スーパー",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "Giga市场",
+          "jname": "Giga市場"
+          },
+          {
+          "lid": 2,
+          "cname": "Kasumi",
+          "jname": "Kasumi"
+          },
+          {
+          "lid": 3,
+          "cname": "Belx",
+          "jname": "Belx"
+          },
+          {
+          "lid": 4,
+          "cname": "Aoki青木",
+          "jname": "Aoki青木"
+          },
+          {
+          "lid": 5,
+          "cname": "Seki",
+          "jname": "Seki"
+          },
+          {
+          "lid": 6,
+          "cname": "Cainz Home",
+          "jname": "Cainz Home"
+          }
+          ]
+ },
+ {
+ "sid": 7,
+ "cname": "便利店",
+ "jname": "コンビニ",
+ "list": [
+          {
+          "lid": 7,
+          "cname": "7-11",
+          "jname": "7-11"
+          },
+          {
+          "lid": 8,
+          "cname": "全家",
+          "jname": "全家"
+          },
+          {
+          "lid": 9,
+          "cname": "罗森",
+          "jname": "ローソン"
+          }
+          ]
+ },
+ {
+ "sid": 8,
+ "cname": "饮食",
+ "jname": "食",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "台湾料理阿福",
+          "jname": "台湾料理と料理"
+          },
+          {
+          "lid": 2,
+          "cname": "中华料理龙盛房",
+          "jname": "中華料理竜盛房"
+          },
+          {
+          "lid": 3,
+          "cname": "中华料理一心",
+          "jname": "中華料理の一心"
+          },
+          {
+          "lid": 4,
+          "cname": "肉便当",
+          "jname": "肉弁当"
+          },
+          {
+          "lid": 5,
+          "cname": "中华料理王家",
+          "jname": "中華料理の王家"
+          },
+          {
+          "lid": 6,
+          "cname": "鱼民",
+          "jname": "魚民"
+          },
+          {
+          "lid": 7,
+          "cname": "Krumaya拉面",
+          "jname": "Krumayaラーメン"
+          },
+          {
+          "lid": 8,
+          "cname": "中华料理日高屋",
+          "jname": "中華料理の日高屋"
+          },
+          {
+          "lid": 9,
+          "cname": "乐天利",
+          "jname": "ロッテ・リー"
+          },
+          {
+          "lid": 10,
+          "cname": "Echigoya",
+          "jname": "Echigoya"
+          },
+          {
+          "lid": 11,
+          "cname": "面屋 彬",
+          "jname": "ビンビン"
+          },
+          {
+          "lid": 12,
+          "cname": "萨莉亚",
+          "jname": "サリア"
+          },
+          {
+          "lid": 13,
+          "cname": "温野菜",
+          "jname": "山菜"
+          }
+          ]
+ },
+ {
+ "sid": 9,
+ "cname": "医院",
+ "jname": "病院",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "今井病院",
+          "jname": "今井病院"
+          },
+          {
+          "lid": 2,
+          "cname": "东埼玉综合病院",
+          "jname": "東埼玉総合病院"
+          }
+          ]
+ },
+ {
+ "sid": 10,
+ "cname": "娱乐",
+ "jname": "娯楽",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "卡拉OK BOX舞台MAX",
+          "jname": "カラオケボックス"
+          },
+          {
+          "lid": 2,
+          "cname": "Big ball",
+          "jname": "Big ball"
+          }
+          ]
+ },
+ {
+ "sid": 11,
+ "cname": "ATM",
+ "jname": "ATM",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "埼玉Resona银行ATM",
+          "jname": "埼玉系銀行ATM"
+          },
+          {
+          "lid": 2,
+          "cname": "邮储银行ATM",
+          "jname": "郵便銀行ATM"
+          },
+          {
+          "lid": 3,
+          "cname": "Seven银行ATM",
+          "jname": "Seven銀行ATM"
+          },
+          {
+          "lid": 4,
+          "cname": "全家ATM",
+          "jname": "全家ATM"
+          },
+          {
+          "lid": 5,
+          "cname": "罗森ATM",
+          "jname": "ローソンATM"
+          },
+          {
+          "lid": 6,
+          "cname": "E.net",
+          "jname": "E.net"
+          }
+          ]
+ }
+ ]
+
