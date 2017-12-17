@@ -1,0 +1,274 @@
+ [
+  {
+  "sid": 1,
+  "name": "租房",
+  "jname": "借家",
+  "list": [
+           {
+           "lid": 1,
+           "name": "东洋不动产",
+           "jname": "東洋不動産"
+           },
+           {
+           "lid": 2,
+           "name": "铃建房屋有限公司",
+           "jname": "ベル建設有限会社"
+           },
+           {
+           "lid": 3,
+           "name": "MAST三幸房产有限公司",
+           "jname": "MAST三幸不動産有限公司"
+           }
+           ]
+  },
+  {
+  "sid": 2,
+  "name": "住民登录及国民健康保险加入",
+  "jname": "住民登録や国民健康保険加入",
+  "list": [
+           {
+           "lid": 1,
+           "name": "宫代町办事处",
+           "jname": "宮代町事務所"
+           }
+           ]
+  },
+  {
+  "sid": 3,
+  "name": "开设银行户头",
+  "jname": "銀行口座を開設する",
+  "list": [
+           {
+           "lid": 1,
+           "name": "邮储银行",
+           "jname": "郵便銀行"
+           },
+           {
+           "lid": 2,
+           "name": "埼玉Resona银行",
+           "jname": "埼玉系銀行"
+           }
+           ]
+  },
+  {
+  "sid": 4,
+  "name": "购买手机",
+  "jname": "携帯電話を買う",
+  "list": [
+           {
+           "lid": 1,
+           "name": "Softbank",
+           "jname": "Softbank"
+           },
+           {
+           "lid": 2,
+           "name": "au",
+           "jname": "au"
+           }
+           ]
+  },
+  {
+  "sid": 5,
+  "name": "自行车相关",
+  "jname": "自転車関連",
+  "list": [
+           {
+           "lid": 1,
+           "name": "Giga市场",
+           "jname": "Giga市場"
+           }
+           ]
+  },
+  {
+  "sid": 6,
+  "name": "购物",
+  "jname": "ショッピング",
+  "list": [
+           {
+           "lid": 1,
+           "name": "Giga市场",
+           "jname": "Giga市場"
+           },
+           {
+           "lid": 2,
+           "name": "Kasumi",
+           "jname": "Kasumi"
+           },
+           {
+           "lid": 3,
+           "name": "Belx",
+           "jname": "Belx"
+           },
+           {
+           "lid": 4,
+           "name": "Aoki青木",
+           "jname": "Aoki青木"
+           },
+           {
+           "lid": 5,
+           "name": "Seki",
+           "jname": "Seki"
+           },
+           {
+           "lid": 6,
+           "name": "Cainz Home",
+           "jname": "Cainz Home"
+           },
+           {
+           "lid": 7,
+           "name": "7-11",
+           "jname": "7-11"
+           },
+           {
+           "lid": 8,
+           "name": "全家",
+           "jname": "全家"
+           },
+           {
+           "lid": 9,
+           "name": "罗森",
+           "jname": "ローソン"
+           }
+           ]
+ },
+ {
+ "sid": 7,
+ "name": "吃饭",
+ "jname": "食事",
+ "list": [
+          {
+          "lid": 1,
+          "name": "台湾料理阿福",
+          "jname": "台湾料理と料理"
+          },
+          {
+          "lid": 2,
+          "name": "中华料理龙盛房",
+          "jname": "中華料理竜盛房"
+          },
+          {
+          "lid": 3,
+          "name": "中华料理一心",
+          "jname": "中華料理の一心"
+          },
+          {
+          "lid": 4,
+          "name": "肉便当",
+          "jname": "肉弁当"
+          },
+          {
+          "lid": 5,
+          "name": "中华料理王家",
+          "jname": "中華料理の王家"
+          },
+          {
+          "lid": 6,
+          "name": "鱼民",
+          "jname": "魚民"
+          },
+          {
+          "lid": 7,
+          "name": "Krumaya拉面",
+          "jname": "Krumayaラーメン"
+          },
+          {
+          "lid": 8,
+          "name": "中华料理日高屋",
+          "jname": "中華料理の日高屋"
+          },
+          {
+          "lid": 9,
+          "name": "乐天利",
+          "jname": "ロッテ・リー"
+          },
+          {
+          "lid": 10,
+          "name": "Echigoya",
+          "jname": "Echigoya"
+          },
+          {
+          "lid": 11,
+          "name": "面屋 彬",
+          "jname": "ビンビン"
+          },
+          {
+          "lid": 12,
+          "name": "萨莉亚",
+          "jname": "サリア"
+          },
+          {
+          "lid": 13,
+          "name": "温野菜",
+          "jname": "山菜"
+          }
+          ]
+ },
+ {
+ "sid": 8,
+ "name": "娱乐",
+ "jname": "娯楽",
+ "list": [
+          {
+          "lid": 1,
+          "name": "卡拉OK BOX舞台MAX",
+          "jname": "カラオケボックス"
+          },
+          {
+          "lid": 2,
+          "name": "Big ball",
+          "jname": "Big ball"
+          }
+          ]
+ },
+ {
+ "sid": 9,
+ "name": "支付各项费用",
+ "jname": "諸費用を支払う",
+ "list": [
+          {
+          "lid": 1,
+          "name": "7-11",
+          "jname": "7-11"
+          },
+          {
+          "lid": 2,
+          "name": "全家",
+          "jname": "全家"
+          },
+          {
+          "lid": 3,
+          "name": "罗森",
+          "jname": "ローソン"
+          }
+          ]
+ },
+ {
+ "sid": 10,
+ "name": "生病时",
+ "jname": "病気の時",
+ "list": [
+          {
+          "lid": 1,
+          "name": "卡拉OK BOX舞台MAX",
+          "jname": "カラオケボックス"
+          },
+          {
+          "lid": 2,
+          "name": "Big ball",
+          "jname": "Big ball"
+          }
+          ]
+ },
+ {
+ "sid": 11,
+ "name": "作为学生",
+ "jname": "学生として",
+ "list": []
+ },
+ {
+ "sid": 12,
+ "name": "想要打工",
+ "jname": "アルバイトがしたい",
+ "list": []
+ }
+  ]
