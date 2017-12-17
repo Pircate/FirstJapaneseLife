@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import HandyJSON
 
 class ServiceViewController: BaseViewController {
     
@@ -25,9 +26,10 @@ class ServiceViewController: BaseViewController {
         return tableView
     }()
     
-    var serviceList: [String] {
-        return LanguageManager.shared.isJapanese ? ServiceData.jServiceList : ServiceData.serviceList
-    }
+    lazy var dataSource: [ServiceListModel] = {
+        let dataSource = [ServiceListModel]()
+        return dataSource
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class ServiceViewController: BaseViewController {
         ay_navigationItem.title = "サービス"
         addSubviews()
         disableAdjustsScrollViewInsets(tableView)
+        loadServiceData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,19 +57,33 @@ class ServiceViewController: BaseViewController {
             make.left.bottom.right.equalToSuperview()
         }
     }
+    
+    private func loadServiceData() {
+        let path = Bundle.main.path(forResource: "ServiceData", ofType: "json")
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            let result = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            if let result = result as? [Any] {
+                dataSource = [ServiceListModel].deserialize(from: result) as! [ServiceListModel]
+                tableView.reloadData()
+            }
+            
+        } catch {}
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension ServiceViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return serviceList.count
+        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ServiceListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceListCell") as! ServiceListCell
         cell.iconView.image = UIImage(named: "service_icon_\(indexPath.row)")
-        cell.titleLabel.text = serviceList[indexPath.row]
+        let model = dataSource[indexPath.row]
+        cell.titleLabel.text = model.name
         return cell
     }
 }
@@ -77,19 +94,20 @@ extension ServiceViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
+        let model = dataSource[indexPath.row]
         switch indexPath.row {
         case 10:
             let serviceStudentVC = ServiceStudentViewController()
-            serviceStudentVC.ay_navigationItem.title = serviceList[indexPath.row]
+            serviceStudentVC.ay_navigationItem.title = model.name
             navigationController?.pushViewController(serviceStudentVC, animated: true)
         case 11:
             let serviceWorkVC = ServiceWorkViewController()
-            serviceWorkVC.ay_navigationItem.title = serviceList[indexPath.row]
+            serviceWorkVC.ay_navigationItem.title = model.name
             navigationController?.pushViewController(serviceWorkVC, animated: true)
         default:
             let serviceChildVC = ServiceChildViewController()
-            serviceChildVC.serviceIndex = indexPath.row
-            serviceChildVC.ay_navigationItem.title = serviceList[indexPath.row]
+            serviceChildVC.serviceModel = model
+            serviceChildVC.ay_navigationItem.title = model.name
             navigationController?.pushViewController(serviceChildVC, animated: true)
         }
     }

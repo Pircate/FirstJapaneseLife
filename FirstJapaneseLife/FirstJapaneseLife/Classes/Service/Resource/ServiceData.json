@@ -1,0 +1,324 @@
+ [
+  {
+  "sid": 1,
+  "cname": "租房",
+  "jname": "借家",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "东洋不动产",
+           "jname": "東洋不動産"
+           },
+           {
+           "lid": 2,
+           "cname": "铃建房屋有限公司",
+           "jname": "ベル建設有限会社"
+           },
+           {
+           "lid": 3,
+           "cname": "MAST三幸房产有限公司",
+           "jname": "MAST三幸不動産有限公司"
+           }
+           ]
+  },
+  {
+  "sid": 2,
+  "cname": "住民登录及国民健康保险加入",
+  "jname": "住民登録や国民健康保険加入",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "宫代町办事处",
+           "jname": "宮代町事務所"
+           }
+           ]
+  },
+  {
+  "sid": 3,
+  "cname": "开设银行户头",
+  "jname": "銀行口座を開設する",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "邮储银行",
+           "jname": "郵便銀行"
+           },
+           {
+           "lid": 2,
+           "cname": "埼玉Resona银行",
+           "jname": "埼玉系銀行"
+           }
+           ]
+  },
+  {
+  "sid": 4,
+  "cname": "购买手机",
+  "jname": "携帯電話を買う",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "Softbank",
+           "jname": "Softbank"
+           },
+           {
+           "lid": 2,
+           "cname": "au",
+           "jname": "au"
+           }
+           ]
+  },
+  {
+  "sid": 5,
+  "cname": "自行车相关",
+  "jname": "自転車関連",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "Giga市场",
+           "jname": "Giga市場"
+           }
+           ]
+  },
+  {
+  "sid": 6,
+  "cname": "购物",
+  "jname": "ショッピング",
+  "cflow": "第一次的日本生活",
+  "jflow": "初めての日本生活",
+  "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+  "cchat": "第一次的日本生活",
+  "jchat": "第一次的日本生活",
+  "list": [
+           {
+           "lid": 1,
+           "cname": "Giga市场",
+           "jname": "Giga市場"
+           },
+           {
+           "lid": 2,
+           "cname": "Kasumi",
+           "jname": "Kasumi"
+           },
+           {
+           "lid": 3,
+           "cname": "Belx",
+           "jname": "Belx"
+           },
+           {
+           "lid": 4,
+           "cname": "Aoki青木",
+           "jname": "Aoki青木"
+           },
+           {
+           "lid": 5,
+           "cname": "Seki",
+           "jname": "Seki"
+           },
+           {
+           "lid": 6,
+           "cname": "Cainz Home",
+           "jname": "Cainz Home"
+           },
+           {
+           "lid": 7,
+           "cname": "7-11",
+           "jname": "7-11"
+           },
+           {
+           "lid": 8,
+           "cname": "全家",
+           "jname": "全家"
+           },
+           {
+           "lid": 9,
+           "cname": "罗森",
+           "jname": "ローソン"
+           }
+           ]
+ },
+ {
+ "sid": 7,
+ "cname": "吃饭",
+ "jname": "食事",
+ "cflow": "第一次的日本生活",
+ "jflow": "初めての日本生活",
+ "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+ "cchat": "第一次的日本生活",
+ "jchat": "第一次的日本生活",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "台湾料理阿福",
+          "jname": "台湾料理と料理"
+          },
+          {
+          "lid": 2,
+          "cname": "中华料理龙盛房",
+          "jname": "中華料理竜盛房"
+          },
+          {
+          "lid": 3,
+          "cname": "中华料理一心",
+          "jname": "中華料理の一心"
+          },
+          {
+          "lid": 4,
+          "cname": "肉便当",
+          "jname": "肉弁当"
+          },
+          {
+          "lid": 5,
+          "cname": "中华料理王家",
+          "jname": "中華料理の王家"
+          },
+          {
+          "lid": 6,
+          "cname": "鱼民",
+          "jname": "魚民"
+          },
+          {
+          "lid": 7,
+          "cname": "Krumaya拉面",
+          "jname": "Krumayaラーメン"
+          },
+          {
+          "lid": 8,
+          "cname": "中华料理日高屋",
+          "jname": "中華料理の日高屋"
+          },
+          {
+          "lid": 9,
+          "cname": "乐天利",
+          "jname": "ロッテ・リー"
+          },
+          {
+          "lid": 10,
+          "cname": "Echigoya",
+          "jname": "Echigoya"
+          },
+          {
+          "lid": 11,
+          "cname": "面屋 彬",
+          "jname": "ビンビン"
+          },
+          {
+          "lid": 12,
+          "cname": "萨莉亚",
+          "jname": "サリア"
+          },
+          {
+          "lid": 13,
+          "cname": "温野菜",
+          "jname": "山菜"
+          }
+          ]
+ },
+ {
+ "sid": 8,
+ "cname": "娱乐",
+ "jname": "娯楽",
+ "cflow": "第一次的日本生活",
+ "jflow": "初めての日本生活",
+ "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+ "cchat": "第一次的日本生活",
+ "jchat": "第一次的日本生活",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "卡拉OK BOX舞台MAX",
+          "jname": "カラオケボックス"
+          },
+          {
+          "lid": 2,
+          "cname": "Big ball",
+          "jname": "Big ball"
+          }
+          ]
+ },
+ {
+ "sid": 9,
+ "cname": "支付各项费用",
+ "jname": "諸費用を支払う",
+ "cflow": "第一次的日本生活",
+ "jflow": "初めての日本生活",
+ "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+ "cchat": "第一次的日本生活",
+ "jchat": "第一次的日本生活",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "7-11",
+          "jname": "7-11"
+          },
+          {
+          "lid": 2,
+          "cname": "全家",
+          "jname": "全家"
+          },
+          {
+          "lid": 3,
+          "cname": "罗森",
+          "jname": "ローソン"
+          }
+          ]
+ },
+ {
+ "sid": 10,
+ "cname": "生病时",
+ "jname": "病気の時",
+ "cflow": "第一次的日本生活",
+ "jflow": "初めての日本生活",
+ "ready_images": ["banner0", "banner1", "banner2", "home_background", "launch_screen"],
+ "cchat": "第一次的日本生活",
+ "jchat": "第一次的日本生活",
+ "list": [
+          {
+          "lid": 1,
+          "cname": "卡拉OK BOX舞台MAX",
+          "jname": "カラオケボックス"
+          },
+          {
+          "lid": 2,
+          "cname": "Big ball",
+          "jname": "Big ball"
+          }
+          ]
+ },
+ {
+ "sid": 11,
+ "cname": "作为学生",
+ "jname": "学生として",
+ "list": []
+ },
+ {
+ "sid": 12,
+ "cname": "想要打工",
+ "jname": "アルバイトがしたい",
+ "list": []
+ }
+  ]

@@ -23,12 +23,8 @@ class ServiceChildViewController: BaseViewController {
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()
-    
-    var allServiceList: [[String]] {
-        return LanguageManager.shared.isJapanese ? ServiceData.jAllList : ServiceData.allList
-    }
 
-    var serviceIndex = 0
+    var serviceModel = ServiceListModel()
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -72,7 +68,7 @@ class ServiceChildViewController: BaseViewController {
         #if arch(i386) || arch(x86_64)
             return
         #endif
-        VoiceSpeaker.speak("初めての日本生活")
+        VoiceSpeaker.speak(serviceModel.chat!)
     }
 }
 
@@ -86,7 +82,7 @@ extension ServiceChildViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return allServiceList[serviceIndex].count
+            return serviceModel.list.count
         default:
             return 1
         }
@@ -97,11 +93,18 @@ extension ServiceChildViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell: ServiceChildListCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildListCell") as! ServiceChildListCell
-            cell.titleLabel.text = allServiceList[serviceIndex][indexPath.row]
+            let model = serviceModel.list[indexPath.row]
+            cell.titleLabel.text = model.name
             return cell
         case 2:
             let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
-            let images = [UIImage(named: "banner0")!, UIImage(named: "banner1")!, UIImage(named: "banner2")!, UIImage(named: "home_background")!, UIImage(named: "launch_screen")!]
+            guard let readyImages = serviceModel.ready_images else {
+                return cell
+            }
+            var images = [UIImage]()
+            for name in readyImages {
+                images.append(UIImage(named: name)!)
+            }
             cell.images = images
             cell.didSelectItemHandler = { (index) in
                 let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
@@ -111,11 +114,11 @@ extension ServiceChildViewController: UITableViewDataSource {
 
         default:
             let cell: ServiceChildTextCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildTextCell") as! ServiceChildTextCell
-            cell.textView.text = """
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-            """
+            if indexPath.section == 1 {
+                cell.textView.text = serviceModel.flow
+            } else {
+                cell.textView.text = serviceModel.chat
+            }
             return cell
         }
     }
@@ -130,7 +133,8 @@ extension ServiceChildViewController: UITableViewDelegate {
             return
         }
         let detailVC = DetailViewController()
-        detailVC.ay_navigationItem.title = allServiceList[serviceIndex][indexPath.row]
+        let model = serviceModel.list[indexPath.row]
+        detailVC.ay_navigationItem.title = model.name
         navigationController?.pushViewController(detailVC, animated: true)
     }
 

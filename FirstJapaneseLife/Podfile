@@ -6,4 +6,5 @@ target 'FirstJapaneseLife' do
     pod 'Kingfisher'
     pod 'AYNavigationBar'
     pod 'Agrume'
+    pod 'HandyJSON', '~> 4.0.0-beta.1'
 end
