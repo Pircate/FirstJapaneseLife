@@ -9,6 +9,7 @@
 import Foundation
 
 struct LocalizableString {
+
     static var backButtonTitle: String {
         return LanguageManager.shared.isJapanese ? "もどる" : "上一页"
     }
@@ -16,5 +17,12 @@ struct LocalizableString {
     static var homeButtonTitle: String {
         return LanguageManager.shared.isJapanese ? "キーページ" : "起始页"
     }
-    
+
+    static var facilityTitle: String {
+        return LanguageManager.shared.isJapanese ? "施設" : "设施"
+    }
+
+    static var serviceTitle: String {
+        return LanguageManager.shared.isJapanese ? "サービス" : "服务"
+    }
 }

@@ -47,7 +47,7 @@ class FacilityViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ay_navigationItem.title = LanguageManager.shared.isJapanese ? "施設" : "设施"
+        ay_navigationItem.title = LocalizableString.facilityTitle
         
         addSubviews()
         disableAdjustsScrollViewInsets(collectionView)
@@ -60,7 +60,7 @@ class FacilityViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
-        ay_navigationItem.title = LanguageManager.shared.isJapanese ? "施設" : "设施"
+        ay_navigationItem.title = LocalizableString.facilityTitle
         collectionView.reloadData()
     }
     
