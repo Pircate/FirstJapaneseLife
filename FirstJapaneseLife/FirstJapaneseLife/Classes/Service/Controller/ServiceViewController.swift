@@ -34,7 +34,7 @@ class ServiceViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ay_navigationItem.title = "サービス"
+        ay_navigationItem.title = LanguageManager.shared.isJapanese ? "サービス" : "服务"
         addSubviews()
         disableAdjustsScrollViewInsets(tableView)
         loadServiceData()
@@ -46,6 +46,7 @@ class ServiceViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
+        ay_navigationItem.title = LanguageManager.shared.isJapanese ? "サービス" : "服务"
         tableView.reloadData()
     }
     

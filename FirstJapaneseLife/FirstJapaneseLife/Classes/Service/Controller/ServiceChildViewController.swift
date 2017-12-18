@@ -45,6 +45,7 @@ class ServiceChildViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
+        ay_navigationItem.title = serviceModel.name
         tableView.reloadData()
     }
     
