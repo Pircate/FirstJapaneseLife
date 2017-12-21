@@ -12,7 +12,7 @@ class ServiceChildListCell: UITableViewCell {
 
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.textColor = UIColor(hex: "#666666")
+        titleLabel.textColor = UIColor.darkText
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         return titleLabel
     }()

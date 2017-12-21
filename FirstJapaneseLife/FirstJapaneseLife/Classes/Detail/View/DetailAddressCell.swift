@@ -13,7 +13,7 @@ class DetailAddressCell: UITableViewCell {
     lazy var leftLabel: UILabel = {
         let leftLabel = UILabel()
         leftLabel.font = UIFont.systemFont(ofSize: 16)
-        leftLabel.textColor = UIColor(hex: "#BCBCBC")
+        leftLabel.textColor = UIColor.lightText
         return leftLabel
     }()
 
@@ -21,7 +21,7 @@ class DetailAddressCell: UITableViewCell {
         let rightLabel = UILabel()
         rightLabel.numberOfLines = 3
         rightLabel.font = UIFont.systemFont(ofSize: 14)
-        rightLabel.textColor = UIColor(hex: "#666666")
+        rightLabel.textColor = UIColor.darkText
         return rightLabel
     }()
 

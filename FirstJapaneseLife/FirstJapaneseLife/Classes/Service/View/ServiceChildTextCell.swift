@@ -13,7 +13,7 @@ class ServiceChildTextCell: UITableViewCell {
     lazy var textView: UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 14)
-        textView.textColor = UIColor(hex: "#666666")
+        textView.textColor = UIColor.darkText
         textView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         textView.isEditable = false
         textView.isScrollEnabled = false

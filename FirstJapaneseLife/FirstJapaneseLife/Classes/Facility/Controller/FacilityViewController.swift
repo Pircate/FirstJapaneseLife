@@ -75,7 +75,7 @@ class FacilityViewController: BaseViewController {
         }
 
         let lineView = UIView()
-        lineView.backgroundColor = UIColor(hex: "#E5E5E5")
+        lineView.backgroundColor = UIColor.hairline
         view.addSubview(lineView)
         lineView.snp.makeConstraints { (make) in
             make.top.equalTo(tabMenuView.snp.bottom)

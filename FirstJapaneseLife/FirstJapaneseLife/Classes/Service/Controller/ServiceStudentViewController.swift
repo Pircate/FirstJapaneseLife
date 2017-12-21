@@ -16,7 +16,7 @@ class ServiceStudentViewController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
-        tableView.separatorColor = UIColor(hex: "#E5E5E5")
+        tableView.separatorColor = UIColor.hairline
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()

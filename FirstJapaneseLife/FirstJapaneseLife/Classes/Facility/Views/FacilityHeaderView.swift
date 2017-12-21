@@ -13,7 +13,7 @@ class FacilityHeaderView: UICollectionReusableView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = UIColor(hex: "#BCBCBC")
+        label.textColor = UIColor.lightText
         return label
     }()
 
@@ -28,7 +28,7 @@ class FacilityHeaderView: UICollectionReusableView {
 
         let line = CALayer()
         line.frame = CGRect(x: 15, y: 0, width: UIScreen.width - 30, height: 0.4)
-        line.backgroundColor = UIColor(hex: "#E5E5E5").cgColor
+        line.backgroundColor = UIColor.hairline.cgColor
         self.layer.addSublayer(line)
     }
 

@@ -13,7 +13,7 @@ class FacilityListCell: UICollectionViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor(hex: "#666666")
+        label.textColor = UIColor.darkText
         return label
     }()
 
