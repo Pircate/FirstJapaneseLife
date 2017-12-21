@@ -11,7 +11,9 @@ import AVFoundation
 import Agrume
 
 class ServiceChildViewController: BaseViewController {
-    
+
+    var serviceModel = ServiceListModel()
+
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
@@ -23,8 +25,6 @@ class ServiceChildViewController: BaseViewController {
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
         return tableView
     }()
-
-    var serviceModel = ServiceListModel()
     
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -52,12 +52,12 @@ class ServiceChildViewController: BaseViewController {
     // MARK: - private
     private func setupTableFooterView() {
 
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 60))
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 70))
         let playBtn = GlobalButton(title: "播放")
         playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         footerView.addSubview(playBtn)
         playBtn.snp.makeConstraints { (make) in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
             make.centerX.equalToSuperview()
             make.size.equalTo(CGSize(width: UIScreen.width - 30, height: 36))
         }
@@ -145,11 +145,19 @@ extension ServiceChildViewController: UITableViewDelegate {
         case 0:
             return 44
         case 1:
-            return 200
+            var frame = CGRect.zero
+            if let flow = serviceModel.flow as NSString? {
+                frame = flow.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+            }
+            return frame.height + 20
         case 2:
             return UIScreen.width / 2
         default:
-            return 200
+            var frame = CGRect.zero
+            if let chat = serviceModel.chat as NSString? {
+                frame = chat.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+            }
+            return frame.height + 20
         }
     }
 

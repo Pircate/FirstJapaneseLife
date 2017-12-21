@@ -14,8 +14,9 @@ class ServiceChildTextCell: UITableViewCell {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 14)
         textView.textColor = UIColor(hex: "#666666")
-        textView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        textView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         textView.isEditable = false
+        textView.isScrollEnabled = false
         return textView
     }()
 

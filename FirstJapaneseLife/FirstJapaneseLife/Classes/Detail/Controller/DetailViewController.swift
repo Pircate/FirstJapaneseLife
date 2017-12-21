@@ -141,10 +141,18 @@ extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 180
+            var frame = CGRect.zero
+            if let desc = detailModel.desc as NSString? {
+                frame = desc.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+            }
+            return frame.height + 20
         case 1:
             guard indexPath.row > 0 else {
-                return 54
+                var frame = CGRect.zero
+                if let address = detailModel.address as NSString? {
+                    frame = address.boundingRect(with: CGSize(width: UIScreen.width - 115, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                }
+                return frame.height + 28
             }
             return 44
         default:
