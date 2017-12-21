@@ -12,7 +12,7 @@ class TabMenuView: UIView {
 
     static let menuHeight: CGFloat = 44.0
 
-    var titles = [String]()
+    public var didSelectItemHandler: ((Int) -> Void)?
 
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -36,9 +36,10 @@ class TabMenuView: UIView {
         return collectionView
     }()
 
-    var dataSource = [TabMenuModel]()
-    var itemWidths = [CGFloat]()
-    var didSelectItemHandler: ((Int) -> Void)?
+    private var titles = [String]()
+    private var dataSource = [TabMenuModel]()
+    private var itemWidths = [CGFloat]()
+    private var currentIndex = 0
 
     init(titles: [String]) {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: TabMenuView.menuHeight))
@@ -77,11 +78,14 @@ class TabMenuView: UIView {
     }
 
     // MARK: - public
-    public func didSelectItem(atIndex index: Int) {
-        let indexPath = IndexPath(item: index, section: 0)
+    public func selectItem(at index: Int) {
 
+        guard currentIndex != index else {
+            return
+        }
+        let indexPath = IndexPath(item: index, section: 0)
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        currentIndex = index
     }
 }
 
@@ -105,8 +109,12 @@ extension TabMenuView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
 
+        guard currentIndex != indexPath.item else {
+            return
+        }
+        currentIndex = indexPath.item
         if didSelectItemHandler != nil {
-            didSelectItemHandler!(indexPath.item)
+            didSelectItemHandler!(currentIndex)
         }
     }
 }
