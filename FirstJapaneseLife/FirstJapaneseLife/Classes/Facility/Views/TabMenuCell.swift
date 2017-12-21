@@ -13,13 +13,17 @@ struct TabMenuModel {
     var titleNormalColor: UIColor?
     var titleSelectedColor: UIColor?
     var backgroundLayerColor: UIColor?
+    var underlineColor: UIColor?
 }
 
 class TabMenuCell: UICollectionViewCell {
 
+    static let underlineHeight: CGFloat = 2.0
+    static let backgroundLayerHeight: CGFloat = 3.0
+
     lazy var backgroundLayer: CALayer = {
         let layer = CALayer()
-        layer.frame = CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 3)
+        layer.frame = CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: TabMenuCell.backgroundLayerHeight)
         return layer
     }()
 
@@ -31,12 +35,19 @@ class TabMenuCell: UICollectionViewCell {
         return btn
     }()
 
+    lazy var underline: CALayer = {
+        let layer = CALayer()
+        layer.frame = CGRect(x: self.contentView.center.x, y: self.contentView.bounds.height - TabMenuCell.underlineHeight, width: 0, height: TabMenuCell.underlineHeight)
+        return layer
+    }()
+
     var model: TabMenuModel? {
         didSet {
             backgroundLayer.backgroundColor = model?.backgroundLayerColor?.cgColor
             titleButton.setTitleColor(model?.titleNormalColor, for: .normal)
             titleButton.setTitleColor(model?.titleSelectedColor, for: .selected)
             titleButton.setTitle(model?.title, for: .normal)
+            underline.backgroundColor = model?.underlineColor?.cgColor;
         }
     }
 
@@ -62,7 +73,9 @@ class TabMenuCell: UICollectionViewCell {
         didSet {
             let flag = TabMenuCell.deselectDisabled ? oldValue : isSelected
             titleButton.isSelected = flag
-            backgroundLayer.frame = flag ? self.contentView.bounds : CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 3)
+            backgroundLayer.frame.size.height = flag ? self.contentView.bounds.height : TabMenuCell.backgroundLayerHeight
+            underline.frame.origin.x = flag ? 0 : self.contentView.center.x
+            underline.frame.size.width = flag ? self.contentView.bounds.width : 0
         }
     }
 
@@ -70,5 +83,6 @@ class TabMenuCell: UICollectionViewCell {
     private func addSubviews() {
         contentView.layer.addSublayer(backgroundLayer)
         contentView.addSubview(titleButton)
+        contentView.layer.addSublayer(underline)
     }
 }

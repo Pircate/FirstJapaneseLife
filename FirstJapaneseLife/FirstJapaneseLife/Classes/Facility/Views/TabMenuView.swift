@@ -60,7 +60,7 @@ class TabMenuView: UIView {
         let colors = [UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0")]
 
         for (index, title) in titles.enumerated() {
-            let model = TabMenuModel(title: title, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: colors[index])
+            let model = TabMenuModel(title: title, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: colors[index], underlineColor: .clear)
             dataSource.append(model)
         }
     }
