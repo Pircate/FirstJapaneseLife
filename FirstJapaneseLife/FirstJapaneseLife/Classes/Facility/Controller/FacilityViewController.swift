@@ -32,7 +32,7 @@ class FacilityViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.bounces = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 280, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: UIScreen.height - 226 - self.ay_navigationBar.frame.maxY, right: 0)
         collectionView.register(FacilityListCell.self, forCellWithReuseIdentifier: "FacilityListCell")
         collectionView.register(FacilityHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView")
         return collectionView

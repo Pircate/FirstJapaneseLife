@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController {
 
     // MARK: - properties
     private var url = ""
@@ -31,14 +31,14 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }()
 
     lazy var webView: WKWebView = {
-        let webView = WKWebView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - self.ay_navigationBar.frame.maxY), configuration: self.configuration)
+        let webView = WKWebView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.width, height: UIScreen.height - self.ay_navigationBar.frame.maxY), configuration: self.configuration)
         webView.navigationDelegate = self
         webView.scrollView.showsVerticalScrollIndicator = false
         return webView
     }()
 
     lazy var progressView: UIProgressView = {
-        let progressView = UIProgressView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.main.bounds.size.width, height: 2))
+        let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 2))
         progressView.progressTintColor = .green
         progressView.trackTintColor = .clear
         return progressView
@@ -96,11 +96,9 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
 
     private func addSubviews() {
+
         view.addSubview(webView)
         view.addSubview(progressView)
-
-        registerNavigationBar()
-
     }
 
     private func updateLeftNavigationBarItem() {
@@ -190,8 +188,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     @objc private func closeBtnAction() {
         navigationController?.popViewController(animated: true)
     }
+}
 
-    // MARK: - WKNavigationDelegate
+// MARK: - WKNavigationDelegate
+extension WebViewController: WKNavigationDelegate {
+
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.isHidden = false
         progressView.transform = CGAffineTransform(scaleX: 1.0, y: 1.5)
@@ -209,5 +210,4 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         webView.reload()
     }
-
 }
