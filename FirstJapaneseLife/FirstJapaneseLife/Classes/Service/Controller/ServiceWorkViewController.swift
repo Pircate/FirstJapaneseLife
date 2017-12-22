@@ -10,6 +10,8 @@ import UIKit
 
 class ServiceWorkViewController: BaseViewController {
 
+    var serviceModel = ServiceListModel()
+
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
@@ -36,13 +38,18 @@ class ServiceWorkViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func languageWillChange(sender: Notification) {
+        ay_navigationItem.title = serviceModel.name
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension ServiceWorkViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return serviceModel.contents.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,11 +59,7 @@ extension ServiceWorkViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: ServiceChildTextCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildTextCell") as! ServiceChildTextCell
-        cell.textView.text = """
-        初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-        初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-        初めての日本生活初めての日本生活初めての日本生活初めての日本生活
-        """
+        cell.textView.text = serviceModel.contents[indexPath.row]
         return cell
     }
 }
@@ -65,7 +68,9 @@ extension ServiceWorkViewController: UITableViewDataSource {
 extension ServiceWorkViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        let content = serviceModel.contents[indexPath.row] as NSString
+        let frame = content.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+        return frame.height + 20
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

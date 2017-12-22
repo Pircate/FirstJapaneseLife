@@ -100,10 +100,12 @@ extension ServiceViewController: UITableViewDelegate {
         case 10:
             let serviceStudentVC = ServiceStudentViewController()
             serviceStudentVC.ay_navigationItem.title = model.name
+            serviceStudentVC.serviceModel = model
             navigationController?.pushViewController(serviceStudentVC, animated: true)
         case 11:
             let serviceWorkVC = ServiceWorkViewController()
             serviceWorkVC.ay_navigationItem.title = model.name
+            serviceWorkVC.serviceModel = model
             navigationController?.pushViewController(serviceWorkVC, animated: true)
         default:
             let serviceChildVC = ServiceChildViewController()
