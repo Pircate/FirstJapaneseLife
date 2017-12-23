@@ -130,16 +130,21 @@ extension DetailViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            if detailModel.desc == nil {
+                return 0
+            }
+        }
         return 44
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            var frame = CGRect.zero
-            if let desc = detailModel.desc as NSString? {
-                frame = desc.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+            guard let desc = detailModel.desc as NSString? else {
+                return 0
             }
+            let frame = desc.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
             return frame.height + 20
         case 1:
             let info = detailModel.info[indexPath.row]

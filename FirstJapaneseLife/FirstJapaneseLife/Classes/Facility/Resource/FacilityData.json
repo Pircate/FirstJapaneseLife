@@ -348,26 +348,48 @@
           {
           "lid": 5,
           "cname": "Seki",
-          "jname": "Seki",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "ドラッグストアセキ",
+          "images": ["detail_banner_13_0", "detail_banner_13_1"],
+          "cdesc": "Seki药品有限公司是一家主要在中东埼玉县经营药妆连锁店的公司。",
+          "jdesc": "株式会社セキ薬品（セキやくひん）は、埼玉県中東部を中心にドラッグストアチェーンを展開する企業です。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://www.sekiyakuhin.co.jp/",
+                   "jcontent": "http://www.sekiyakuhin.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "宫代店\n〒345-0827\n埼玉県南埼玉郡宮代町本田1-4-23",
+                   "jcontent": "宮代店\n〒345-0827\n埼玉県南埼玉郡宮代町本田1-4-23"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田1-4-23"
           },
           {
           "lid": 6,
           "cname": "Cainz Home",
-          "jname": "Cainz Home",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "カインズホーム",
+          "images": ["detail_banner_14_0", "detail_banner_14_1"],
+          "cdesc": "Cainz有限公司是总部位于埼玉县本庄市的Beicia集团的成员。",
+          "jdesc": "株式会社カインズ（英: Cainz Co., Ltd.）は、埼玉県本庄市に本部を置くベイシアグループの一員である。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "https://www.cainz.com/",
+                   "jcontent": "https://www.cainz.com/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "杉户店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸7-2-11",
+                   "jcontent": "杉戸店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸7-2-11"
+                   },
+                   ],
+          "jaddress": "埼玉県北葛飾郡杉戸町杉戸7-2-11"
           }
           ]
  },
@@ -379,38 +401,72 @@
           {
           "lid": 7,
           "cname": "7-11",
-          "jname": "7-11",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "セブンイレブン",
+          "images": ["detail_banner_15_0", "detail_banner_15_1", "detail_banner_15_2"],
+          "cdesc": "7-11是一家发祥于美国的便利店。 这是日本最大的便利店，也是全球连锁店最大的连锁店。（可用银联卡取现金。）",
+          "jdesc": "セブン-イレブン（英: 7-Eleven）は、アメリカ合衆国発祥のコンビニエンスストアです。日本におけるコンビニエンスストア最大手であり、チェーンストアとしても世界最大の店舗数を展開している企業です。（銀聯カードがお金降ろせます。）",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://www.sej.co.jp/",
+                   "jcontent": "http://www.sej.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "宫代中央店\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-3-8",
+                   "jcontent": "宮代中央店\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-3-8"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町中央3-3-8"
           },
           {
           "lid": 8,
           "cname": "全家",
-          "jname": "全家",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "ファミリーマート",
+          "images": ["detail_banner_16_0", "detail_banner_16_1", "detail_banner_16_2", "detail_banner_16_3"],
+          "cdesc": "FamilyMart有限公司是日本的便利店（CVS）特许经营商。",
+          "jdesc": "株式会社ファミリーマート（英: FamilyMart Co., Ltd.）は、日本のコンビニエンスストア (CVS) フランチャイザーです。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://www.family.co.jp/",
+                   "jcontent": "http://www.family.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "宫代本田店\n〒345-0827\n埼玉県南埼玉郡宮代町本田2-7-2\n东武动物公园站店\n〒345-0801\n埼玉県南埼玉郡 宮代町百間2-3-24",
+                   "jcontent": "宮代本田店\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-3-8\n東武動物公園駅店\n〒345-0801\n埼玉県南埼玉郡 宮代町百間2-3-24"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田2-7-2",
+          "jaddress1": "埼玉県南埼玉郡 宮代町百間2-3-24"
           },
           {
           "lid": 9,
           "cname": "罗森",
           "jname": "ローソン",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "images": ["detail_banner_17_0", "detail_banner_17_1"],
+          "cdesc": "Lawson是日本领先的便利店特许经营商。（可用银联卡取现金并可使用支付宝。）",
+          "jdesc": "株式会社ローソン（英語: LAWSON, INC.）は、日本の大手コンビニエンスストアフランチャイザーです。（銀聯カードがお金降ろせます。アリペイが使えます。）",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://www.lawson.co.jp/",
+                   "jcontent": "http://www.lawson.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "宫代须贺店\n〒345-0831\n埼玉県南埼玉郡宮代町須賀965-1",
+                   "jcontent": "宮代須賀店\n〒345-0831\n埼玉県南埼玉郡宮代町須賀965-1"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町須賀965-1"
           }
           ]
  },
@@ -422,127 +478,157 @@
           {
           "lid": 1,
           "cname": "台湾料理阿福",
-          "jname": "台湾料理と料理",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "台湾料理福ちゃん",
+          "images": ["detail_banner_18_0", "detail_banner_18_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田5-8-21",
+                   "jcontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田5-8-21"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田5-8-21"
           },
           {
           "lid": 2,
           "cname": "中华料理龙盛房",
-          "jname": "中華料理竜盛房",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "龍盛房",
+          "images": ["detail_banner_19_0", "detail_banner_19_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田1-3-21",
+                   "jcontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田1-3-21"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田1-3-21"
           },
           {
           "lid": 3,
-          "cname": "中华料理一心",
-          "jname": "中華料理の一心",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "cname": "食事处一心",
+          "jname": "お食事処一心",
+          "images": ["detail_banner_20_0", "detail_banner_20_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0821\n埼玉県南埼玉郡宮代町中央2-5-19",
+                   "jcontent": "〒345-0821\n埼玉県南埼玉郡宮代町中央2-5-19"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町中央2-5-19"
           },
           {
           "lid": 4,
           "cname": "肉便当",
-          "jname": "肉弁当",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "肉弁",
+          "images": ["detail_banner_21_0", "detail_banner_21_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田5-4-8",
+                   "jcontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田5-4-8"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田5-4-8"
           },
           {
           "lid": 5,
-          "cname": "中华料理王家",
-          "jname": "中華料理の王家",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "cname": "王家中华酒菜",
+          "jname": "王家中華酒菜",
+          "images": ["detail_banner_22_0"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0801\n埼玉県南埼玉郡南埼玉郡宮代町百間2-4-17",
+                   "jcontent": "〒345-0801\n埼玉県南埼玉郡南埼玉郡宮代町百間2-4-17"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡南埼玉郡宮代町百間2-4-17"
           },
           {
           "lid": 6,
           "cname": "鱼民",
           "jname": "魚民",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "images": ["detail_banner_23_0"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "东武动物公园东口站前店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-37東武動物公園東口ビルF2",
+                   "jcontent": "東武動物公園東口駅前店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-37東武動物公園東口ビルF2"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町百間2-3-37東武動物公園東口ビルF2"
           },
           {
           "lid": 7,
           "cname": "Krumaya拉面",
-          "jname": "Krumayaラーメン",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "くるまやラーメン",
+          "images": ["detail_banner_24_0", "detail_banner_24_1", "detail_banner_24_2"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "东武动物公园店\n〒345-0827\n埼玉県南埼玉郡宮代町本田2-26-1",
+                   "jcontent": "東武動物公園店\n〒345-0827\n埼玉県南埼玉郡宮代町本田2-26-1"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田2-26-1"
           },
           {
           "lid": 8,
-          "cname": "中华料理日高屋",
-          "jname": "中華料理の日高屋",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "cname": "中华食堂日高屋",
+          "jname": "中華食堂日高屋",
+          "images": ["detail_banner_25_0"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "东武动物公园站店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅",
+                   "jcontent": "東武動物公園駅店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅"
           },
           {
           "lid": 9,
           "cname": "乐天利",
-          "jname": "ロッテ・リー",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "ロッテリア",
+          "images": ["detail_banner_26_0", "detail_banner_26_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "东武动物公园站店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅",
+                   "jcontent": "東武動物公園駅店\n〒345-0801\n埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町百間2-3-24 東武動物公園駅"
           },
           {
           "lid": 10,
           "cname": "Echigoya",
-          "jname": "Echigoya",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "レストラン ゑちごや",
+          "images": ["detail_banner_27_0", "detail_banner_27_1"],
+          "info": [
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "〒345-0827\n宮代町本田5-9-18",
+                   "jcontent": "〒345-0827\n宮代町本田5-9-18"
+                   }
+                   ],
+          "jaddress": "宮代町本田5-9-18"
           },
           {
           "lid": 11,
           "cname": "面屋 彬",
-          "jname": "ビンビン",
+          "jname": "麺屋 彬",
           "image": "detail_header",
           "cdesc": "中文介绍",
           "jdesc": "日本語紹介",
