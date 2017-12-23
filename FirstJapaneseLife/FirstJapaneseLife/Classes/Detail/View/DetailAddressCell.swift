@@ -19,7 +19,7 @@ class DetailAddressCell: UITableViewCell {
 
     lazy var rightLabel: UILabel = {
         let rightLabel = UILabel()
-        rightLabel.numberOfLines = 3
+        rightLabel.numberOfLines = 0
         rightLabel.font = UIFont.systemFont(ofSize: 14)
         rightLabel.textColor = UIColor.darkText
         return rightLabel

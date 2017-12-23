@@ -226,13 +226,24 @@
           "lid": 2,
           "cname": "au",
           "jname": "au",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "images": ["detail_banner_8_0", "detail_banner_8_1"],
+          "cdesc": "au是KDDI和冲绳手机的服务品牌，开展包括手机在内的移动服务业务，以及由KDDI提供的消费（商务）解决方案（企业）IT服务业务。",
+          "jdesc": "au（エーユー）は、KDDIおよび沖縄セルラー電話のサービスブランド名で、携帯電話を含む移動体通信事業、ならびにKDDIの提供するコンシューマー（個人）向け・ビジネスソリューション（法人）向けITサービス事業を行っています。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://www.au.com/‎",
+                   "jcontent": "http://www.au.com/‎"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "东武动物公园店\n〒345-0035\n北葛飾郡 杉戸町内田1-1791",
+                   "jcontent": "東武動物公園店\n〒345-0035\n北葛飾郡 杉戸町内田1-1791"
+                   },
+                   ],
+          "jaddress": "北葛飾郡 杉戸町内田1-1791"
           }
           ]
  },
@@ -244,50 +255,95 @@
           {
           "lid": 1,
           "cname": "Giga市场",
-          "jname": "Giga市場",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "ギガパール",
+          "images": ["detail_banner_9_0", "detail_banner_9_1"],
+          "cdesc": "Giga市场是由Giga物产经营的折扣店。",
+          "jdesc": "ギガマート（giga Mart）は、株式会社ギガ物産（ギガぶっさん）が運営するディスカウントストアです。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://giga-mart.co.jp/",
+                   "jcontent": "http://giga-mart.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "动物公园站前店\n〒345-0822\n埼玉県南埼玉郡宮代町笠原2-2-2",
+                   "jcontent": "動物公園駅前店\n〒345-0822\n埼玉県南埼玉郡宮代町笠原2-2-2"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町笠原2-2-2"
           },
           {
           "lid": 2,
           "cname": "Kasumi",
-          "jname": "Kasumi",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "カスミ",
+          "images": ["detail_banner_10_0", "detail_banner_10_1", "detail_banner_10_2", "detail_banner_10_3", "detail_banner_10_4"],
+          "cdesc": "Kasumi是总部位于茨城县筑波市西大桥599号的日本经销商。",
+          "jdesc": "株式会社カスミは、茨城県つくば市西大橋599番地1に本社を置く日本の流通業者です。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "https://www.kasumi.co.jp/",
+                   "jcontent": "https://www.kasumi.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "美食广场宫代店\n〒345-0811\n埼玉県南埼玉郡宮代町道佛595\n杉户店\n〒345-0035\n埼玉県北葛飾郡杉戸町内田2-14-14",
+                   "jcontent": "フードスクエア宮代店\n〒345-0811\n埼玉県南埼玉郡宮代町道佛595\n杉戸店\n〒345-0035\n埼玉県北葛飾郡杉戸町内田2-14-14"
+                   }
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町笠原2-2-2",
+          "jaddress1": "埼玉県北葛飾郡杉戸町内田2-14-14"
           },
           {
           "lid": 3,
           "cname": "Belx",
-          "jname": "Belx",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "ベルクス",
+          "images": ["detail_banner_11_0", "detail_banner_11_1"],
+          "cdesc": "Sambelx有限公司是经营超市“BELX”的日本公司。",
+          "jdesc": "株式会社サンベルクスは、スーパーマーケット「ベルクス」を経営する日本の企業です。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "http://sunbelx.com/stor",
+                   "jcontent": "http://sunbelx.com/stor"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "杉户店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸2-9-20",
+                   "jcontent": "杉戸店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸2-9-20"
+                   },
+                   ],
+          "jaddress": "埼玉県北葛飾郡杉戸町杉戸2-9-20"
           },
           {
           "lid": 4,
           "cname": "Aoki青木",
-          "jname": "Aoki青木",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
+          "jname": "クスリのアオキ",
+          "images": ["detail_banner_12_0"],
+          "cdesc": "青木株式会社是在总部位于石川县白山市的石川县，在中部地区经营药妆连锁店的公司。",
+          "jdesc": "株式会社クスリのアオキは、石川県白山市に本社を置く石川県を中心に中部地方にドラッグストア（薬店）チェーンを展開する企業です。",
+          "info": [
+                   {
+                   "cname": "网址",
+                   "jname": "HP",
+                   "ccontent": "https://www.kusuri-aoki.co.jp/",
+                   "jcontent": "https://www.kusuri-aoki.co.jp/"
+                   },
+                   {
+                   "cname": "地址",
+                   "jname": "住所",
+                   "ccontent": "宫代店\n〒345-0827\n埼玉県南埼玉郡宮代町本田5-5-19",
+                   "jcontent": "宮代店\n〒345-0827\n埼玉県南埼玉郡宮代町本田5-5-19"
+                   },
+                   ],
+          "jaddress": "埼玉県南埼玉郡宮代町本田5-5-19"
           },
           {
           "lid": 5,
