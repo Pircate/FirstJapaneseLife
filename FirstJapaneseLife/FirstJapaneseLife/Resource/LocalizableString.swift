@@ -11,11 +11,11 @@ import Foundation
 struct LocalizableString {
 
     static var backButtonTitle: String {
-        return LanguageManager.shared.isJapanese ? "もどる" : "上一页"
+        return LanguageManager.shared.isJapanese ? "戻る" : "返回"
     }
     
     static var homeButtonTitle: String {
-        return LanguageManager.shared.isJapanese ? "キーページ" : "起始页"
+        return LanguageManager.shared.isJapanese ? "トップ" : "首页"
     }
 
     static var facilityTitle: String {
