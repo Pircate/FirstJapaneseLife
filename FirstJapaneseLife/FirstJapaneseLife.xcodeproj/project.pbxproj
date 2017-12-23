@@ -43,6 +43,16 @@
 		B571471B1FE69ADE00E193A3 /* FacilityData.json in Resources */ = {isa = PBXBuildFile; fileRef = B571471A1FE69ADE00E193A3 /* FacilityData.json */; };
 		B571471D1FE69EC600E193A3 /* FacilityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571471C1FE69EC600E193A3 /* FacilityListModel.swift */; };
 		B57147201FE6A3C300E193A3 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571471F1FE6A3C300E193A3 /* DetailModel.swift */; };
+		B5998A221FEEB8DF00CF7BF0 /* bank.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A181FEEB8DF00CF7BF0 /* bank.wav */; };
+		B5998A231FEEB8DF00CF7BF0 /* bike.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A191FEEB8DF00CF7BF0 /* bike.wav */; };
+		B5998A241FEEB8DF00CF7BF0 /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1A1FEEB8DF00CF7BF0 /* eat.wav */; };
+		B5998A251FEEB8DF00CF7BF0 /* entertainment.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1B1FEEB8DF00CF7BF0 /* entertainment.wav */; };
+		B5998A261FEEB8DF00CF7BF0 /* ill.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1C1FEEB8DF00CF7BF0 /* ill.wav */; };
+		B5998A271FEEB8DF00CF7BF0 /* insurance.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1D1FEEB8DF00CF7BF0 /* insurance.wav */; };
+		B5998A281FEEB8DF00CF7BF0 /* pay.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1E1FEEB8DF00CF7BF0 /* pay.wav */; };
+		B5998A291FEEB8DF00CF7BF0 /* phone.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A1F1FEEB8DF00CF7BF0 /* phone.wav */; };
+		B5998A2A1FEEB8DF00CF7BF0 /* renting.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A201FEEB8DF00CF7BF0 /* renting.wav */; };
+		B5998A2B1FEEB8DF00CF7BF0 /* shopping.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5998A211FEEB8DF00CF7BF0 /* shopping.wav */; };
 		B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D601FE180DD004B925E /* UIColorExtension.swift */; };
 		B5F82D631FE18443004B925E /* ServiceChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D621FE18443004B925E /* ServiceChildViewController.swift */; };
 		B5F82D661FE18FE9004B925E /* VoiceSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F82D651FE18FE9004B925E /* VoiceSpeaker.swift */; };
@@ -110,6 +120,16 @@
 		B571471A1FE69ADE00E193A3 /* FacilityData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FacilityData.json; sourceTree = "<group>"; };
 		B571471C1FE69EC600E193A3 /* FacilityListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityListModel.swift; sourceTree = "<group>"; };
 		B571471F1FE6A3C300E193A3 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		B5998A181FEEB8DF00CF7BF0 /* bank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bank.wav; sourceTree = "<group>"; };
+		B5998A191FEEB8DF00CF7BF0 /* bike.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bike.wav; sourceTree = "<group>"; };
+		B5998A1A1FEEB8DF00CF7BF0 /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
+		B5998A1B1FEEB8DF00CF7BF0 /* entertainment.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = entertainment.wav; sourceTree = "<group>"; };
+		B5998A1C1FEEB8DF00CF7BF0 /* ill.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ill.wav; sourceTree = "<group>"; };
+		B5998A1D1FEEB8DF00CF7BF0 /* insurance.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = insurance.wav; sourceTree = "<group>"; };
+		B5998A1E1FEEB8DF00CF7BF0 /* pay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pay.wav; sourceTree = "<group>"; };
+		B5998A1F1FEEB8DF00CF7BF0 /* phone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = phone.wav; sourceTree = "<group>"; };
+		B5998A201FEEB8DF00CF7BF0 /* renting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = renting.wav; sourceTree = "<group>"; };
+		B5998A211FEEB8DF00CF7BF0 /* shopping.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shopping.wav; sourceTree = "<group>"; };
 		B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstJapaneseLife-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5F82D601FE180DD004B925E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B5F82D621FE18443004B925E /* ServiceChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChildViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +392,7 @@
 		B57147131FE68D3100E193A3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B5998A171FEEB8DF00CF7BF0 /* Audio */,
 				B57147141FE68D3100E193A3 /* ServiceData.json */,
 			);
 			path = Resource;
@@ -399,6 +420,23 @@
 				B571471F1FE6A3C300E193A3 /* DetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B5998A171FEEB8DF00CF7BF0 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				B5998A181FEEB8DF00CF7BF0 /* bank.wav */,
+				B5998A191FEEB8DF00CF7BF0 /* bike.wav */,
+				B5998A1A1FEEB8DF00CF7BF0 /* eat.wav */,
+				B5998A1B1FEEB8DF00CF7BF0 /* entertainment.wav */,
+				B5998A1C1FEEB8DF00CF7BF0 /* ill.wav */,
+				B5998A1D1FEEB8DF00CF7BF0 /* insurance.wav */,
+				B5998A1E1FEEB8DF00CF7BF0 /* pay.wav */,
+				B5998A1F1FEEB8DF00CF7BF0 /* phone.wav */,
+				B5998A201FEEB8DF00CF7BF0 /* renting.wav */,
+				B5998A211FEEB8DF00CF7BF0 /* shopping.wav */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		B5F82D5F1FE180C5004B925E /* Extension */ = {
@@ -539,10 +577,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5998A221FEEB8DF00CF7BF0 /* bank.wav in Resources */,
+				B5998A241FEEB8DF00CF7BF0 /* eat.wav in Resources */,
 				B571471B1FE69ADE00E193A3 /* FacilityData.json in Resources */,
+				B5998A261FEEB8DF00CF7BF0 /* ill.wav in Resources */,
+				B5998A281FEEB8DF00CF7BF0 /* pay.wav in Resources */,
+				B5998A251FEEB8DF00CF7BF0 /* entertainment.wav in Resources */,
 				B5126B091FE13B4E002E2F67 /* LaunchScreen.storyboard in Resources */,
+				B5998A231FEEB8DF00CF7BF0 /* bike.wav in Resources */,
+				B5998A2A1FEEB8DF00CF7BF0 /* renting.wav in Resources */,
 				B5126B061FE13B4E002E2F67 /* Assets.xcassets in Resources */,
+				B5998A2B1FEEB8DF00CF7BF0 /* shopping.wav in Resources */,
 				B57147151FE68D3100E193A3 /* ServiceData.json in Resources */,
+				B5998A271FEEB8DF00CF7BF0 /* insurance.wav in Resources */,
+				B5998A291FEEB8DF00CF7BF0 /* phone.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
