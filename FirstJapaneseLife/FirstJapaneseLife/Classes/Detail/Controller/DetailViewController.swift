@@ -125,7 +125,7 @@ extension DetailViewController: UITableViewDelegate {
         let header = TitleHeaderView()
         let iconImgs = ["detail_header_intro", "detail_header_address", "detail_header_map"]
         header.iconView.image = UIImage(named: iconImgs[section])
-        header.titleLabel.text = ["介绍", "位置", "地图"][section]
+        header.titleLabel.text = LocalizableString.detailSectionTitles[section]
         return header
     }
 

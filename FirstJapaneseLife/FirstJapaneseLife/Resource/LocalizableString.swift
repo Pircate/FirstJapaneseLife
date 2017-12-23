@@ -25,4 +25,16 @@ struct LocalizableString {
     static var serviceTitle: String {
         return LanguageManager.shared.isJapanese ? "サービス" : "服务"
     }
+    
+    static var serviceChildTitles: [String] {
+        return LanguageManager.shared.isJapanese ? ["場所", "流れ", "準備必要とする物", "対話例"] : ["场所", "流程", "需要准备的材料", "对话例"]
+    }
+    
+    static var playButtonTitle: String {
+        return LanguageManager.shared.isJapanese ? "クリックすると録音が再生される" : "点击播放录音"
+    }
+    
+    static var detailSectionTitles: [String] {
+        return LanguageManager.shared.isJapanese ? ["绍介", "位置", "地図"] : ["介绍", "位置", "地图"]
+    }
 }

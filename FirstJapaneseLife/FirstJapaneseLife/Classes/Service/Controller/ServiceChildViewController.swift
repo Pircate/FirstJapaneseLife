@@ -26,6 +26,12 @@ class ServiceChildViewController: BaseViewController {
         return tableView
     }()
     
+    lazy var playButton: GlobalButton = {
+        let playBtn = GlobalButton(title: LocalizableString.playButtonTitle)
+        playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
+        return playBtn
+    }()
+    
     private var player: AVAudioPlayer?
     
     // MARK: - life cycle
@@ -53,16 +59,15 @@ class ServiceChildViewController: BaseViewController {
     override func languageWillChange(sender: Notification) {
         ay_navigationItem.title = serviceModel.name
         tableView.reloadData()
+        playButton.setTitle(LocalizableString.playButtonTitle, for: .normal)
     }
     
     // MARK: - private
     private func setupTableFooterView() {
 
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 70))
-        let playBtn = GlobalButton(title: "播放")
-        playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
-        footerView.addSubview(playBtn)
-        playBtn.snp.makeConstraints { (make) in
+        footerView.addSubview(playButton)
+        playButton.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
             make.centerX.equalToSuperview()
             make.size.equalTo(CGSize(width: UIScreen.width - 30, height: 36))
@@ -192,7 +197,7 @@ extension ServiceChildViewController: UITableViewDelegate {
         let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
         header.iconView.image = UIImage(named: iconImgs[section])
         header.titleLabel.textColor = UIColor(hex: "#8a8a8a")
-        header.titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
+        header.titleLabel.text = LocalizableString.serviceChildTitles[section]
         return header
     }
     
