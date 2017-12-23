@@ -60,21 +60,21 @@ class ServiceChildReadyCell: UITableViewCell {
     private func imageText(name: String) -> String {
         switch name {
         case "service_ready_bankbook":
-            return "銀行口座"
+            return LanguageManager.shared.isJapanese ? "口座" : "银行账户"
         case "service_ready_address":
-            return "地址"
+            return LanguageManager.shared.isJapanese ? "住所" : "房屋地址"
         case "service_ready_insurance":
-            return "保险"
+            return LanguageManager.shared.isJapanese ? "国民健康保険証" : "国民健康保险证"
         case "service_ready_phone":
-            return "手机号码"
+            return LanguageManager.shared.isJapanese ? "携帯番号" : "手机号"
         case "service_ready_request":
-            return "请求书"
+            return LanguageManager.shared.isJapanese ? "請求書" : "请求书"
         case "service_ready_residence":
-            return "在留卡"
+            return LanguageManager.shared.isJapanese ? "在留カード" : "在留卡"
         case "service_ready_seal":
-            return "印章"
+            return LanguageManager.shared.isJapanese ? "印鑑" : "印章"
         case "service_ready_studentID":
-            return "学生证"
+            return LanguageManager.shared.isJapanese ? "学生証" : "学生证"
         default:
             return ""
         }
