@@ -16,7 +16,6 @@ class DetailViewController: BaseViewController {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -87,7 +86,7 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 1:
-            return 3
+            return detailModel.info.count
         default:
             return 1
         }
@@ -102,15 +101,14 @@ extension DetailViewController: UITableViewDataSource {
             return cell
         case 1:
             let cell: DetailAddressCell = tableView.dequeueReusableCell(withIdentifier: "DetailAddressCell") as! DetailAddressCell
-            cell.leftLabel.text = ["地址", "电话", "营业时间"][indexPath.row]
-            switch indexPath.row {
-            case 0:
-                cell.rightLabel.text = detailModel.address
-            case 1:
-                cell.rightLabel.text = detailModel.telphone
-            default:
-                cell.rightLabel.text = detailModel.open_time
+            let info = detailModel.info[indexPath.row]
+            if let name = info.cname {
+                if name == "网址" || name == "支店网址" {
+                    cell.rightLabel.textColor = UIColor.global
+                }
             }
+            cell.leftLabel.text = info.name
+            cell.rightLabel.text = info.content
             return cell
         default:
             let cell: DetailMapCell = tableView.dequeueReusableCell(withIdentifier: "DetailMapCell") as! DetailMapCell
@@ -144,9 +142,10 @@ extension DetailViewController: UITableViewDelegate {
             }
             return frame.height + 20
         case 1:
-            guard indexPath.row > 0 else {
+            let info = detailModel.info[indexPath.row]
+            if info.cname == "地址" {
                 var frame = CGRect.zero
-                if let address = detailModel.address as NSString? {
+                if let address = info.content as NSString? {
                     frame = address.boundingRect(with: CGSize(width: UIScreen.width - 115, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
                 }
                 return frame.height + 28
@@ -154,6 +153,20 @@ extension DetailViewController: UITableViewDelegate {
             return 44
         default:
             return 240
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let info = detailModel.info[indexPath.row]
+        guard let name = info.cname else { return }
+        if name == "网址" || name == "支店网址" {
+            if let url = info.content {
+                let webVC = WebViewController(url: url)
+                webVC.ay_navigationBar.backgroundColor = UIColor.global
+                webVC.ay_navigationItem.titleTextAttributes = ay_navigationItem.titleTextAttributes
+                navigationController?.pushViewController(webVC, animated: true)
+            }
         }
     }
 }

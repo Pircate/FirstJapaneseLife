@@ -38,6 +38,7 @@ class DetailAddressCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
 
         contentView.addSubview(leftLabel)
         contentView.addSubview(rightLabel)

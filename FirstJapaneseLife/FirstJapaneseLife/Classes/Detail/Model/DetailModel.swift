@@ -9,6 +9,19 @@
 import Foundation
 import HandyJSON
 
+struct DetailInfoModel: HandyJSON {
+    var name: String? {
+        return LanguageManager.shared.isJapanese ? jname : cname
+    }
+    var cname: String?
+    var jname: String?
+    var content: String? {
+        return LanguageManager.shared.isJapanese ? jcontent : ccontent
+    }
+    var ccontent: String?
+    var jcontent: String?
+}
+
 struct DetailModel: HandyJSON {
     
     var name: String? {
@@ -22,6 +35,8 @@ struct DetailModel: HandyJSON {
     }
     var cdesc: String?
     var jdesc: String?
+    var info = [DetailInfoModel]()
+    var website: String?
     var address: String? {
         return LanguageManager.shared.isJapanese ? jaddress : caddress
     }

@@ -13,37 +13,76 @@
            "lid": 1,
            "cname": "东洋不动产",
            "jname": "東洋不動産",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "images": ["detail_banner_3_0", "detail_banner_3_1"],
+           "cdesc": "东洋不动产是一家有专业人士为宫代町、杉户町、白冈市、久喜市地区的租赁公寓，出租公寓、月租停车场等的房地产租金服务提供支持的中介公司。",
+           "jdesc": "宮代町、杉戸町、白岡市、久喜市エリアの賃貸マンション、賃貸アパート、月極駐車場、など不動産賃貸に関する専門スタッフがしっかりサポート致します。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://tyf-chintai.jp",
+                    "jcontent": "http://tyf-chintai.jp"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "宫代本社\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-8-25",
+                    "jcontent": "宫代本社\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-8-25"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町中央3-8-25"
            },
            {
            "lid": 2,
            "cname": "铃建房屋有限公司",
-           "jname": "ベル建設有限会社",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "jname": "有限会社鈴建ホーム",
+           "images": ["detail_banner_4_0", "detail_banner_4_1"],
+           "cdesc": "铃建是一家房地产公司，主要在埼玉县宫代町提供土地、新建独立屋、二手独立屋、出租公寓、公寓。 我们以梦想的形式，以“塑造新的梦想”为座右铭，引入支持顾客舒适生活的房地产。",
+           "jdesc": "鈴建ホームは、埼玉県宮代町を中心に土地、新築戸建、中古戸建、賃貸、マンションをご提供する不動産会社です。“夢をカタチに、カタチが新たな夢を創る！”をモットーに、お客様の快適な暮らしを支える不動産をご紹介しています。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://suzu-h.com/",
+                    "jcontent": "http://suzu-h.com/"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田2-6-1",
+                    "jcontent": "〒345-0827\n埼玉県南埼玉郡宮代町本田2-6-1"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町本田2-6-1"
            },
            {
            "lid": 3,
-           "cname": "MAST三幸房产有限公司",
-           "jname": "MAST三幸不動産有限公司",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "cname": "Century21三幸房产有限公司",
+           "jname": "株式会社センチュリー21三幸ハウス",
+           "images": ["detail_banner_5_0", "detail_banner_5_1"],
+           "cdesc": "Century21于1971年在美国成立，现在是世界上最大的房地产经纪网络之一，在全球76个国家和地区拥有7000家门店和10.6万名员工。",
+           "jdesc": "センチュリー21は1971年アメリカで誕生し、現在では世界76の国と地域に、7000店舗、従業員数10.6万人の規模に成長した世界最大級の不動産仲介ネットワークです。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://www.century21.jp/",
+                    "jcontent": "http://www.century21.jp/"
+                    },
+                    {
+                    "cname": "支店网址",
+                    "jname": "支社HP",
+                    "ccontent": "http://www.c21sanko.com/",
+                    "jcontent": "http://www.c21sanko.com/"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "宫代支店\n〒345-0821\n埼玉県南埼玉郡宮代町中央2-3-34三幸ビル1F",
+                    "jcontent": "宮代支社\n〒345-0827\n埼玉県南埼玉郡宮代町中央2-3-34三幸ビル1F"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町中央2-3-34三幸ビル1F"
            }
            ]
   },
@@ -60,14 +99,25 @@
            {
            "lid": 1,
            "cname": "宫代町办事处",
-           "jname": "宮代町事務所",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "jname": "宮代町役场",
+           "images": ["detail_banner_6_0", "detail_banner_6_1"],
+           "cdesc": "宫代町办事处是宫代町的标志之一，是让居民自豪的政府机构。",
+           "jdesc": "宮代町のシンボルの一つ、宮代町役場は住民にとってはちょっと自慢の庁舎です。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://www.nit.ac.jp/",
+                    "jcontent": "http://www.nit.ac.jp/"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "〒345-0822\n埼玉県南埼玉郡宮代町笠原1-4-1",
+                    "jcontent": "〒345-0822\n埼玉県南埼玉郡宮代町笠原1-4-1"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町笠原1-4-1"
            }
            ]
   },
@@ -83,27 +133,49 @@
   "list": [
            {
            "lid": 1,
-           "cname": "邮储银行",
-           "jname": "郵便銀行",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "cname": "埼玉Resona银行",
+           "jname": "埼玉りそな銀行",
+           "images": ["detail_banner_0_0", "detail_banner_0_1", "detail_banner_0_2"],
+           "cdesc": "埼玉Resona银行有限公司是Resona控股附属的日本城市银行。 总公司在埼玉县浦和区。",
+           "jdesc": "株式会社埼玉りそな銀行（さいたまりそなぎんこう、Saitama Resona Bank, Limited）は、りそなホールディングス傘下の日本の都市銀行です。本店を埼玉県さいたま市浦和区に置きます。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://www.saitamaresona.co.jp",
+                    "jcontent": "http://www.saitamaresona.co.jp"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "宫代支店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸2-12-26",
+                    "jcontent": "宫代支店\n〒345-0036\n埼玉県北葛飾郡杉戸町杉戸2-12-26"
+                    },
+                    ],
+           "jaddress": "埼玉県北葛飾郡杉戸町杉戸2-12-26"
            },
            {
            "lid": 2,
-           "cname": "埼玉Resona银行",
-           "jname": "埼玉系銀行",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "cname": "邮储银行",
+           "jname": "ゆうちょ銀行",
+           "images": ["detail_banner_2_0", "detail_banner_2_1"],
+           "cdesc": "日本邮政银行股份有限公司是一家日本银行，总部设在东京的霞关，总店设在东京丸之内。",
+           "jdesc": "株式会社ゆうちょ銀行（ゆうちょぎんこう、英称：Japan Post Bank Co., Ltd.）は、東京都千代田区霞が関に本社を、同区丸の内に本店窓口をそれぞれ置く、日本の銀行です。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://www.jp-bank.japanpost.jp/",
+                    "jcontent": "http://www.jp-bank.japanpost.jp/"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "宫代郵便局\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-8-26",
+                    "jcontent": "宫代郵便局\n〒345-0821\n埼玉県南埼玉郡宮代町中央3-8-26"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町中央3-8-26"
            }
            ]
   },
@@ -123,13 +195,24 @@
            "lid": 1,
            "cname": "Softbank",
            "jname": "Softbank",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "images": ["detail_banner_7_0", "detail_banner_7_1"],
+           "cdesc": "软银公司是软银集团的股份制公司，是日本主要的电力公司，是在日本提供移动电话和长途/国际通信等无线通信业务（移动电信运营商）的电信运营商。",
+           "jdesc": "ソフトバンク株式会社（英文社名: SoftBank Corp.）は、ソフトバンクグループ傘下の株式会社で、日本で携帯電話などの無線通信サービス（移動体通信事業者）および長距離・国際通信を提供する日本の大手電気通信事業者です。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://www.softbank.jp/‎",
+                    "jcontent": "http://www.softbank.jp/‎"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "东武动物公园店\n〒345-0025\n埼玉県北葛飾郡杉戸町清地1-6-3",
+                    "jcontent": "東武動物公園店\n〒345-0025\n埼玉県北葛飾郡杉戸町清地1-6-3"
+                    },
+                    ],
+           "jaddress": "埼玉県北葛飾郡杉戸町清地1-6-3"
            },
            {
            "lid": 2,
