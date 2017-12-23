@@ -26,6 +26,8 @@ class ServiceChildViewController: BaseViewController {
         return tableView
     }()
     
+    private var player: AVAudioPlayer?
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,10 @@ class ServiceChildViewController: BaseViewController {
             make.left.bottom.right.equalToSuperview()
         }
         setupTableFooterView()
+    }
+    
+    deinit {
+        player?.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +75,22 @@ class ServiceChildViewController: BaseViewController {
         #if arch(i386) || arch(x86_64)
             return
         #endif
-        VoiceSpeaker.speak(serviceModel.chat!)
+        if player == nil {
+            guard let fileName = serviceModel.audio else { return }
+            let path = Bundle.main.path(forResource: fileName, ofType: "wav")
+            guard path != nil else { return }
+            do {
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
+            }
+            catch {}
+        }
+        
+        if player!.isPlaying {
+            player!.pause()
+        }
+        else {
+            player!.play()
+        }
     }
 }
 
@@ -107,10 +128,12 @@ extension ServiceChildViewController: UITableViewDataSource {
             for name in readyImages {
                 images.append(UIImage(named: name)!)
             }
-            cell.didSelectItemHandler = { (index) in
+            cell.didSelectItemHandler = { [weak self] (index) in
                 let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
                 agrume.statusBarStyle = .lightContent
-                agrume.showFrom(self)
+                if let strongSelf = self {
+                    agrume.showFrom(strongSelf)
+                }
             }
             return cell
 

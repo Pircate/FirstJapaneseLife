@@ -32,6 +32,7 @@ struct ServiceListModel: HandyJSON {
     }
     var cchat: String?
     var jchat: String?
+    var audio: String?
     var list = [DetailModel]()
     var contents: [String] {
         return LanguageManager.shared.isJapanese ? jcontents : ccontents

@@ -12,7 +12,7 @@ class BaseViewController: UIViewController {
     
     lazy var backButton: UIButton = {
         let backBtn = UIButton(type: .system)
-        backBtn.frame = CGRect(x: 0, y: 0, width: 54, height: 44)
+        backBtn.frame = CGRect(x: 0, y: 0, width: 48, height: 44)
         backBtn.setTitle(LocalizableString.backButtonTitle, for: .normal)
         backBtn.setTitleColor(.white, for: .normal)
         backBtn.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     
     lazy var homeButton: UIButton = {
         let homeBtn = UIButton(type: .system)
-        homeBtn.frame = CGRect(x: 0, y: 0, width: 54, height: 44)
+        homeBtn.frame = CGRect(x: 0, y: 0, width: 48, height: 44)
         homeBtn.setTitle(LocalizableString.homeButtonTitle, for: .normal)
         homeBtn.setTitleColor(.white, for: .normal)
         homeBtn.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
@@ -72,8 +72,8 @@ class BaseViewController: UIViewController {
     }
     
     private func setupNavigationItem() {
-        
-        ay_navigationItem.leftBarItems = [backButton, homeButton]
+        let space = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        ay_navigationItem.leftBarItems = [space, backButton, homeButton]
         ay_navigationItem.rightBarButton = switchButton
     }
     
