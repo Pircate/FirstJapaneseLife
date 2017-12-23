@@ -21,6 +21,11 @@ struct ServiceListModel: HandyJSON {
     }
     var cflow: String?
     var jflow: String?
+    var flowNote: String? {
+        return LanguageManager.shared.isJapanese ? jflowNote : cflowNote
+    }
+    var cflowNote: String?
+    var jflowNote: String?
     var ready_images: [String]?
     var chat: String? {
         return LanguageManager.shared.isJapanese ? jchat : cchat

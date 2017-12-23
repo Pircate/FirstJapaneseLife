@@ -32,7 +32,7 @@ class FacilityViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.bounces = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: UIScreen.height - 226 - self.ay_navigationBar.frame.maxY, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: UIScreen.height - 138 - self.ay_navigationBar.frame.maxY, right: 0)
         collectionView.register(FacilityListCell.self, forCellWithReuseIdentifier: "FacilityListCell")
         collectionView.register(FacilityHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView")
         return collectionView
@@ -44,7 +44,7 @@ class FacilityViewController: BaseViewController {
     }()
     
     lazy var titles: [String] = {
-        let titles = ["学校", "银行", "房屋中介", "办事处", "手机营业厅", "超市", "便利店", "饮食", "医院", "娱乐", "ATM"]
+        let titles = ["学校", "银行", "房屋中介", "办事处", "手机营业厅", "超市", "便利店", "饮食", "医院", "娱乐"]
         return titles
     }()
 

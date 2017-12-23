@@ -151,7 +151,10 @@ extension ServiceChildViewController: UITableViewDelegate {
             }
             return frame.height + 20
         case 2:
-            return UIScreen.width / 2
+            guard let images = serviceModel.ready_images else {
+                return 0.0
+            }
+            return images.count > 0 ? UIScreen.width / 2 : 0.0
         default:
             var frame = CGRect.zero
             if let chat = serviceModel.chat as NSString? {
@@ -169,8 +172,48 @@ extension ServiceChildViewController: UITableViewDelegate {
         header.titleLabel.text = ["场所", "流程", "准备", "对话例"][section]
         return header
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 1 {
+            guard let note = serviceModel.flowNote else {
+                return nil
+            }
+            let footer = UIView()
+            let noteLabel = UILabel()
+            noteLabel.font = UIFont.systemFont(ofSize: 12)
+            noteLabel.textColor = UIColor.red
+            noteLabel.numberOfLines = 0
+            noteLabel.text = note
+            footer.addSubview(noteLabel)
+            noteLabel.snp.makeConstraints({ (make) in
+                make.left.equalToSuperview().offset(10)
+                make.centerY.equalToSuperview()
+                make.width.equalTo(UIScreen.width - 20)
+            })
+            return footer
+        }
+        return nil
+    }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 2 {
+            guard let images = serviceModel.ready_images else {
+                return 0.0
+            }
+            guard images.count > 0 else {
+                return 0.0
+            }
+        }
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 1 {
+            if let note = serviceModel.flowNote as NSString? {
+                let frame = note.boundingRect(with: CGSize(width: UIScreen.width - 20, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)], context: nil)
+                return frame.height + 5
+            }
+        }
+        return CGFloat.leastNormalMagnitude
     }
 }

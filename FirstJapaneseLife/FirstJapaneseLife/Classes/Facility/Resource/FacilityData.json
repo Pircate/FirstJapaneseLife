@@ -52,7 +52,7 @@
  {
  "sid": 3,
  "cname": "房屋中介",
- "jname": "家屋ブローカー",
+ "jname": "不動産屋",
  "list": [
           {
           "lid": 1,
@@ -95,7 +95,7 @@
  {
  "sid": 4,
  "cname": "办事处",
- "jname": "事務所",
+ "jname": "役場",
  "list": [
           {
           "lid": 1,
@@ -114,7 +114,7 @@
  {
  "sid": 5,
  "cname": "手机营业厅",
- "jname": "携帯電話営業店",
+ "jname": "携帯ショップ",
  "list": [
           {
           "lid": 1,
@@ -267,7 +267,7 @@
  {
  "sid": 8,
  "cname": "饮食",
- "jname": "食",
+ "jname": "飲食店",
  "list": [
           {
           "lid": 1,
@@ -479,85 +479,6 @@
           "lid": 2,
           "cname": "Big ball",
           "jname": "Big ball",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          }
-          ]
- },
- {
- "sid": 11,
- "cname": "ATM",
- "jname": "ATM",
- "list": [
-          {
-          "lid": 1,
-          "cname": "埼玉Resona银行ATM",
-          "jname": "埼玉系銀行ATM",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          },
-          {
-          "lid": 2,
-          "cname": "邮储银行ATM",
-          "jname": "郵便銀行ATM",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          },
-          {
-          "lid": 3,
-          "cname": "Seven银行ATM",
-          "jname": "Seven銀行ATM",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          },
-          {
-          "lid": 4,
-          "cname": "全家ATM",
-          "jname": "全家ATM",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          },
-          {
-          "lid": 5,
-          "cname": "罗森ATM",
-          "jname": "ローソンATM",
-          "image": "detail_header",
-          "cdesc": "中文介绍",
-          "jdesc": "日本語紹介",
-          "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-          "jaddress": "埼玉県南埼玉郡宫代町学園台",
-          "telphone": "45646622",
-          "open_time": "9:00-18:00"
-          },
-          {
-          "lid": 6,
-          "cname": "E.net",
-          "jname": "E.net",
           "image": "detail_header",
           "cdesc": "中文介绍",
           "jdesc": "日本語紹介",

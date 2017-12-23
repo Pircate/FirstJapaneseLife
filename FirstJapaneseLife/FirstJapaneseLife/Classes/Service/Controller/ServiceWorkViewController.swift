@@ -78,7 +78,7 @@ extension ServiceWorkViewController: UITableViewDelegate {
         let iconImgs = ["service_child_time", "service_child_work"]
         header.iconView.image = UIImage(named: iconImgs[section])
         header.titleLabel.textColor = UIColor(hex: "#8a8a8a")
-        header.titleLabel.text = ["时间限制", "找工作"][section]
+        header.titleLabel.text = ["注意事项"][section]
         return header
     }
 
