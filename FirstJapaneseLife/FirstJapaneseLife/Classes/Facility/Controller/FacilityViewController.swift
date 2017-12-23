@@ -15,9 +15,6 @@ class FacilityViewController: BaseViewController {
         menu.didSelectItemHandler = { [weak self] (index) in
             let indexPath = IndexPath(item: 0, section: index)
             self?.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
-            if index < (self?.dataSource.count)! - 1 {
-                self?.collectionView.contentOffset.y -= 50
-            }
         }
         return menu
     }()
@@ -31,8 +28,6 @@ class FacilityViewController: BaseViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.bounces = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: UIScreen.height - 138 - self.ay_navigationBar.frame.maxY, right: 0)
         collectionView.register(FacilityListCell.self, forCellWithReuseIdentifier: "FacilityListCell")
         collectionView.register(FacilityHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FacilityHeaderView")
         return collectionView

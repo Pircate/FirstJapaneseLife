@@ -38,7 +38,7 @@ class WebViewController: UIViewController {
     }()
 
     lazy var progressView: UIProgressView = {
-        let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 2))
+        let progressView = UIProgressView(frame: CGRect(x: 0, y: self.ay_navigationBar.frame.maxY, width: UIScreen.width, height: 2))
         progressView.progressTintColor = .green
         progressView.trackTintColor = .clear
         return progressView
