@@ -295,14 +295,25 @@
            {
            "lid": 1,
            "cname": "Giga市场",
-           "jname": "Giga市場",
-           "image": "detail_header",
-           "cdesc": "中文介绍",
-           "jdesc": "日本語紹介",
-           "caddress": "日本埼玉县南埼玉郡宫代町学园台",
-           "jaddress": "埼玉県南埼玉郡宫代町学園台",
-           "telphone": "45646622",
-           "open_time": "9:00-18:00"
+           "jname": "ギガパール",
+           "images": ["detail_banner_9_0", "detail_banner_9_1"],
+           "cdesc": "Giga市场是由Giga物产经营的折扣店。",
+           "jdesc": "ギガマート（giga Mart）は、株式会社ギガ物産（ギガぶっさん）が運営するディスカウントストアです。",
+           "info": [
+                    {
+                    "cname": "网址",
+                    "jname": "HP",
+                    "ccontent": "http://giga-mart.co.jp/",
+                    "jcontent": "http://giga-mart.co.jp/"
+                    },
+                    {
+                    "cname": "地址",
+                    "jname": "住所",
+                    "ccontent": "动物公园站前店\n〒345-0822\n埼玉県南埼玉郡宮代町笠原2-2-2",
+                    "jcontent": "動物公園駅前店\n〒345-0822\n埼玉県南埼玉郡宮代町笠原2-2-2"
+                    },
+                    ],
+           "jaddress": "埼玉県南埼玉郡宮代町笠原2-2-2"
            },
            {
            "lid": 2,
