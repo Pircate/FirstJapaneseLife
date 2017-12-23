@@ -102,11 +102,11 @@ extension ServiceChildViewController: UITableViewDataSource {
             guard let readyImages = serviceModel.ready_images else {
                 return cell
             }
+            cell.images = readyImages
             var images = [UIImage]()
             for name in readyImages {
                 images.append(UIImage(named: name)!)
             }
-            cell.images = images
             cell.didSelectItemHandler = { (index) in
                 let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
                 agrume.statusBarStyle = .lightContent

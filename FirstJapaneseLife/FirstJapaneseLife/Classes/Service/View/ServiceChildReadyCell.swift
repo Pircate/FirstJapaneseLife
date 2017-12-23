@@ -25,7 +25,7 @@ class ServiceChildReadyCell: UITableViewCell {
         return collectionView
     }()
 
-    var images: [UIImage] {
+    var images: [String] {
         didSet {
             self.collectionView.reloadData()
         }
@@ -44,7 +44,7 @@ class ServiceChildReadyCell: UITableViewCell {
     }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        self.images = [UIImage]()
+        self.images = [String]()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         contentView.addSubview(collectionView)
@@ -55,6 +55,29 @@ class ServiceChildReadyCell: UITableViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func imageText(name: String) -> String {
+        switch name {
+        case "service_ready_bankbook":
+            return "銀行口座"
+        case "service_ready_address":
+            return "地址"
+        case "service_ready_insurance":
+            return "保险"
+        case "service_ready_phone":
+            return "手机号码"
+        case "service_ready_request":
+            return "请求书"
+        case "service_ready_residence":
+            return "在留卡"
+        case "service_ready_seal":
+            return "印章"
+        case "service_ready_studentID":
+            return "学生证"
+        default:
+            return ""
+        }
     }
 }
 
@@ -67,8 +90,8 @@ extension ServiceChildReadyCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ReadyPictureCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReadyPictureCell", for: indexPath) as! ReadyPictureCell
-        cell.imageView.image = images[indexPath.item]
-        cell.nameLabel.text = "图片\(indexPath.item + 1)"
+        cell.imageView.image = UIImage(named: images[indexPath.item])
+        cell.nameLabel.text = imageText(name: images[indexPath.item])
         return cell
     }
 }
