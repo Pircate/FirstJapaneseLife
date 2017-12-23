@@ -8,6 +8,7 @@
 
 import UIKit
 import Agrume
+import SDCycleScrollView
 
 class DetailViewController: BaseViewController {
 
@@ -23,6 +24,16 @@ class DetailViewController: BaseViewController {
         tableView.register(DetailMapCell.self, forCellReuseIdentifier: "DetailMapCell")
         tableView.register(DetailAddressCell.self, forCellReuseIdentifier: "DetailAddressCell")
         return tableView
+    }()
+    
+    lazy var images: [UIImage] = {
+        var images = [UIImage]()
+        if let imgs = detailModel.images {
+            for name in imgs {
+                images.append(UIImage(named: name)!)
+            }
+        }
+        return images
     }()
     
     var detailModel = DetailModel()
@@ -59,24 +70,10 @@ class DetailViewController: BaseViewController {
     }
 
     private func setupTableHeaderView() {
-        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 240))
-        if let name = detailModel.image {
-            headerView.image = UIImage(named: name)
-        }
-        headerView.isUserInteractionEnabled = true
+        guard let images = detailModel.images else { return }
+        let headerView = SDCycleScrollView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 240), imageNamesGroup: images)
+        headerView?.delegate = self as SDCycleScrollViewDelegate
         tableView.tableHeaderView = headerView
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureAction(sender:)))
-        headerView.addGestureRecognizer(tapGesture)
-    }
-
-    // MARK: - action
-    @objc private func tapGestureAction(sender: UITapGestureRecognizer) {
-        let imgView = sender.view as? UIImageView
-        if let image = imgView?.image {
-            let agrume = Agrume(image: image, backgroundBlurStyle: .dark)
-            agrume.statusBarStyle = .lightContent
-            agrume.showFrom(self)
-        }
     }
 }
 
@@ -172,5 +169,13 @@ extension DetailViewController: UIScrollViewDelegate {
             let alpha = -scrollView.contentOffset.y / ay_navigationBar.frame.maxY
             ay_navigationBar.alpha = alpha
         }
+    }
+}
+
+extension DetailViewController: SDCycleScrollViewDelegate {
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
+        let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
+        agrume.statusBarStyle = .lightContent
+        agrume.showFrom(self)
     }
 }

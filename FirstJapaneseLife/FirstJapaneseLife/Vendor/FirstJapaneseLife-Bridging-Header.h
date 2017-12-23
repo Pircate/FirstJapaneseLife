@@ -3,3 +3,4 @@
 //
 
 #import <AYNavigationBar/AYNavigationBar.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>

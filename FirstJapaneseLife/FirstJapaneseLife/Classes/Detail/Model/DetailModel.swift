@@ -16,7 +16,7 @@ struct DetailModel: HandyJSON {
     }
     var cname: String?
     var jname: String?
-    var image: String?
+    var images: [String]?
     var desc: String? {
         return LanguageManager.shared.isJapanese ? jdesc : cdesc
     }

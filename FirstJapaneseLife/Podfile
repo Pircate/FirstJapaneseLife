@@ -3,8 +3,8 @@ use_frameworks!
 
 target 'FirstJapaneseLife' do
     pod 'SnapKit'
-    pod 'Kingfisher'
     pod 'AYNavigationBar'
     pod 'Agrume'
     pod 'HandyJSON', '~> 4.0.0-beta.1'
+    pod 'SDCycleScrollView'
 end
