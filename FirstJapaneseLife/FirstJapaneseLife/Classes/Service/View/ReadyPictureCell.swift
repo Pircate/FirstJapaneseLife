@@ -12,6 +12,7 @@ class ReadyPictureCell: UICollectionViewCell {
 
     lazy var imageView: UIImageView = {
         let imgView = UIImageView()
+        imgView.contentMode = .scaleAspectFit
         return imgView
     }()
 
