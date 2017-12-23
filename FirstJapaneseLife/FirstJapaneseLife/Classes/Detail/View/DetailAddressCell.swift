@@ -49,7 +49,7 @@ class DetailAddressCell: UITableViewCell {
         }
 
         rightLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(100)
+            make.left.equalToSuperview().offset(115)
             make.right.equalToSuperview().offset(-15)
             make.centerY.equalToSuperview()
         }

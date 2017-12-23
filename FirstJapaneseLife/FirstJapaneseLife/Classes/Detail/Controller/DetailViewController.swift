@@ -151,7 +151,7 @@ extension DetailViewController: UITableViewDelegate {
             if info.cname == "地址" {
                 var frame = CGRect.zero
                 if let address = info.content as NSString? {
-                    frame = address.boundingRect(with: CGSize(width: UIScreen.width - 115, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                    frame = address.boundingRect(with: CGSize(width: UIScreen.width - 130, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
                 }
                 return frame.height + 28
             }
