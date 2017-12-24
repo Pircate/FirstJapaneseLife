@@ -28,7 +28,9 @@ class ServiceChildViewController: BaseViewController {
     
     lazy var playButton: GlobalButton = {
         let playBtn = GlobalButton(title: LocalizableString.playButtonTitle)
-        playBtn.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
+        playBtn.setImage(UIImage(named: "service_child_pause"), for: .selected)
+        playBtn.setTitle("", for: .selected)
+        playBtn.addTarget(self, action: #selector(playButtonAction(sender:)), for: .touchUpInside)
         return playBtn
     }()
     
@@ -76,7 +78,7 @@ class ServiceChildViewController: BaseViewController {
     }
     
     // MARK: - action
-    @objc private func playButtonAction() {
+    @objc private func playButtonAction(sender: UIButton) {
         if player == nil {
             guard let fileName = serviceModel.audio else { return }
             let path = Bundle.main.path(forResource: fileName, ofType: "wav")
@@ -89,9 +91,11 @@ class ServiceChildViewController: BaseViewController {
         
         if player!.isPlaying {
             player!.pause()
+            sender.isSelected = false
         }
         else {
             player!.play()
+            sender.isSelected = true
         }
     }
 }
