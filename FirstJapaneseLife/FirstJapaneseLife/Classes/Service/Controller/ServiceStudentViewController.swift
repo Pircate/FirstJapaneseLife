@@ -78,7 +78,7 @@ extension ServiceStudentViewController: UITableViewDelegate {
         let iconImgs = ["service_child_unit", "service_child_activity"]
         header.iconView.image = UIImage(named: iconImgs[section])
         header.titleLabel.textColor = UIColor(hex: "#8a8a8a")
-        header.titleLabel.text = ["注意事项"][section]
+        header.titleLabel.text = ["注意事項"][section]
         return header
     }
 

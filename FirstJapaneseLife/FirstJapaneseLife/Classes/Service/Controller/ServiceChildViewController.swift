@@ -77,9 +77,6 @@ class ServiceChildViewController: BaseViewController {
     
     // MARK: - action
     @objc private func playButtonAction() {
-        #if arch(i386) || arch(x86_64)
-            return
-        #endif
         if player == nil {
             guard let fileName = serviceModel.audio else { return }
             let path = Bundle.main.path(forResource: fileName, ofType: "wav")
