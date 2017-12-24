@@ -35,6 +35,6 @@ struct LocalizableString {
     }
     
     static var detailSectionTitles: [String] {
-        return LanguageManager.shared.isJapanese ? ["绍介", "位置", "地図"] : ["介绍", "位置", "地图"]
+        return LanguageManager.shared.isJapanese ? ["紹介する", "場所", "地図"] : ["介绍", "位置", "地图"]
     }
 }
