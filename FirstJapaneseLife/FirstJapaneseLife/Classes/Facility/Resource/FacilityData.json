@@ -38,7 +38,7 @@
           "lid": 1,
           "cname": "埼玉Resona银行",
           "jname": "埼玉りそな銀行",
-          "images": ["detail_banner_0_0", "detail_banner_0_1", "detail_banner_0_2"],
+          "images": ["detail_banner_1_0", "detail_banner_1_1"],
           "cdesc": "埼玉Resona银行有限公司是Resona控股附属的日本城市银行。 总公司在埼玉县浦和区。",
           "jdesc": "株式会社埼玉りそな銀行（さいたまりそなぎんこう、Saitama Resona Bank, Limited）は、りそなホールディングス傘下の日本の都市銀行です。本店を埼玉県さいたま市浦和区に置きます。",
           "info": [
@@ -708,7 +708,7 @@
           "lid": 2,
           "cname": "东埼玉综合病院",
           "jname": "東埼玉総合病院",
-          "images": ["detail_banner_31_0", "detail_banner_31_1"],
+          "images": ["detail_banner_32_0", "detail_banner_32_1"],
           "cdesc": "东埼玉综合医院是位于埼玉县幸手的医疗机构。这是由日本医疗联盟（一家社会医疗公司）经营的医院。",
           "jdesc": "東埼玉総合病院は、埼玉県幸手市にある医療機関。社会医療法人ジャパンメディカルアライアンスが運営する病院です。",
           "info": [
