@@ -198,6 +198,10 @@ extension ServiceChildViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 2 {
+            guard let images = serviceModel.ready_images else { return nil }
+            guard !images.isEmpty else { return nil }
+        }
         let header = TitleHeaderView()
         let iconImgs = ["service_child_site", "service_child_flow", "service_child_ready", "service_child_chat"]
         header.iconView.image = UIImage(named: iconImgs[section])
@@ -232,10 +236,10 @@ extension ServiceChildViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 2 {
             guard let images = serviceModel.ready_images else {
-                return 0.0
+                return CGFloat.leastNormalMagnitude
             }
-            guard images.count > 0 else {
-                return 0.0
+            guard !images.isEmpty else {
+                return CGFloat.leastNormalMagnitude
             }
         }
         return 44
