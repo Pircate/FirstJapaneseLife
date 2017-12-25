@@ -11,6 +11,7 @@ import UIKit
 class TabMenuView: UIView {
 
     static let menuHeight: CGFloat = 44.0
+    static let colors = [UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3")]
 
     public var didSelectItemHandler: ((Int) -> Void)?
 
@@ -36,13 +37,20 @@ class TabMenuView: UIView {
         return collectionView
     }()
 
-    private var titles = [String]()
-    private var dataSource = [TabMenuModel]()
-    private var itemWidths: [CGFloat] {
+    lazy var dataSource: [TabMenuModel] = {
+        return titles.enumerated().map({
+            let backgroundLayerColor = TabMenuView.colors[$0 % TabMenuView.colors.count]
+            return TabMenuModel(title: $1, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: backgroundLayerColor, underlineColor: .clear)
+        })
+    }()
+
+    lazy var itemWidths: [CGFloat] = {
         return titles.map({
             return CGFloat($0.count * 15 + 30)
         })
-    }
+    }()
+
+    private var titles = [String]()
     private var currentIndex = 0
 
     init(titles: [String]) {
@@ -50,7 +58,6 @@ class TabMenuView: UIView {
 
         self.titles = titles
 
-        configureDataSource()
         addSubviews()
     }
 
@@ -59,16 +66,6 @@ class TabMenuView: UIView {
     }
 
     // MARK: - private
-    private func configureDataSource() {
-
-        let colors = [UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3"), UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0")]
-
-        for (index, title) in titles.enumerated() {
-            let model = TabMenuModel(title: title, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: colors[index], underlineColor: .clear)
-            dataSource.append(model)
-        }
-    }
-
     private func addSubviews() {
         self.addSubview(collectionView)
     }
