@@ -15,11 +15,11 @@ class ServiceChildViewController: BaseViewController {
     var serviceModel = ServiceListModel()
 
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        tableView.separatorColor = UIColor.hairline
+        tableView.separatorStyle = .none
         tableView.register(ServiceChildListCell.self, forCellReuseIdentifier: "ServiceChildListCell")
         tableView.register(ServiceChildReadyCell.self, forCellReuseIdentifier: "ServiceChildReadyCell")
         tableView.register(ServiceChildTextCell.self, forCellReuseIdentifier: "ServiceChildTextCell")
@@ -68,6 +68,7 @@ class ServiceChildViewController: BaseViewController {
     private func setupTableFooterView() {
 
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 70))
+        footerView.backgroundColor = UIColor.white
         footerView.addSubview(playButton)
         playButton.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
@@ -208,6 +209,7 @@ extension ServiceChildViewController: UITableViewDelegate {
                 return nil
             }
             let footer = UIView()
+            footer.backgroundColor = UIColor.white
             let noteLabel = UILabel()
             noteLabel.font = UIFont.systemFont(ofSize: 12)
             noteLabel.textColor = UIColor.red
@@ -215,9 +217,9 @@ extension ServiceChildViewController: UITableViewDelegate {
             noteLabel.text = note
             footer.addSubview(noteLabel)
             noteLabel.snp.makeConstraints({ (make) in
-                make.left.equalToSuperview().offset(10)
+                make.left.equalToSuperview().offset(15)
                 make.centerY.equalToSuperview()
-                make.width.equalTo(UIScreen.width - 20)
+                make.width.equalTo(UIScreen.width - 30)
             })
             return footer
         }
@@ -239,7 +241,7 @@ extension ServiceChildViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 1 {
             if let note = serviceModel.flowNote as NSString? {
-                let frame = note.boundingRect(with: CGSize(width: UIScreen.width - 20, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)], context: nil)
+                let frame = note.boundingRect(with: CGSize(width: UIScreen.width - 30, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)], context: nil)
                 return frame.height + 5
             }
         }
