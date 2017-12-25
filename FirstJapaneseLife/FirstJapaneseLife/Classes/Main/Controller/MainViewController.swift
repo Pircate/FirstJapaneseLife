@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         
         view.backgroundColor = .white
         ay_navigationBar.alpha = 0
-        ay_navigationItem.title = "初めての日本生活"
+        ay_navigationItem.title = "     初めての日本生活"
         ay_navigationBar.prefersLargeTitles = true
         ay_navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.cyan]
         
