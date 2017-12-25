@@ -33,6 +33,13 @@ class ServiceChildViewController: BaseViewController {
         playBtn.addTarget(self, action: #selector(playButtonAction(sender:)), for: .touchUpInside)
         return playBtn
     }()
+
+    lazy var readyImages: [UIImage] = {
+        guard let images = serviceModel.ready_images else { return [UIImage]() }
+        return images.map({
+            return UIImage(named: $0)!
+        })
+    }()
     
     private var player: AVAudioPlayer?
     
@@ -127,18 +134,14 @@ extension ServiceChildViewController: UITableViewDataSource {
             return cell
         case 2:
             let cell: ServiceChildReadyCell = tableView.dequeueReusableCell(withIdentifier: "ServiceChildReadyCell") as! ServiceChildReadyCell
-            guard let readyImages = serviceModel.ready_images else {
+            guard let images = serviceModel.ready_images else {
                 return cell
             }
-            cell.images = readyImages
-            var images = [UIImage]()
-            for name in readyImages {
-                images.append(UIImage(named: name)!)
-            }
+            cell.images = images
             cell.didSelectItemHandler = { [weak self] (index) in
-                let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
-                agrume.statusBarStyle = .lightContent
                 if let strongSelf = self {
+                    let agrume = Agrume(images: strongSelf.readyImages, startIndex: index, backgroundBlurStyle: .dark)
+                    agrume.statusBarStyle = .lightContent
                     agrume.showFrom(strongSelf)
                 }
             }

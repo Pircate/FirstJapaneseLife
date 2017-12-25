@@ -38,7 +38,11 @@ class TabMenuView: UIView {
 
     private var titles = [String]()
     private var dataSource = [TabMenuModel]()
-    private var itemWidths = [CGFloat]()
+    private var itemWidths: [CGFloat] {
+        return titles.map({
+            return CGFloat($0.count * 15 + 30)
+        })
+    }
     private var currentIndex = 0
 
     init(titles: [String]) {
@@ -47,7 +51,6 @@ class TabMenuView: UIView {
         self.titles = titles
 
         configureDataSource()
-        figureItemWidth()
         addSubviews()
     }
 
@@ -63,13 +66,6 @@ class TabMenuView: UIView {
         for (index, title) in titles.enumerated() {
             let model = TabMenuModel(title: title, titleNormalColor: .global, titleSelectedColor: .white, backgroundLayerColor: colors[index], underlineColor: .clear)
             dataSource.append(model)
-        }
-    }
-
-    private func figureItemWidth() {
-        for title in titles {
-            let width = CGFloat(title.count * 15 + 30)
-            itemWidths.append(width)
         }
     }
 

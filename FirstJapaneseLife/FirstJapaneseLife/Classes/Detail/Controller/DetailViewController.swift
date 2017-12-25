@@ -26,13 +26,10 @@ class DetailViewController: BaseViewController {
     }()
     
     lazy var images: [UIImage] = {
-        var images = [UIImage]()
-        if let imgs = detailModel.images {
-            for name in imgs {
-                images.append(UIImage(named: name)!)
-            }
-        }
-        return images
+        guard let images = detailModel.images else { return [UIImage]() }
+        return images.map({
+            return UIImage(named: $0)!
+        })
     }()
     
     var detailModel = DetailModel()
@@ -190,6 +187,7 @@ extension DetailViewController: UIScrollViewDelegate {
     }
 }
 
+// MARK: - SDCycleScrollViewDelegate
 extension DetailViewController: SDCycleScrollViewDelegate {
     func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
         let agrume = Agrume(images: images, startIndex: index, backgroundBlurStyle: .dark)
