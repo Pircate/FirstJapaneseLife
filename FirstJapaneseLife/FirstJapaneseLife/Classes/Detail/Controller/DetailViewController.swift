@@ -160,6 +160,9 @@ extension DetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard indexPath.section == 1 else {
+            return
+        }
         let info = detailModel.info[indexPath.row]
         guard let name = info.cname else { return }
         if name == "网址" || name == "支店网址" {

@@ -76,17 +76,20 @@ class DetailMapCell: UITableViewCell {
 }
 
 extension DetailMapCell: MKMapViewDelegate {
-
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         mapView.deselectAnnotation(view.annotation, animated: true)
-        print(mapView.annotations.count)
-        guard let coordinate = view.annotation?.coordinate else {
-            return
-        }
+        guard let coordinate = view.annotation?.coordinate else { return }
         UIApplication.shared.keyWindow?.rootViewController?.alert(title: "是否使用导航", message: nil, cancelTitle: "取消", otherTitles: ["确定"], completionHandler: { [weak self] (index) in
             if index == 1 {
                 self?.openMapNavigation(toPoint: coordinate)
             }
         })
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "ID")
+        annotationView.image = UIImage(named: "default_location")
+        return annotationView
     }
 }

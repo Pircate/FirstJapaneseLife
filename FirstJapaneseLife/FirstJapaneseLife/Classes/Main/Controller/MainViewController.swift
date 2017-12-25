@@ -28,7 +28,8 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         ay_navigationBar.alpha = 0
         ay_navigationItem.title = "初めての日本生活"
-        ay_navigationItem.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 24)]
+        ay_navigationBar.prefersLargeTitles = true
+        ay_navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.cyan]
         
         addSubviews()
     }
@@ -50,7 +51,7 @@ class MainViewController: UIViewController {
         backgroundImgView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-
+        
         view.addSubview(facilityButton)
         view.addSubview(serviceButton)
         
