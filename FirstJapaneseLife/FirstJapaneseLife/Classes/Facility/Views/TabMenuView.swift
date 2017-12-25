@@ -10,7 +10,7 @@ import UIKit
 
 class TabMenuView: UIView {
 
-    static let menuHeight: CGFloat = 44.0
+    static let defaultHeight: CGFloat = 44.0
     static let colors = [UIColor(hex: "#f25f5c"), UIColor(hex: "#ffe066"), UIColor(hex: "#247ba0"), UIColor(hex: "#70c1b3")]
 
     public var didSelectItemHandler: ((Int) -> Void)?
@@ -54,7 +54,7 @@ class TabMenuView: UIView {
     private var currentIndex = 0
 
     init(titles: [String]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: TabMenuView.menuHeight))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: TabMenuView.defaultHeight))
 
         self.titles = titles
 
@@ -116,6 +116,6 @@ extension TabMenuView: UICollectionViewDelegate {
 extension TabMenuView: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: itemWidths[indexPath.item], height: TabMenuView.menuHeight)
+        return CGSize(width: itemWidths[indexPath.item], height: TabMenuView.defaultHeight)
     }
 }
