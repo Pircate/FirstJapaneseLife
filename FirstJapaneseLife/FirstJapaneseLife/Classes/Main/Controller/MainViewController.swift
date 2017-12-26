@@ -27,9 +27,6 @@ class MainViewController: UIViewController {
         
         view.backgroundColor = .white
         ay_navigationBar.alpha = 0
-        ay_navigationItem.title = "     初めての日本生活"
-        ay_navigationBar.prefersLargeTitles = true
-        ay_navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.cyan]
         
         addSubviews()
     }
@@ -50,6 +47,17 @@ class MainViewController: UIViewController {
         view.addSubview(backgroundImgView)
         backgroundImgView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
+        }
+
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
+        titleLabel.textColor = UIColor.cyan
+        titleLabel.textAlignment = .center
+        titleLabel.text = "初めての日本生活"
+        view.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(80)
+            make.centerX.equalToSuperview()
         }
         
         view.addSubview(facilityButton)

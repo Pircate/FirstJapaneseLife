@@ -28,7 +28,7 @@ class DetailViewController: BaseViewController {
     lazy var images: [UIImage] = {
         guard let images = detailModel.images else { return [UIImage]() }
         return images.map({
-            return UIImage(named: $0)!
+            UIImage(named: $0)!
         })
     }()
     

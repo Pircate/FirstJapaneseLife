@@ -46,7 +46,7 @@ class TabMenuView: UIView {
 
     lazy var itemWidths: [CGFloat] = {
         return titles.map({
-            return CGFloat($0.count * 15 + 30)
+            CGFloat($0.count * 15 + 30)
         })
     }()
 
