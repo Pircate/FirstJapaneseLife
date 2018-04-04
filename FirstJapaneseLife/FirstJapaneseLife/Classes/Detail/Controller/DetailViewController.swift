@@ -9,6 +9,7 @@
 import UIKit
 import Agrume
 import SDCycleScrollView
+import SafariServices
 
 class DetailViewController: BaseViewController {
 
@@ -38,9 +39,9 @@ class DetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ay_navigationItem.title = detailModel.name
+        navigation.item.title = detailModel.name
         disableAdjustsScrollViewInsets(tableView)
-        ay_navigationBar.alpha = 0
+        navigation.bar.alpha = 0
 
         addSubviews()
     }
@@ -51,7 +52,7 @@ class DetailViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
-        ay_navigationItem.title = detailModel.name
+        navigation.item.title = detailModel.name
         tableView.reloadData()
     }
 
@@ -166,11 +167,9 @@ extension DetailViewController: UITableViewDelegate {
         let info = detailModel.info[indexPath.row]
         guard let name = info.cname else { return }
         if name == "网址" || name == "支店网址" {
-            if let url = info.content {
-                let webVC = WebViewController(url: url)
-                webVC.ay_navigationBar.backgroundColor = UIColor.global
-                webVC.ay_navigationItem.titleTextAttributes = ay_navigationItem.titleTextAttributes
-                navigationController?.pushViewController(webVC, animated: true)
+            if let content = info.content, let url = URL(string: content) {
+                let webVC = SFSafariViewController(url: url)
+                present(webVC, animated: true, completion: nil)
             }
         }
     }
@@ -182,10 +181,10 @@ extension DetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0 {
             let alpha = scrollView.contentOffset.y / CGFloat(176)
-            ay_navigationBar.alpha = alpha
+            navigation.bar.alpha = alpha
         } else {
-            let alpha = -scrollView.contentOffset.y / ay_navigationBar.frame.maxY
-            ay_navigationBar.alpha = alpha
+            let alpha = -scrollView.contentOffset.y / navigation.bar.frame.maxY
+            navigation.bar.alpha = alpha
         }
     }
 }

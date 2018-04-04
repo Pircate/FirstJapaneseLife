@@ -47,7 +47,7 @@ class FacilityViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ay_navigationItem.title = LocalizableString.facilityTitle
+        navigation.item.title = LocalizableString.facilityTitle
         
         addSubviews()
         disableAdjustsScrollViewInsets(collectionView)
@@ -60,7 +60,7 @@ class FacilityViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
-        ay_navigationItem.title = LocalizableString.facilityTitle
+        navigation.item.title = LocalizableString.facilityTitle
         collectionView.reloadData()
     }
     
@@ -69,7 +69,7 @@ class FacilityViewController: BaseViewController {
 
         view.addSubview(tabMenuView)
         tabMenuView.snp.makeConstraints { (make) in
-            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.top.equalTo(navigation.bar.snp.bottom)
             make.left.equalToSuperview()
             make.size.equalTo(CGSize(width: UIScreen.width, height: 44))
         }

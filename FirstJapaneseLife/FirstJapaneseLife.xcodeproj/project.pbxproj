@@ -10,7 +10,6 @@
 		461589411FE3C71000FB1895 /* ServiceStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */; };
 		461589431FE3C72F00FB1895 /* ServiceWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */; };
 		461589451FE3CAAD00FB1895 /* GlobalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589441FE3CAAD00FB1895 /* GlobalButton.swift */; };
-		462919AC1FE204800031D642 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AB1FE204800031D642 /* WebViewController.swift */; };
 		462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AD1FE204920031D642 /* UIViewControllerExtension.swift */; };
 		462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B61FE219AA0031D642 /* TabMenuCell.swift */; };
 		462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B71FE219AA0031D642 /* TabMenuView.swift */; };
@@ -81,7 +80,6 @@
 		461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStudentViewController.swift; sourceTree = "<group>"; };
 		461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWorkViewController.swift; sourceTree = "<group>"; };
 		461589441FE3CAAD00FB1895 /* GlobalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalButton.swift; sourceTree = "<group>"; };
-		462919AB1FE204800031D642 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		462919AD1FE204920031D642 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		462919B61FE219AA0031D642 /* TabMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuCell.swift; sourceTree = "<group>"; };
 		462919B71FE219AA0031D642 /* TabMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		B5126B341FE13EE7002E2F67 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				462919AB1FE204800031D642 /* WebViewController.swift */,
 				B5F82D531FE16ED9004B925E /* FirstJapaneseLife-Bridging-Header.h */,
 			);
 			path = Vendor;
@@ -478,7 +475,6 @@
 				B5126AF81FE13B4E002E2F67 /* Frameworks */,
 				B5126AF91FE13B4E002E2F67 /* Resources */,
 				C7B3B90C39411303BA3DB31F /* [CP] Embed Pods Frameworks */,
-				5E880A3CD249134CD9B214DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -629,24 +625,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E880A3CD249134CD9B214DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C7B3B90C39411303BA3DB31F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,9 +632,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AYNavigationBar/AYNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FKNavigationBar/FKNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -664,9 +642,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AYNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Agrume.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FKNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -706,7 +684,6 @@
 				B5F82D611FE180DD004B925E /* UIColorExtension.swift in Sources */,
 				B5126B3E1FE13EF8002E2F67 /* BaseViewController.swift in Sources */,
 				B571471D1FE69EC600E193A3 /* FacilityListModel.swift in Sources */,
-				462919AC1FE204800031D642 /* WebViewController.swift in Sources */,
 				462919C31FE230560031D642 /* ReadyPictureCell.swift in Sources */,
 				462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */,
 				B5126B541FE14978002E2F67 /* ServiceListCell.swift in Sources */,

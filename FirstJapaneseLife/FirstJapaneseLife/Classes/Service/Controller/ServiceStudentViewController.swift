@@ -29,7 +29,7 @@ class ServiceStudentViewController: BaseViewController {
         disableAdjustsScrollViewInsets(tableView)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.top.equalTo(navigation.bar.snp.bottom)
             make.left.bottom.right.equalToSuperview()
         }
     }
@@ -40,7 +40,7 @@ class ServiceStudentViewController: BaseViewController {
     }
 
     override func languageWillChange(sender: Notification) {
-        ay_navigationItem.title = serviceModel.name
+        navigation.item.title = serviceModel.name
         tableView.reloadData()
     }
 }

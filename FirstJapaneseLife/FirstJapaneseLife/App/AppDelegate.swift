@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FKNavigationBar
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        UIViewController.setupNavigationBar
         LanguageManager.shared.isJapanese = true
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         let nav = UINavigationController(rootViewController: MainViewController())
-        nav.ay_navigationBarEnabled = true
+        nav.navigation.configuration.enabled = true
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         return true

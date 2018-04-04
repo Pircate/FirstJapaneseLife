@@ -35,7 +35,7 @@ class ServiceViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ay_navigationItem.title = LocalizableString.serviceTitle
+        navigation.item.title = LocalizableString.serviceTitle
         addSubviews()
         disableAdjustsScrollViewInsets(tableView)
         loadServiceData()
@@ -47,7 +47,7 @@ class ServiceViewController: BaseViewController {
     }
     
     override func languageWillChange(sender: Notification) {
-        ay_navigationItem.title = LocalizableString.serviceTitle
+        navigation.item.title = LocalizableString.serviceTitle
         tableView.reloadData()
     }
     
@@ -55,7 +55,7 @@ class ServiceViewController: BaseViewController {
     private func addSubviews() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(ay_navigationBar.snp.bottom)
+            make.top.equalTo(navigation.bar.snp.bottom)
             make.left.bottom.right.equalToSuperview()
         }
     }
@@ -99,18 +99,18 @@ extension ServiceViewController: UITableViewDelegate {
         switch indexPath.row {
         case 10:
             let serviceStudentVC = ServiceStudentViewController()
-            serviceStudentVC.ay_navigationItem.title = model.name
+            serviceStudentVC.navigation.item.title = model.name
             serviceStudentVC.serviceModel = model
             navigationController?.pushViewController(serviceStudentVC, animated: true)
         case 11:
             let serviceWorkVC = ServiceWorkViewController()
-            serviceWorkVC.ay_navigationItem.title = model.name
+            serviceWorkVC.navigation.item.title = model.name
             serviceWorkVC.serviceModel = model
             navigationController?.pushViewController(serviceWorkVC, animated: true)
         default:
             let serviceChildVC = ServiceChildViewController()
             serviceChildVC.serviceModel = model
-            serviceChildVC.ay_navigationItem.title = model.name
+            serviceChildVC.navigation.item.title = model.name
             navigationController?.pushViewController(serviceChildVC, animated: true)
         }
     }

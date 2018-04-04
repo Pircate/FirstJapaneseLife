@@ -12,7 +12,6 @@ class BaseViewController: UIViewController {
     
     lazy var backButton: UIButton = {
         let backBtn = UIButton(type: .system)
-        backBtn.frame = CGRect(x: 0, y: 0, width: 48, height: 44)
         backBtn.setTitle(LocalizableString.backButtonTitle, for: .normal)
         backBtn.setTitleColor(.white, for: .normal)
         backBtn.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
@@ -21,7 +20,6 @@ class BaseViewController: UIViewController {
     
     lazy var homeButton: UIButton = {
         let homeBtn = UIButton(type: .system)
-        homeBtn.frame = CGRect(x: 0, y: 0, width: 48, height: 44)
         homeBtn.setTitle(LocalizableString.homeButtonTitle, for: .normal)
         homeBtn.setTitleColor(.white, for: .normal)
         homeBtn.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
@@ -31,7 +29,6 @@ class BaseViewController: UIViewController {
     lazy var switchButton: UIButton = {
         let switchBtn = UIButton(type: .custom)
         switchBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        switchBtn.frame = CGRect(x: 0, y: 0, width: 60, height: 44)
         switchBtn.setTitle("日本语", for: .normal)
         switchBtn.setTitle("日本语", for: .highlighted)
         switchBtn.setTitle("中文", for: .selected)
@@ -67,14 +64,15 @@ class BaseViewController: UIViewController {
     // MARK: - private
     private func setupBaseAttribute() {
         view.backgroundColor = .white
-        ay_navigationBar.backgroundColor = .global
-        ay_navigationItem.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigation.bar.backgroundColor = .global
+        navigation.bar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     private func setupNavigationItem() {
-        let space = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        ay_navigationItem.leftBarItems = [space, backButton, homeButton]
-        ay_navigationItem.rightBarButton = switchButton
+        navigation.item.leftBarButtonItems = [backButton, homeButton].map({
+            UIBarButtonItem(customView: $0)
+        })
+        navigation.item.rightBarButtonItem = UIBarButtonItem(customView: switchButton)
     }
     
     // MARK: - action

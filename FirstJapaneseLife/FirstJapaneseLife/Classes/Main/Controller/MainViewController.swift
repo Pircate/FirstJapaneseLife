@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        ay_navigationBar.alpha = 0
+        navigation.bar.alpha = 0
         
         addSubviews()
     }
