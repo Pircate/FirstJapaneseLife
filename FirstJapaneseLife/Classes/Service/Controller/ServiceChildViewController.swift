@@ -26,8 +26,8 @@ class ServiceChildViewController: BaseViewController {
         return tableView
     }()
     
-    lazy var playButton: GlobalButton = {
-        let playBtn = GlobalButton(title: LocalizableString.playButtonTitle)
+    lazy var playButton: UIButton = {
+        let playBtn = UIButton(title: LocalizableString.playButtonTitle)
         playBtn.setImage(UIImage(named: "service_child_pause"), for: .selected)
         playBtn.setTitle("", for: .selected)
         playBtn.addTarget(self, action: #selector(playButtonAction(sender:)), for: .touchUpInside)

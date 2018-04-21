@@ -11,13 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
     
     lazy var facilityButton: UIButton = {
-        let btn = GlobalButton(title: "施設")
+        let btn = UIButton(title: "施設")
         btn.addTarget(self, action: #selector(facilityButtonAction), for: .touchUpInside)
         return btn
     }()
     
     lazy var serviceButton: UIButton = {
-        let btn = GlobalButton(title: "サービス")
+        let btn = UIButton(title: "サービス")
         btn.addTarget(self, action: #selector(serviceButtonAction), for: .touchUpInside)
         return btn
     }()

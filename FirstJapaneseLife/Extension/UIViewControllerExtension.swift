@@ -8,15 +8,7 @@
 
 import Foundation
 
-protocol AdjustsInsets {
-    func disableAdjustsScrollViewInsets(_ scrollView: UIScrollView)
-}
-
-protocol Alert {
-    func alert(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, cancelTitle: String?, otherTitles: [String], completionHandler: @escaping (_ buttonIndex: Int) -> Void)
-}
-
-extension UIViewController: AdjustsInsets, Alert {
+extension UIViewController {
 
     func disableAdjustsScrollViewInsets(_ scrollView: UIScrollView) {
         if #available(iOS 11.0, *) {
@@ -50,22 +42,5 @@ extension UIViewController: AdjustsInsets, Alert {
         }
 
         present(alert, animated: true, completion: nil)
-    }
-
-    func dismiss(animated: Bool) {
-
-        if presentingViewController != nil {
-            if let nav = navigationController {
-                if nav.viewControllers.count > 1 {
-                    nav.popViewController(animated: animated)
-                } else {
-                    dismiss(animated: animated, completion: nil)
-                }
-            } else {
-                dismiss(animated: animated, completion: nil)
-            }
-        } else {
-            navigationController?.popViewController(animated: animated)
-        }
     }
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33870907208B2E2B0052F0E1 /* UIButton+Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33870906208B2E2B0052F0E1 /* UIButton+Global.swift */; };
 		461589411FE3C71000FB1895 /* ServiceStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */; };
 		461589431FE3C72F00FB1895 /* ServiceWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */; };
-		461589451FE3CAAD00FB1895 /* GlobalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461589441FE3CAAD00FB1895 /* GlobalButton.swift */; };
 		462919AE1FE204920031D642 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919AD1FE204920031D642 /* UIViewControllerExtension.swift */; };
 		462919B81FE219AA0031D642 /* TabMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B61FE219AA0031D642 /* TabMenuCell.swift */; };
 		462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462919B71FE219AA0031D642 /* TabMenuView.swift */; };
@@ -77,9 +77,9 @@
 /* Begin PBXFileReference section */
 		0FF0CD35E39964AF1FF8AAFF /* Pods-FirstJapaneseLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.debug.xcconfig"; sourceTree = "<group>"; };
 		22B59195B5474C63078487AF /* Pods-FirstJapaneseLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstJapaneseLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstJapaneseLife/Pods-FirstJapaneseLife.release.xcconfig"; sourceTree = "<group>"; };
+		33870906208B2E2B0052F0E1 /* UIButton+Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Global.swift"; sourceTree = "<group>"; };
 		461589401FE3C71000FB1895 /* ServiceStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStudentViewController.swift; sourceTree = "<group>"; };
 		461589421FE3C72F00FB1895 /* ServiceWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWorkViewController.swift; sourceTree = "<group>"; };
-		461589441FE3CAAD00FB1895 /* GlobalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalButton.swift; sourceTree = "<group>"; };
 		462919AD1FE204920031D642 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		462919B61FE219AA0031D642 /* TabMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuCell.swift; sourceTree = "<group>"; };
 		462919B71FE219AA0031D642 /* TabMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		462919B51FE219AA0031D642 /* Views */ = {
+		462919B51FE219AA0031D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				462919B61FE219AA0031D642 /* TabMenuCell.swift */,
@@ -177,7 +177,7 @@
 				462919BC1FE21D840031D642 /* FacilityListCell.swift */,
 				462919BE1FE2235B0031D642 /* FacilityHeaderView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		462919C91FE243450031D642 /* Detail */ = {
@@ -288,7 +288,6 @@
 			children = (
 				B5126B3D1FE13EF8002E2F67 /* BaseViewController.swift */,
 				468A18781FE256A300929D27 /* TitleHeaderView.swift */,
-				461589441FE3CAAD00FB1895 /* GlobalButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -331,7 +330,7 @@
 				B5126B421FE141C6002E2F67 /* Controller */,
 				B57147191FE69AB400E193A3 /* Model */,
 				B57147181FE69AB400E193A3 /* Resource */,
-				462919B51FE219AA0031D642 /* Views */,
+				462919B51FE219AA0031D642 /* View */,
 			);
 			path = Facility;
 			sourceTree = "<group>";
@@ -442,6 +441,7 @@
 				462919AD1FE204920031D642 /* UIViewControllerExtension.swift */,
 				B5F82D601FE180DD004B925E /* UIColorExtension.swift */,
 				462CFC8B1FE36B80003048AB /* UIScreenExtension.swift */,
+				33870906208B2E2B0052F0E1 /* UIButton+Global.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -668,11 +668,11 @@
 				461589431FE3C72F00FB1895 /* ServiceWorkViewController.swift in Sources */,
 				462919C11FE22EB70031D642 /* ServiceChildReadyCell.swift in Sources */,
 				B50EC6091FE2AA1B00EEBE91 /* AppDelegate.swift in Sources */,
+				33870907208B2E2B0052F0E1 /* UIButton+Global.swift in Sources */,
 				461589411FE3C71000FB1895 /* ServiceStudentViewController.swift in Sources */,
 				468A18751FE24D9200929D27 /* DetailMapCell.swift in Sources */,
 				468A18771FE24FDB00929D27 /* DetailAddressCell.swift in Sources */,
 				462919CF1FE24C1F0031D642 /* DetailViewController.swift in Sources */,
-				461589451FE3CAAD00FB1895 /* GlobalButton.swift in Sources */,
 				468A18791FE256A300929D27 /* TitleHeaderView.swift in Sources */,
 				462919B91FE219AA0031D642 /* TabMenuView.swift in Sources */,
 				462919C51FE23B460031D642 /* ServiceChildTextCell.swift in Sources */,
