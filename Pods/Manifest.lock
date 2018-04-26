@@ -1,6 +1,6 @@
 PODS:
   - Agrume (4.0.4)
-  - EachNavigationBar (0.1.0)
+  - EachNavigationBar (0.1.1)
   - FDFullscreenPopGesture (1.1)
   - HandyJSON (4.1.1)
   - SDCycleScrollView (1.75):
@@ -30,13 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Agrume: 123943d590fd0436a00642e37032da1814518153
-  EachNavigationBar: bfd9364d97754e081bf3d36c1d2a675ccd70fcdb
+  EachNavigationBar: 8e2824048aa9dc85948bc534a7b51a0631e4f441
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 0af2ea9c5366b6c4472846d8a1cbfdfa02f9247e
+PODFILE CHECKSUM: 81991907b7a9c9660142c2237c5344d4ae541b71
 
 COCOAPODS: 1.5.0

@@ -69,6 +69,7 @@ class BaseViewController: UIViewController {
     }
     
     private func setupNavigationItem() {
+        navigation.bar.isTranslucent = false
         navigation.item.leftBarButtonItems = [backButton, homeButton].map({
             UIBarButtonItem(customView: $0)
         })
